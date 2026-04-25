@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import { IconType } from "react-icons";
 import { BiCodeBlock } from "react-icons/bi";
 import {
   TbDeviceImacCode,
@@ -9,8 +11,13 @@ import {
 import { GrSettingsOption } from "react-icons/gr";
 import { TiWeatherStormy } from "react-icons/ti";
 
+interface CardItem {
+  Icon: IconType;
+  text: string;
+}
+
 export const OutSourcing = () => {
-  const services = [
+  const services: CardItem[] = [
     { Icon: BiCodeBlock, text: "Custom Software Development" },
     { Icon: TbDeviceImacCode, text: "Web Application Development" },
     { Icon: TbDeviceMobileCode, text: "Mobile App Development" },
@@ -90,7 +97,7 @@ export const OutSourcing = () => {
 };
 
 // 🔥 Card Component
-const Card = ({ item }) => {
+const Card: React.FC<{ item: CardItem }> = ({ item }) => {
   const Icon = item.Icon;
 
   return (
