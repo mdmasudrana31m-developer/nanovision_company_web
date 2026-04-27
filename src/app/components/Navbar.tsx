@@ -56,8 +56,10 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* 🔹 Logo */}
           <h1 className="text-2xl font-semibold">
-            <span className="text-blue-600 text-3xl md:text-4xl">Nano</span>{" "}
-            <span className="text-gray-700">vission</span>
+            <Link href="/">
+              <span className="text-blue-600 text-3xl md:text-4xl">Nano</span>{" "}
+              <span className="text-gray-700">vision</span>
+            </Link>
           </h1>
 
           {/* 🔹 Desktop Menu */}
@@ -79,7 +81,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="#">Services</Link>
+              <Link href="/services">Services</Link>
             </li>
 
             {/* Company */}
@@ -101,23 +103,7 @@ export default function Navbar() {
               <Link href="#">Contact</Link>
             </li>
 
-            {/* Right */}
-            <div className="flex items-center gap-4">
-              <IoSearchOutline className="text-xl cursor-pointer" />
-
-              <Link
-                href="/demo"
-                className="revesoft_common_demo_btn px-5 py-2 rounded-xl"
-                data-content="Get a Free Demo"
-              >
-                Get a Free Demo
-              </Link>
-
-              <select className="text-sm outline-none">
-                <option>English</option>
-                <option>Bangla</option>
-              </select>
-            </div>
+         
           </ul>
 
           {/* 🔹 Mobile Menu Icon */}
@@ -165,7 +151,7 @@ export default function Navbar() {
               {/* Menu Items */}
               <div className="flex flex-col gap-4 text-gray-700">
                 <Link href="#">Products</Link>
-                <Link href="#">Services</Link>
+                <Link href="/services">Services</Link>
                 <Link href="#">Company</Link>
                 <Link href="#">Blog</Link>
                 <Link href="#">Contact</Link>
