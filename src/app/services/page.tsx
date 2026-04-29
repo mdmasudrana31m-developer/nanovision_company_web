@@ -5,6 +5,7 @@ import WeService from "../components/services/WeService";
 import OurWorkFlow from "../components/services/OurWorkFlow";
 import Technologies from "../components/services/Technologies";
 import OurWork from "../components/services/OurWork";
+import WorkDiscus from "../components/services/WorkDiscus";
 
 const ServicesPage = () => {
   return (
@@ -15,6 +16,7 @@ const ServicesPage = () => {
       <OurWorkFlow />
       <Technologies />
       <OurWork />
+      <WorkDiscus />
     </div>
   );
 };
