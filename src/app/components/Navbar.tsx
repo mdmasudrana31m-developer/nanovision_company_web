@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link href="#">Blog</Link>
             </li>
             <li>
-              <Link href="#">Contact</Link>
+              <Link href="contact">Contact</Link>
             </li>
 
          
@@ -149,7 +149,7 @@ export default function Navbar() {
               </div>
 
               {/* Menu Items */}
-              <div className="flex flex-col gap-4 text-gray-700">
+              <div className="flex flex-col gap-4 text-gray-700 " onClick={()=> setOpen(false)}>
                 <Link href="#">Products</Link>
                 <Link href="/services">Services</Link>
                 <Link href="#">Company</Link>

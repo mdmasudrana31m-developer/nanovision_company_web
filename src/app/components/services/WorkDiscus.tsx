@@ -7,7 +7,6 @@ export default function WorkDiscus() {
       <div className="absolute inset-0 bg-[url('/contactBg.webp')] bg-cover bg-center"></div>
 
       {/* Dark overlay (important for readability) */}
-      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
