@@ -102,8 +102,6 @@ export default function Navbar() {
             <li>
               <Link href="contact">Contact</Link>
             </li>
-
-         
           </ul>
 
           {/* 🔹 Mobile Menu Icon */}
@@ -149,12 +147,15 @@ export default function Navbar() {
               </div>
 
               {/* Menu Items */}
-              <div className="flex flex-col gap-4 text-gray-700 " onClick={()=> setOpen(false)}>
+              <div
+                className="flex flex-col gap-4 text-gray-700 "
+                onClick={() => setOpen(false)}
+              >
                 <Link href="#">Products</Link>
                 <Link href="/services">Services</Link>
                 <Link href="#">Company</Link>
                 <Link href="#">Blog</Link>
-                <Link href="#">Contact</Link>
+                <Link href="/contact">Contact</Link>
 
                 <Link
                   href="/demo"
