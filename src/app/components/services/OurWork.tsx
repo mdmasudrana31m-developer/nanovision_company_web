@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
 export default function OurWork() {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -18,27 +18,15 @@ export default function OurWork() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🔥 AUTO SCROLL
-  useEffect(() => {
-    if (isMobile || isPaused) return;
-
-    const interval = setInterval(() => {
-      scroll("right");
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, [isMobile, isPaused]);
-
-  // 🔥 SCROLL FUNCTION
-  const scroll = (dir) => {
+  const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
 
     const container = scrollRef.current;
-    const card = container.children[0];
+    const card = container.children[0] as HTMLElement | undefined;
     if (!card) return;
 
     const style = window.getComputedStyle(container);
-    const gap = parseInt(style.columnGap || "32");
+    const gap = parseInt(style.columnGap || "32", 10);
 
     const cardWidth = card.clientWidth + gap;
     const moveCount = window.innerWidth < 768 ? 1 : 3;
@@ -56,6 +44,17 @@ export default function OurWork() {
       setIsPaused(false);
     }, 4000);
   };
+
+  // 🔥 AUTO SCROLL
+  useEffect(() => {
+    if (isMobile || isPaused) return;
+
+    const interval = setInterval(() => {
+      scroll("right");
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, [isMobile, isPaused]);
 
   const data = Array(20).fill({
     title: "AI SaaS Platform",

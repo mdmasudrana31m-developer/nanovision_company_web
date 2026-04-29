@@ -72,7 +72,7 @@ const techData = {
 
 export default function Technologies() {
   const [active, setActive] = useState("frontend");
-  const tabRefs = useRef({});
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const tabs = [
     { key: "frontend", label: "Frontend Development" },
@@ -100,7 +100,9 @@ export default function Technologies() {
           {tabs.map((tab) => (
             <button
               key={tab.key}
-              ref={(el) => (tabRefs.current[tab.key] = el)}
+              ref={(el) => {
+                tabRefs.current[tab.key] = el;
+              }}
               onClick={() => {
                 setActive(tab.key);
 
@@ -111,7 +113,7 @@ export default function Technologies() {
                   block: "nearest",
                 });
               }}
-              className={`flex-shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 text-xs sm:text-sm rounded-full transition-all duration-300 ${
+              className={`shrink-0 whitespace-nowrap px-4 sm:px-5 py-2 text-xs sm:text-sm rounded-full transition-all duration-300 ${
                 active === tab.key
                   ? "bg-[#5f82ff] text-white shadow-md"
                   : "text-gray-700 hover:bg-gray-300"
