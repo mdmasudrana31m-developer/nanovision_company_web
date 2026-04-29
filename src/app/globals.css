@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* global.css */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+
+
+
 .revesoft_common_demo_btn::after {
   content: attr(data-content);
   color: transparent;
