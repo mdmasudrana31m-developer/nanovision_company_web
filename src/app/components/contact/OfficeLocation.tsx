@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Building2 } from "lucide-react";
+import Link from "next/link";
 import { useCallback } from "react";
 
 export default function OfficeLocation() {
@@ -79,9 +80,13 @@ export default function OfficeLocation() {
             <hr className="border-t-2 border-gray-300 " />
 
             {/* Map */}
-            <button className="flex items-center gap-2 text-blue-600 text-sm hover:underline">
-              📍 Locate on Map
-            </button>
+            <Link
+              href="https://www.google.com/maps/place/Boikali+Bazar/@22.8418467,89.5335217,17z/data=!3m1!4b1!4m6!3m5!1s0x39ff9a90e51fdad5:0xd3b1f4bdfcee5740!8m2!3d22.8418418!4d89.5383926!16s%2Fg%2F1whdgrz5?authuser=1&entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+              target="blank"
+              className="flex items-center gap-2 text-blue-600 text-sm hover:underline"
+            >
+              <MapPin size={19} className="text-gray-500"/> Locate on Map
+            </Link>
           </div>
         </div>
 

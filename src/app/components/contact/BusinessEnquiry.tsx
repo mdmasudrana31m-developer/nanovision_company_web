@@ -65,22 +65,21 @@ export default function BusinessEnquiry() {
             {/* Row 3 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
+                <label>What&apos;s app Number*</label>
+
+                <input
+                  type="text"
+                  placeholder="Enter your WhatsApp number"
+                  className="w-full border rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
                 <label>Are you currently in a Telecom Business</label>
 
                 <select className="w-full border rounded-md px-4 py-3 outline-none">
                   <option>Select</option>
                   <option>Yes</option>
                   <option>No</option>
-                </select>
-              </div>
-
-              <div>
-                <label>Country Name</label>
-
-                <select className="w-full border rounded-md px-4 py-3 outline-none">
-                  <option>United States</option>
-                  <option>Bangladesh</option>
-                  <option>India</option>
                 </select>
               </div>
             </div>
