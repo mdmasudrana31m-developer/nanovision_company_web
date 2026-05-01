@@ -87,7 +87,7 @@ export default function BusinessEnquiry() {
             {/* Company */}
 
             <div>
-              <label>Company/Organization Name*</label>
+              <label>Company/Organization Name</label>
 
               <input
                 type="text"

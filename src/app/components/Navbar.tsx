@@ -65,17 +65,33 @@ export default function Navbar() {
           {/* 🔹 Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
             {/* Products */}
+
             <li className="relative group">
-              <span className="cursor-pointer flex items-center gap-1 hover:text-blue-600">
+              {/* MENU BUTTON */}
+              <span className="flex items-center gap-1 cursor-pointer py-2">
                 Products <IoIosArrowDown />
               </span>
 
-              <div className="absolute left-0 top-8 hidden group-hover:block bg-white shadow-lg rounded-md p-6 w-[500px]">
-                <div className="grid grid-cols-2 gap-4">
-                  <Link href="#">Call Center Solution</Link>
-                  <Link href="#">Bulk SMS</Link>
-                  <Link href="#">Cloud Telephony</Link>
-                  <Link href="#">Communication API</Link>
+              {/* DROPDOWN */}
+              <div
+                className="
+      absolute left-0 top-full pt-3
+      opacity-0 invisible
+      group-hover:opacity-100
+      group-hover:visible
+      transition-all duration-300
+      z-50
+    "
+              >
+                <div className="bg-white shadow-xl rounded-xl min-w-[180px] p-3 flex flex-col gap-3">
+                  <div className="absolute left-0 top-8 hidden group-hover:block bg-white shadow-lg rounded-md p-6 w-[500px]">
+                    <div className="grid grid-cols-2 gap-4">
+                      <Link href="#">Call Center Solution</Link>
+                      <Link href="#">Bulk SMS</Link>
+                      <Link href="#">Cloud Telephony</Link>
+                      <Link href="#">Communication API</Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
@@ -85,14 +101,39 @@ export default function Navbar() {
             </li>
 
             {/* Company */}
+
             <li className="relative group">
-              <span className="flex items-center gap-1 cursor-pointer">
+              {/* MENU BUTTON */}
+              <span className="flex items-center gap-1 cursor-pointer py-2">
                 Company <IoIosArrowDown />
               </span>
 
-              <div className="absolute hidden group-hover:block bg-white shadow p-4 rounded top-8">
-                <Link href="#">About Us</Link>
-                <Link href="#">Careers</Link>
+              {/* DROPDOWN */}
+              <div
+                className="
+      absolute left-0 top-full pt-3
+      opacity-0 invisible
+      group-hover:opacity-100
+      group-hover:visible
+      transition-all duration-300
+      z-50
+    "
+              >
+                <div className="bg-white shadow-xl rounded-xl min-w-[180px] p-3 flex flex-col gap-3">
+                  <Link
+                    href="/about-us"
+                    className="hover:text-blue-600 transition"
+                  >
+                    About Us
+                  </Link>
+
+                  <Link
+                    href="/careers"
+                    className="hover:text-blue-600 transition"
+                  >
+                    Careers
+                  </Link>
+                </div>
               </div>
             </li>
 
