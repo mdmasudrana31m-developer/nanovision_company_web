@@ -24,8 +24,6 @@ export default function DropYourResume() {
         {/* FORM BOX */}
         <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-2xl text-left">
           <form className="space-y-2">
-         
-
             {/* ROW 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
@@ -82,20 +80,6 @@ export default function DropYourResume() {
                 </label>
 
                 <div className="flex gap-3">
-                  <input
-                    type="text"
-                    defaultValue="880"
-                    className="
-                    w-[90px] h-[56px]
-                    rounded-xl
-                    border border-[#e5e7eb]
-                    bg-[#fafafa]
-                    px-3
-                    text-[16px]
-                    outline-none
-                  "
-                  />
-
                   <input
                     type="text"
                     placeholder="Phone Number"
