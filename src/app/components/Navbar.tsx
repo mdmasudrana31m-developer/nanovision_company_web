@@ -141,7 +141,7 @@ export default function Navbar() {
               <Link href="#">Blog</Link>
             </li>
             <li>
-              <Link href="contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
 
@@ -197,6 +197,7 @@ export default function Navbar() {
                 <Link href="#">Company</Link>
                 <Link href="#">Blog</Link>
                 <Link href="/contact">Contact</Link>
+                <Link href="/about-us">About-Us</Link>
 
                 <Link
                   href="/demo"
