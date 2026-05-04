@@ -86,10 +86,12 @@ export default function Navbar() {
                 <div className="bg-white shadow-xl rounded-xl min-w-[180px] p-3 flex flex-col gap-3">
                   <div className="absolute left-0 top-8 hidden group-hover:block bg-white shadow-lg rounded-md p-6 w-[500px]">
                     <div className="grid grid-cols-2 gap-4">
-                      <Link href="#">Call Center Solution</Link>
-                      <Link href="#">Bulk SMS</Link>
-                      <Link href="#">Cloud Telephony</Link>
-                      <Link href="#">Communication API</Link>
+                      <Link href="#">SMS Platform</Link>
+                      <Link href="#">Live Chat</Link>
+                      <Link href="#">
+                        mobile Session Border Controller (SBC)
+                      </Link>
+                      <Link href="#">WhatsApp Campaign</Link>
                     </div>
                   </div>
                 </div>
@@ -194,8 +196,7 @@ export default function Navbar() {
               >
                 <Link href="#">Products</Link>
                 <Link href="/services">Services</Link>
-                <Link href="#">Company</Link>
-                <Link href="#">Blog</Link>
+                <Link href="/careers">Careers</Link>
                 <Link href="/contact">Contact</Link>
                 <Link href="/about-us">About-Us</Link>
 
