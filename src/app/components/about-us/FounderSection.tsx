@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { X, Plus } from "lucide-react";
+import Button from "@/app/utils/Button";
 
 export default function FounderSection() {
   const [open, setOpen] = useState(false);
 
   // ESC close
   useEffect(() => {
-    const handleEsc = (e : KeyboardEvent) => {
+    const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setOpen(false);
       }
@@ -60,7 +61,7 @@ export default function FounderSection() {
               </div>
 
               {/* BUTTON */}
-              <button
+              {/* <button
                 onClick={() => setOpen(true)}
                 className="mt-8 sm:mt-10 flex items-center gap-3 bg-[#eef0ff] hover:bg-[#dfe4ff] transition-all duration-300 rounded-full  px-2 py-2 group hover:scale-105"
               >
@@ -68,10 +69,22 @@ export default function FounderSection() {
                   See More
                 </span>
 
-                <div className="w-6 h-6 rounded-full bg-[#6c63ff] flex items-center justify-center">
-                  <Plus size={16} className="text-white" />
+                <div className="w-6 h-6 rounded-full   flex items-center justify-center">
+                  <Plus size={16} className="text-white bg-[#6c63ff]" />
                 </div>
-              </button>
+              </button> */}
+              <div className="max-w-30 mt-8 sm:mt-10">
+                <Button
+                  buttonText="See More"
+                  onClick={() => setOpen(true)}
+                  Plus={
+                    <Plus
+                      size={18}
+                      className="text-white bg-gray-600  rounded-full"
+                    />
+                  }
+                />
+              </div>
             </div>
 
             {/* RIGHT IMAGE */}
@@ -101,7 +114,7 @@ export default function FounderSection() {
               {/* CLOSE BUTTON */}
               <button
                 onClick={() => setOpen(false)}
-                className="absolute top-3 right-3 sm:top-1 sm:right-1 z-30 w-10 h-10 rounded-full bg-black flex items-center justify-center hover:scale-110 transition"
+                className="absolute top-2.5 right-2.5 lg:right-3 lg:top-3 sm:top-1 sm:right-1 z-30 w-7 h-7 lg:w-10 lg:h-10 rounded-full bg-black flex items-center justify-center hover:scale-110 transition"
               >
                 <X className="text-white" size={18} />
               </button>

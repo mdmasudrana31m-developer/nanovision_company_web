@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/utils/Button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ export default function JoinTeamSection() {
     <section className="bg-[#f5f5f7] mt-16 py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* TOP CONTENT */}
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center flex flex-col justify-center items-center">
           <h2
             className="
             text-[36px]
@@ -44,30 +45,12 @@ export default function JoinTeamSection() {
           </p>
 
           {/* BUTTON */}
-          <div className="mt-8 sm:mt-10">
-            <Link
-              href="#"
-              className="
-              inline-flex
-              items-center
-              justify-center
-              bg-[#4F5BFF]
-              hover:bg-[#4250f5]
-              transition-all
-              duration-300
-              text-white
-              font-semibold
-              text-[15px]
-              sm:text-[16px]
-              rounded-xl
-              px-8
-              sm:px-10
-              py-3.5
-              shadow-lg
-              hover:scale-105
-              "
-            >
-              Join Reve family
+          <div
+            className="mt-8 sm:mt-10     w-[250px]
+"
+          >
+            <Link href="#">
+              <Button buttonText="Join Our Team" />
             </Link>
           </div>
         </div>

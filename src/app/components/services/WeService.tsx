@@ -13,6 +13,7 @@ import {
   Brain,
   Bug,
 } from "lucide-react";
+import { FaFigma } from "react-icons/fa6";
 
 const services = [
   { icon: Code2, title: "Custom Software Development" },
@@ -28,6 +29,7 @@ const services = [
   { icon: Cpu, title: "Fintech Software Development" },
   { icon: Landmark, title: "Banking Solutions" },
   { icon: Settings, title: "Digital Transformation" },
+  { icon: FaFigma, title: "UI/UX Design" },
 ];
 
 export default function WeService() {

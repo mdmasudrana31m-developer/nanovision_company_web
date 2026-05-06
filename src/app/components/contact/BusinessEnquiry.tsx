@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "@/app/utils/Button";
+
 export default function BusinessEnquiry() {
   return (
     <section
@@ -119,12 +121,14 @@ export default function BusinessEnquiry() {
             </div>
 
             {/* Button */}
-            <button
+            {/* <button
               type="submit"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md font-medium transition"
             >
               Submit
-            </button>
+            </button> */}
+
+            <Button buttonText="Submit"/>
           </form>
         </div>
       </div>

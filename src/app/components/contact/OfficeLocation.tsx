@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/app/utils/Button";
 import { MapPin, Phone, Building2 } from "lucide-react";
 import Link from "next/link";
 import { useCallback } from "react";
@@ -26,7 +27,7 @@ export default function OfficeLocation() {
       </div>
 
       {/* SINGLE CARD */}
-      <div className="max-w-4xl mx-auto  flex flex-col items-center justify-center px-4">
+      <div className="max-w-4xl  mx-auto  flex flex-col items-center justify-center px-4">
         <div
           className="bg-white rounded-2xl overflow-hidden 
     shadow-[0_10px_30px_rgba(0,0,0,0.08),0_4px_10px_rgba(0,0,0,0.05)]
@@ -85,19 +86,16 @@ export default function OfficeLocation() {
               target="blank"
               className="flex items-center gap-2 text-blue-600 text-sm hover:underline"
             >
-              <MapPin size={19} className="text-gray-500"/> Locate on Map
+              <MapPin size={19} className="text-gray-500" /> Locate on Map
             </Link>
           </div>
         </div>
 
-        <div className="text-center mt-8">
-          <button
-            type="button"
+        <div className="text-center mt-8  min-w-55 ">
+          <Button
+            buttonText="Get in Touch with Us"
             onClick={handleScrollToBusiness}
-            className="inline-block w-[220px] bg-white border border-[#0585FF] text-blue-600 font-bold rounded-lg py-3 transition hover:scale-105 hover:bg-blue-50 cursor-pointer"
-          >
-            Get in Touch with Us
-          </button>
+          />
         </div>
       </div>
     </section>

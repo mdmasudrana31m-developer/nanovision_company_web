@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu, FiX } from "react-icons/fi";
-import { IoSearchOutline } from "react-icons/io5";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,21 +46,24 @@ export default function Navbar() {
       <motion.div
         initial={false}
         animate={{
-          maxWidth: scrolled && window.innerWidth >= 768 ? "68%" : "100%",
+          maxWidth: scrolled && window.innerWidth >= 768 ? "63%" : "100%",
           borderRadius: scrolled && window.innerWidth >= 768 ? "12px" : "0px",
         }}
         transition={{ duration: 0.4 }}
         className="bg-white w-full mx-auto border-b border-gray-200 shadow-sm"
       >
         {/* 🔹 Content */}
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* 🔹 Logo */}
-          <h1 className="text-2xl font-semibold">
-            <Link href="/">
-              <span className="text-blue-600 text-3xl md:text-4xl">Nano</span>{" "}
-              <span className="text-gray-700">vision</span>
-            </Link>
-          </h1>
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="NanoVision Logo"
+              width={150}
+              height={40}
+              className="object-contain"
+            />
+          </Link>
 
           {/* 🔹 Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
@@ -75,7 +78,7 @@ export default function Navbar() {
               {/* DROPDOWN */}
               <div
                 className="
-      absolute left-0 top-full pt-3
+    absolute left-0 top-full pt-3
       opacity-0 invisible
       group-hover:opacity-100
       group-hover:visible
@@ -83,8 +86,8 @@ export default function Navbar() {
       z-50
     "
               >
-                <div className="bg-white shadow-xl rounded-xl min-w-[180px] p-3 flex flex-col gap-3">
-                  <div className="absolute left-0 top-8 hidden group-hover:block bg-white shadow-lg rounded-md p-6 w-[500px]">
+                <div className=" min-w-[180px] p-3 flex flex-col gap-3">
+                  <div className="absolute left-0 top-4 hidden group-hover:block bg-white shadow-lg rounded-md p-6 w-[500px]">
                     <div className="grid grid-cols-2 gap-4">
                       <Link href="#">SMS Platform</Link>
                       <Link href="#">Live Chat</Link>

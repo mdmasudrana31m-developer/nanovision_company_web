@@ -1,10 +1,10 @@
 "use client";
 
-
-import { TbMessages, } from "react-icons/tb";
+import { TbMessages } from "react-icons/tb";
 import { RiGlobalFill } from "react-icons/ri";
 import { GiServerRack } from "react-icons/gi";
 import { IoLayers } from "react-icons/io5";
+import Button from "@/app/utils/Button";
 const products = [
   {
     icon: TbMessages,
@@ -30,7 +30,7 @@ const products = [
 
 export default function ProductsSection() {
   return (
-    <section className="w-full py-12 md:py-20 px-4 md:px-8 lg:px-16 bg-gray-100">
+    <section className="w-full flex flex-col justify-center items-center py-12 md:py-20 px-4 md:px-8 lg:px-16 bg-gray-100">
       <div className="text-center mb-10 md:mb-16">
         <h2 className="text-2xl md:text-4xl font-semibold text-gray-800">
           Our Products
@@ -61,10 +61,8 @@ export default function ProductsSection() {
         })}
       </div>
 
-      <div className="flex justify-center mt-10 md:mt-14">
-        <button className="px-6 py-2 md:px-8 md:py-3 border border-blue-500 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-          Explore All
-        </button>
+      <div className="min-w-50   mt-10 md:mt-14">
+        <Button buttonText="Explore All Products" />
       </div>
     </section>
   );

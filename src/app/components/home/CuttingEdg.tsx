@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const data = [
   {
-    title: "TELCOS",
-    desc: "Advanced telco-grade SBC, SMS Platform, Virtual Roaming, and more with scalability and high performance",
-    img: "/telcos.png",
+    title: "Ai",
+    desc: "Advanced AI-powered solutions including automation, intelligent chatbots, predictive analytics, and more with scalability and high performance.",
+    img: "/Ai1.png",
   },
   {
     title: "SERVICE PROVIDERS",

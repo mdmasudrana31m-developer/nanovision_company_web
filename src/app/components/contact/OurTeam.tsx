@@ -6,8 +6,9 @@ import { BsWhatsapp } from "react-icons/bs";
 
 const team = [
   {
-    region: "Europe, America & Africa",
-    name: "Quazi Limon",
+    region: "Khulna, Bangladesh",
+    name: "Saiful Islam",
+    post: "Chairman of Nanovision",
     img: "/hero1.webp",
     phone: "+44 7956170990",
     BsWhatsapp: "+44 7956170990",
@@ -16,8 +17,9 @@ const team = [
     color: "bg-blue-200",
   },
   {
-    region: "India & Middle East",
-    name: "Siddharth Yadav",
+    region: "Khulna, Bangladesh",
+    name: "Salman Rahman",
+    post: "Executive Director - Nanovision",
     img: "/hero1.webp",
     phone: "+91 9891863927",
     BsWhatsapp: "+91 9891863927",
@@ -25,31 +27,11 @@ const team = [
     lang: "English, हिंदी",
     color: "bg-gray-200",
   },
-  {
-    region: "India & Middle East",
-    name: "Fayez Kamal",
-    img: "/hero1.webp",
-    phone: "+91 9999841318",
-    BsWhatsapp: "+91 9999841318",
-    email: "fayez@revesoft.com",
-    lang: "English, हिंदी",
-    color: "bg-orange-200",
-  },
-  {
-    region: "Asia Pacific, Pakistan & Middle East",
-    name: "Md Arafat Hossain",
-    img: "/hero1.webp",
-    phone: "+88 01814655955",
-    BsWhatsapp: "+88 01814655955",
-    email: "arafat@revesoft.com",
-    lang: "English, বাংলা",
-    color: "bg-green-200",
-  },
 ];
 
 export default function OurTeam() {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 flex flex-col justify-center items-center  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* HEADER */}
       <div className="max-w-3xl mx-auto text-center mb-14 px-4">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -63,7 +45,7 @@ export default function OurTeam() {
       </div>
 
       {/* GRID */}
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="min-w-3xl  px-4    grid grid-cols-1 sm:grid-cols-2  gap-16">
         {team.map((item, i) => (
           <div
             key={i}
@@ -91,8 +73,8 @@ export default function OurTeam() {
 
               {/* NAME */}
               <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
-
-              <hr className="my-3" />
+              <p className="text-gray-600 mb-3">{item.post}</p>
+              <hr className="my-3 border-t-2 border-gray-300" />
 
               {/* INFO */}
               <div className="text-sm text-gray-600 space-y-2">
@@ -104,7 +86,7 @@ export default function OurTeam() {
                     target="_blank"
                     className="flex justify-center items-center gap-1"
                   >
-                    <BsWhatsapp size={19}/> <span>{item.BsWhatsapp}</span>
+                    <BsWhatsapp size={19} /> <span>{item.BsWhatsapp}</span>
                   </Link>
                 </div>
 

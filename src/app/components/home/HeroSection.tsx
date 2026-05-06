@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/dist/client/link";
+import Button from "@/app/utils/Button";
 
 const slides = [
   {
@@ -47,15 +48,14 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    
     <div className="relative w-full min-h-[550px] md:h-[600px] flex items-center justify-center px-4 md:px-8 lg:px-16 py-12 md:py-0">
-      <div className="max-w-7xl w-full min-h-full flex flex-col justify-between items-center overflow-hidden">
+      <div className="max-w-7xl  w-full min-h-full flex flex-col justify-between items-center overflow-hidden">
         {/* 🔹 Left Background Shape */}
         <div className="absolute left-0 top-0 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] h-full opacity-100 pointer-events-none">
           <Image
@@ -96,19 +96,17 @@ export default function HeroSection() {
               </p>
 
               {/* 🔹 Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start  md:ml-4 ">
                 {slides[index].button && (
-                  <Link
-                    href="/demo"
-                    className="revesoft_common_demo_btn px-6 py-3 rounded-xl text-center"
-                    data-content="Get a Free Demo"
-                  >
-                    {slides[index].button}
-                  </Link>
+                  <div className="min-w-50 ">
+                    <Link href="/demo" className="bg-amber-600">
+                      <Button buttonText={slides[index].button} />
+                    </Link>
+                  </div>
                 )}
 
                 {slides[index].LearnMore && (
-                  <button className="px-6 py-2 border border-gray-600 text-gray-600 rounded-md hover:bg-gray-600 hover:text-white transition">
+                  <button className="px-6 py-2 border border-gray-300 text-gray-600 rounded-md hover:bg-gray-600 hover:text-white transition cursor-pointer">
                     {slides[index].LearnMore}
                   </button>
                 )}

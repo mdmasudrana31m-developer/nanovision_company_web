@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Plus, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import Button from "@/app/utils/Button";
 
 export default function LeadershipMember() {
   const [open, setOpen] = useState(false);
@@ -86,39 +87,18 @@ export default function LeadershipMember() {
                   </p>
 
                   {/* BUTTON */}
-                  <button onClick={()=> setOpen(!open)}
-                    className="
-                  mt-5
-                  inline-flex
-                  items-center
-                  gap-2
-                  bg-[#EEF2FF]
-                  hover:bg-[#E0E7FF]
-                  transition
-                  rounded-full
-                  px-4
-                  py-2
-                  text-[13px]
-                  font-medium
-                  text-[#111827]
-                  "
-                  >
-                    See More
-                    <span
-                      className="
-                    w-5
-                    h-5
-                    rounded-full
-                    bg-[#6366F1]
-                    text-white
-                    flex
-                    items-center
-                    justify-center
-                    "
-                    >
-                      <Plus size={12} />
-                    </span>
-                  </button>
+                  <div className="max-w-30 mt-8 sm:mt-10">
+                    <Button
+                      buttonText="See More"
+                      onClick={() => setOpen(true)}
+                      Plus={
+                        <Plus
+                          size={18}
+                          className="text-white bg-gray-600  rounded-full"
+                        />
+                      }
+                    />
+                  </div>
                 </div>
               </div>
             ))}

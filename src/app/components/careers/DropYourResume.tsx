@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "@/app/utils/Button";
+
 export default function DropYourResume() {
   return (
     <section
@@ -221,7 +223,7 @@ export default function DropYourResume() {
             </div>
 
             {/* BUTTON */}
-            <button
+            {/* <button
               type="submit"
               className="
               w-full h-[58px]
@@ -235,7 +237,9 @@ export default function DropYourResume() {
             "
             >
               Submit
-            </button>
+            </button> */}
+
+            <Button buttonText="Submit" />
           </form>
         </div>
       </div>

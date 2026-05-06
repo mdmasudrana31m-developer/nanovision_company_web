@@ -10,6 +10,7 @@ import {
 } from "react-icons/tb";
 import { GrSettingsOption } from "react-icons/gr";
 import { TiWeatherStormy } from "react-icons/ti";
+import { FaFigma } from "react-icons/fa6";
 
 interface CardItem {
   Icon: IconType;
@@ -24,6 +25,7 @@ export const OutSourcing = () => {
     { Icon: TbSettingsCode, text: "Enterprise Software Development" },
     { Icon: GrSettingsOption, text: "ERP Development" },
     { Icon: TiWeatherStormy, text: "Cloud Engineering & DevOps" },
+    { Icon: FaFigma, text: "UI/UX Design" },
   ];
 
   const loopItems = [...services, ...services];

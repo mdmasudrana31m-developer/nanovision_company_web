@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "@/app/utils/Button";
+
 export default function WorkDiscus() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16">
@@ -68,9 +70,6 @@ export default function WorkDiscus() {
 
             {/* Phone */}
             <div className="flex border border-white/30 rounded-lg overflow-hidden">
-              <span className="px-3 flex items-center bg-white/10 text-sm">
-                +880
-              </span>
               <input
                 type="text"
                 placeholder="Phone Number"
@@ -92,13 +91,6 @@ export default function WorkDiscus() {
               className="w-full bg-transparent border border-white/30 rounded-lg px-4 py-3 text-sm outline-none focus:border-blue-400 resize-none"
             ></textarea>
 
-            {/* Country */}
-            <select className="w-full bg-transparent border border-white/30 rounded-lg px-4 py-3 text-sm outline-none">
-              <option className="text-black">United States</option>
-              <option className="text-black">Bangladesh</option>
-              <option className="text-black">India</option>
-            </select>
-
             {/* Fake captcha */}
             <div className="bg-white text-black rounded-md p-3 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -111,12 +103,14 @@ export default function WorkDiscus() {
             </div>
 
             {/* Button */}
-            <button
+            {/* <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 transition px-8 py-3 rounded-lg text-white text-sm sm:text-base"
             >
               Submit
-            </button>
+            </button> */}
+
+            <Button buttonText="Submit" />
           </form>
         </div>
       </div>

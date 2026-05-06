@@ -1,3 +1,4 @@
+import Button from "@/app/utils/Button";
 import Image from "next/image";
 import React from "react";
 
@@ -22,7 +23,7 @@ const ServiceHeroSection = () => {
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 pt-32 pb-20">
         {/* 🔹 Heading */}
         <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-bold max-w-5xl leading-tight mb-6">
-          From Idea to Impact – Your Partner in <br />
+          Your Dream – Our Code <br />
           Digital Transformation
         </h1>
 
@@ -30,12 +31,9 @@ const ServiceHeroSection = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
           {/* Contact Button */}
 
-          <button
-            className="revesoft_common_demo_btn px-20 py-3 lg:mt-20 mt-0 rounded-xl text-center"
-            data-content="Contact Us"
-          >
-            Contact Us
-          </button>
+          <div className="  lg:mt-20 mt-0  md:w-60 w-full">
+            <Button  buttonText="Contact Us"/>
+          </div>
         </div>
 
         {/* 🔥 Cards */}
