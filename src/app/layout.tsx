@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Foooter from "./components/Foooter";
 
 export const metadata: Metadata = {
   title: "Nanovision - Revolutionize Your Communication",
@@ -20,7 +21,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         {/* Footer  */}
-        <Footer />
+        <Foooter />
       </body>
     </html>
   );

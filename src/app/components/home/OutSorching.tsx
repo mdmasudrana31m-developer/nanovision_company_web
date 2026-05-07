@@ -41,7 +41,7 @@ export const OutSourcing = () => {
         </div>
 
         {/* 🔥 Row 1 */}
-        <div className="relative w-full overflow-hidden mb-6">
+        <div className="relative w-full  overflow-hidden mb-6">
           <div className="flex gap-4 md:gap-6 animate-scroll px-4">
             {loopItems.map((item, i) => (
               <Card key={i} item={item} />
@@ -111,7 +111,7 @@ const Card: React.FC<{ item: CardItem }> = ({ item }) => {
       rounded-xl
       p-4 md:p-5
       shrink-0
-      w-[260px] sm:w-[300px] md:w-[320px] lg:w-[340px]
+      w-[150px] sm:w-[300px] md:w-[320px] lg:w-[340px]
       transition-all duration-300 ease-in-out
 
       hover:bg-gray-100

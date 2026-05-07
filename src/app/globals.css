@@ -9,41 +9,11 @@
   scrollbar-width: none;
 }
 
-
-
-.revesoft_common_demo_btn::after {
-  content: attr(data-content);
-  color: transparent;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #279aff -57.27%, #2727e5 151.3%);
-  z-index: -100;
-  transition: 0.1s ease-in-out;
-  border-radius: inherit;
+.elementor-shape-top svg {
+  width: calc(100% + 1.3px);
+  height: 74px;
 }
-
-.revesoft_common_demo_btn {
-  color: #fff;
-  position: relative;
-  z-index: 100;
-  transition: 0.1s ease-in-out;
-}
-
-.revesoft_common_demo_btn:hover {
-  color: transparent;
-  background: linear-gradient(to right, #a1caff, #26f4aa, #ff5bef);
-}
-
-.revesoft_common_demo_btn:hover::after {
-  transform: translate3d(4px, -4px, 0);
-  color: #fff;
-}
-
 /* OurWorkFlow Component Styles */
-
 /* ===== SECTION ===== */
 .text_anmation {
   padding: 80px 0 200px;
@@ -72,10 +42,12 @@
 .m_image_animate_box_wrapper {
   position: relative;
   max-width: 900px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  min-height: 1800px; /* scroll space */
+  min-height: 1800px;
+  padding: 0 20px;
 }
 
 /* ===== MAIN BOX ===== */
@@ -98,7 +70,6 @@
   justify-content: center;
   text-align: center;
 
-  /* 🔥 IMPORTANT ANIMATION FIX */
   opacity: 0;
   transform: translateY(80px) scale(0.85);
   transition: all 0.8s ease;
@@ -140,6 +111,7 @@
   color: #333;
 }
 
+/* ===== ARROW POSITION ===== */
 .m_image_animate_box_one .arrow1 {
   top: 120%;
   left: -35%;
@@ -163,6 +135,7 @@
   left: 0%;
   transform: translateY(-50%);
 }
+
 /* ===== DESCRIPTION BOX ===== */
 .m_image_animate_box_one_text,
 .m_image_animate_box_two_text,
@@ -179,7 +152,7 @@
   transition: all 0.5s ease;
 }
 
-/* ===== DESCRIPTION BOX ===== */
+/* ===== DESCRIPTION TEXT ===== */
 .m_image_animate_box_one_text .paragraph,
 .m_image_animate_box_two_text .paragraph,
 .m_image_animate_box_three_text .paragraph,
@@ -188,23 +161,26 @@
   margin-bottom: 0;
 }
 
-/* show text when active */
+/* ===== ACTIVE TEXT ===== */
 .active .m_image_animate_box_one_text {
   opacity: 1;
   transform: translateY(0);
   left: 30%;
 }
+
 .active .m_image_animate_box_two_text {
   opacity: 1;
   transform: translateY(0);
   left: -137%;
 }
+
 .active .m_image_animate_box_three_text {
   opacity: 1;
   transform: translateY(0);
   top: -50%;
   left: 100%;
 }
+
 .active .m_image_animate_box_four_text {
   opacity: 1;
   transform: translateY(0);
@@ -215,7 +191,6 @@
 /* ===== POSITIONING TEXT ===== */
 .m_image_animate_box_one_text {
   margin-top: 300%;
-
   left: 50%;
   transform: translateX(-50%);
 }
@@ -246,6 +221,43 @@
   mix-blend-mode: normal;
 }
 
+/* ================================================= */
+/* ===== FIX FOR 769px - 1100px RESPONSIVE ===== */
+/* ================================================= */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .m_image_animate_box_wrapper {
+    max-width: 100%;
+    padding: 0 40px;
+    min-height: 1600px;
+  }
+
+  .m_image_animate_box {
+    transform: scale(0.82);
+    transform-origin: center;
+  }
+
+  .m_image_animate_box_one_text,
+  .m_image_animate_box_two_text,
+  .m_image_animate_box_three_text,
+  .m_image_animate_box_four_text {
+    width: 190px;
+    font-size: 12px;
+  }
+
+  .active .m_image_animate_box_two_text {
+    left: -115%;
+  }
+
+  .active .m_image_animate_box_three_text {
+    left: 90%;
+  }
+
+  .active .m_image_animate_box_four_text {
+    left: 45%;
+  }
+}
+
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .m_image_animate_box {
@@ -253,6 +265,7 @@
     align-items: flex-start;
     gap: 20px;
     top: 15%;
+    transform: none !important;
   }
 
   /* each step row */
@@ -269,10 +282,13 @@
     border-radius: 0;
   }
 
-  /* 🔥 ONLY circle style */
+  /* ONLY circle style */
   .circle {
+    min-width: 120px;
+    min-height: 120px;
     max-width: 120px;
     max-height: 120px;
+
     font-size: 13px;
     background: #fff;
     border-radius: 50%;
@@ -282,7 +298,7 @@
     padding: 15px;
   }
 
-  /* 🔥 TEXT RIGHT SIDE */
+  /* TEXT RIGHT SIDE */
   .m_image_animate_box_one_text,
   .m_image_animate_box_two_text,
   .m_image_animate_box_three_text,
@@ -297,7 +313,7 @@
     transition: all 0.5s ease;
   }
 
-  /* 🔥 ACTIVE ANIMATION */
+  /* ACTIVE ANIMATION */
   .active .m_image_animate_box_one_text,
   .active .m_image_animate_box_two_text,
   .active .m_image_animate_box_three_text,
@@ -309,5 +325,12 @@
   /* remove arrow */
   .m_image_animate_box img {
     display: none;
+  }
+}
+
+
+@media (min-width: 360px) and (max-width: 405px) {
+  .m_image_animate_box_four {
+    margin-top: 20px;
   }
 }

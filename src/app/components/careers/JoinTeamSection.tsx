@@ -46,7 +46,7 @@ export default function JoinTeamSection() {
 
           {/* BUTTON */}
           <div
-            className="mt-8 sm:mt-10     w-[250px]
+            className="mt-8 sm:mt-10     w-50
 "
           >
             <Link href="#">

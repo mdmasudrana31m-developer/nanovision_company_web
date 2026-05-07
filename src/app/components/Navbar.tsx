@@ -11,24 +11,28 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
+  // 👉 only 1024px+ screen এ animation হবে
+  const [isLargeDesktop, setIsLargeDesktop] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
-      // 👉 mobile এ গেলে scroll effect off
-      if (window.innerWidth < 768) {
+      const largeDesktop = window.innerWidth >= 1030;
+
+      setIsLargeDesktop(largeDesktop);
+
+      if (!largeDesktop) {
         setScrolled(false);
       } else {
-        // 👉 desktop এ থাকলে scroll অনুযায়ী update
         setScrolled(window.scrollY > 50);
       }
     };
 
     const handleScroll = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1030) {
         setScrolled(window.scrollY > 50);
       }
     };
 
-    // 👉 initial run (very important)
     handleResize();
 
     window.addEventListener("resize", handleResize);
@@ -41,59 +45,84 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
-      {/* 🔥 Animated Background (desktop only effect) */}
+    <nav className="fixed top-0 left-0 w-full z-50 flex justify-center pt-0 ">
+      {/* 🔥 Animated Navbar */}
       <motion.div
         initial={false}
         animate={{
-          maxWidth: scrolled && window.innerWidth >= 768 ? "63%" : "100%",
-          borderRadius: scrolled && window.innerWidth >= 768 ? "12px" : "0px",
+          width: scrolled && isLargeDesktop ? "63%" : "100%",
+
+          scale: scrolled && isLargeDesktop ? 0.96 : 1,
+
+          marginTop:
+            scrolled && isLargeDesktop
+              ? "10px"
+              : "0px",
+
+          borderRadius: scrolled && isLargeDesktop ? "18px" : "0px",
+
+          y: scrolled && isLargeDesktop ? 6 : 0,
         }}
-        transition={{ duration: 0.4 }}
-        className="bg-white w-full mx-auto border-b border-gray-200 shadow-sm"
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+        }}
+        className="
+          bg-white
+          border border-gray-200
+          shadow-sm
+          origin-top
+          will-change-transform
+        "
+        style={{
+          transformOrigin: "top center",
+        }}
       >
         {/* 🔹 Content */}
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
           {/* 🔹 Logo */}
-          <Link href="/">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/logo.png"
               alt="NanoVision Logo"
               width={150}
               height={40}
-              className="object-contain"
+              priority
+              className="object-contain w-[130px] md:w-[150px] h-auto"
             />
           </Link>
 
           {/* 🔹 Desktop Menu */}
           <ul className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
             {/* Products */}
-
             <li className="relative group">
               {/* MENU BUTTON */}
-              <span className="flex items-center gap-1 cursor-pointer py-2">
+              <span className="flex items-center gap-1 cursor-pointer py-2 text-[20px]">
                 Products <IoIosArrowDown />
               </span>
 
               {/* DROPDOWN */}
               <div
                 className="
-    absolute left-0 top-full pt-3
-      opacity-0 invisible
-      group-hover:opacity-100
-      group-hover:visible
-      transition-all duration-300
-      z-50
-    "
+                  absolute left-0 top-full pt-3
+                  opacity-0 invisible
+                  group-hover:opacity-100
+                  group-hover:visible
+                  transition-all duration-300
+                  z-50
+                "
               >
-                <div className=" min-w-[180px] p-3 flex flex-col gap-3">
-                  <div className="absolute left-0 top-4 hidden group-hover:block bg-white shadow-lg rounded-md p-6 w-[500px]">
+                <div className="min-w-[180px] p-3 flex flex-col gap-3">
+                  <div className="absolute left-0 top-4 bg-white shadow-lg rounded-md p-6 w-[500px]">
                     <div className="grid grid-cols-2 gap-4">
                       <Link href="#">SMS Platform</Link>
+
                       <Link href="#">Live Chat</Link>
+
                       <Link href="#">
-                        mobile Session Border Controller (SBC)
+                        Mobile Session Border Controller (SBC)
                       </Link>
+
                       <Link href="#">WhatsApp Campaign</Link>
                     </div>
                   </div>
@@ -101,28 +130,28 @@ export default function Navbar() {
               </div>
             </li>
 
+            {/* Services */}
             <li>
-              <Link href="/services">Services</Link>
+              <Link href="/services" className="text-[20px]">Services</Link>
             </li>
 
             {/* Company */}
-
             <li className="relative group">
               {/* MENU BUTTON */}
-              <span className="flex items-center gap-1 cursor-pointer py-2">
+              <span className="flex items-center gap-1 cursor-pointer py-2 text-[20px]">
                 Company <IoIosArrowDown />
               </span>
 
               {/* DROPDOWN */}
               <div
                 className="
-      absolute left-0 top-full pt-3
-      opacity-0 invisible
-      group-hover:opacity-100
-      group-hover:visible
-      transition-all duration-300
-      z-50
-    "
+                  absolute left-0 top-full pt-3
+                  opacity-0 invisible
+                  group-hover:opacity-100
+                  group-hover:visible
+                  transition-all duration-300
+                  z-50
+                "
               >
                 <div className="bg-white shadow-xl rounded-xl min-w-[180px] p-3 flex flex-col gap-3">
                   <Link
@@ -142,15 +171,18 @@ export default function Navbar() {
               </div>
             </li>
 
+            {/* Blog */}
             <li>
-              <Link href="#">Blog</Link>
+              <Link href="#"  className="text-[20px]">Blog</Link>
             </li>
+
+            {/* Contact */}
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link href="/contact"  className="text-[20px]">Contact</Link>
             </li>
           </ul>
 
-          {/* 🔹 Mobile Menu Icon */}
+          {/* 🔹 Mobile Menu */}
           <div className="md:hidden">
             <FiMenu
               size={26}
@@ -179,12 +211,27 @@ export default function Navbar() {
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
-              transition={{ type: "spring", stiffness: 80, damping: 15 }}
-              className="fixed top-0 left-0 h-full w-[260px] bg-white z-50 shadow-lg p-6"
+              transition={{
+                type: "spring",
+                stiffness: 80,
+                damping: 15,
+              }}
+              className="
+                fixed
+                top-0
+                left-0
+                h-full
+                w-[260px]
+                bg-white
+                z-50
+                shadow-lg
+                p-6
+              "
             >
               {/* Close */}
               <div className="flex justify-between items-center mb-6">
                 <h2 className="font-bold text-lg">Menu</h2>
+
                 <FiX
                   size={24}
                   className="cursor-pointer"
@@ -194,21 +241,20 @@ export default function Navbar() {
 
               {/* Menu Items */}
               <div
-                className="flex flex-col gap-4 text-gray-700 "
+                className="flex flex-col gap-4 text-gray-700"
                 onClick={() => setOpen(false)}
               >
-                <Link href="#">Products</Link>
-                <Link href="/services">Services</Link>
-                <Link href="/careers">Careers</Link>
-                <Link href="/contact">Contact</Link>
-                <Link href="/about-us">About-Us</Link>
+                <Link href="/">Home</Link>
 
-                <Link
-                  href="/demo"
-                  className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md text-center"
-                >
-                  Get a Free Demo
-                </Link>
+                <Link href="#">Products</Link>
+
+                <Link href="/services">Services</Link>
+
+                <Link href="/careers">Careers</Link>
+
+                <Link href="/contact">Contact</Link>
+
+                <Link href="/about-us">About Us</Link>
               </div>
             </motion.div>
           </>

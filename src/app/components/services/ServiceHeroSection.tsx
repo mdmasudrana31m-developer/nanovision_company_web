@@ -1,23 +1,59 @@
-import Button from "@/app/utils/Button";
-import Image from "next/image";
-import React from "react";
+"use client";
 
-const ServiceHeroSection = () => {
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Button from "@/app/utils/Button";
+
+export default function HeroSection() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (video) {
+      video.play().catch((err) => {
+        console.log("Video autoplay error:", err);
+      });
+    }
+  }, []);
+
   return (
     <section className="relative w-full min-h-screen overflow-hidden">
+      {/* 🔥 Poster Image */}
+      {!videoLoaded && (
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/poster.webp"
+            alt="Background"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+      )}
+
       {/* 🔥 Background Video */}
       <video
+        ref={videoRef}
         autoPlay
-        loop
         muted
+        loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        preload="auto"
+        onCanPlay={() => setVideoLoaded(true)}
+        className={`
+          absolute inset-0 w-full h-full object-cover
+          
+          ${videoLoaded ? "opacity-100" : "opacity-0"}
+        `}
       >
         <source src="/services_video.mp4" type="video/mp4" />
       </video>
 
       {/* 🔹 Overlay */}
-      <div className="absolute inset-0 bg-black/70 z-10"></div>
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
 
       {/* 🔥 Content */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center px-4 pt-32 pb-20">
@@ -27,20 +63,17 @@ const ServiceHeroSection = () => {
           Digital Transformation
         </h1>
 
-        {/* 🔹 Buttons */}
+        {/* 🔹 Button */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-          {/* Contact Button */}
-
-          <div className="  lg:mt-20 mt-0  md:w-60 w-full">
-            <Button  buttonText="Contact Us"/>
+          <div className="lg:mt-20 mt-0 md:w-60 w-50">
+            <Button buttonText="Contact Us" />
           </div>
         </div>
 
         {/* 🔥 Cards */}
         <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mt-6 lg:mt-10 px-4">
-          {/* 🔹 Card 1 */}
+          {/* Card 1 */}
           <div className="bg-white/10 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl text-white hover:bg-white/20 transition-all duration-300">
-            {/* Icon + Title */}
             <div className="flex items-center gap-3 mb-3">
               <Image
                 src="/Layer_1.svg"
@@ -58,7 +91,7 @@ const ServiceHeroSection = () => {
             </p>
           </div>
 
-          {/* 🔹 Card 2 */}
+          {/* Card 2 */}
           <div className="bg-white/10 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl text-white hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <Image
@@ -77,7 +110,7 @@ const ServiceHeroSection = () => {
             </p>
           </div>
 
-          {/* 🔹 Card 3 */}
+          {/* Card 3 */}
           <div className="bg-white/10 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl text-white hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <Image
@@ -99,6 +132,4 @@ const ServiceHeroSection = () => {
       </div>
     </section>
   );
-};
-
-export default ServiceHeroSection;
+}

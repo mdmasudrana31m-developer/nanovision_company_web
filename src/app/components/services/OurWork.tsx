@@ -69,6 +69,7 @@ export default function OurWork() {
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
           Our Latest Works
         </h2>
+
         <p className="text-gray-600 text-sm md:text-base">
           Innovation in action. Every project you see represents a unique
           challenge we’ve solved and a powerful solution we’ve built to help a
@@ -77,18 +78,50 @@ export default function OurWork() {
       </div>
 
       {/* Slider */}
-      <div className="relative max-w-[1300px] mx-auto px-4">
+      <div className="relative max-w-[1300px] mx-auto px-4 md:px-14 xl:px-4">
         {/* Desktop arrows */}
         <button
           onClick={() => scroll("left")}
-          className="hidden md:flex absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white shadow w-10 h-10 rounded-full items-center justify-center"
+          className="
+        hidden
+        md:flex
+        absolute
+        left-2
+        xl:left-[-50px]
+        top-1/2
+        -translate-y-1/2
+        z-10
+        bg-white
+        shadow
+        w-10
+        h-10
+        rounded-full
+        items-center
+        justify-center
+      "
         >
           ←
         </button>
 
         <button
           onClick={() => scroll("right")}
-          className="hidden md:flex absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 bg-white shadow w-10 h-10 rounded-full items-center justify-center"
+          className="
+        hidden
+        md:flex
+        absolute
+        right-2
+        xl:right-[-50px]
+        top-1/2
+        -translate-y-1/2
+        z-10
+        bg-white
+        shadow
+        w-10
+        h-10
+        rounded-full
+        items-center
+        justify-center
+      "
         >
           →
         </button>
@@ -96,18 +129,29 @@ export default function OurWork() {
         {/* Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar"
+          className="
+        flex
+        gap-8
+        overflow-x-auto
+        scroll-smooth
+        no-scrollbar
+      "
         >
           {data.map((item, i) => (
             <div
               key={i}
               className="
-              min-w-full
-              sm:min-w-[90%]
-              md:min-w-[calc((100%-64px)/3)]
-              bg-white rounded-2xl overflow-hidden shadow-md
-              transition-transform duration-300 hover:scale-[1.02]
-              "
+            min-w-full
+            sm:min-w-[90%]
+            md:min-w-[calc((100%-64px)/3)]
+            bg-white
+            rounded-2xl
+            overflow-hidden
+            shadow-md
+            transition-transform
+            duration-300
+            hover:scale-[1.02]
+          "
             >
               {/* Image */}
               <div className="relative h-[200px]">
@@ -132,13 +176,26 @@ export default function OurWork() {
         <div className="flex justify-center gap-6 mt-6 md:hidden">
           <button
             onClick={() => scroll("left")}
-            className="bg-white shadow w-10 h-10 rounded-full"
+            className="
+          bg-white
+          shadow
+          w-10
+          h-10
+          rounded-full
+        "
           >
             ←
           </button>
+
           <button
             onClick={() => scroll("right")}
-            className="bg-white shadow w-10 h-10 rounded-full"
+            className="
+          bg-white
+          shadow
+          w-10
+          h-10
+          rounded-full
+        "
           >
             →
           </button>
