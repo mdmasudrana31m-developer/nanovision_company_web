@@ -13,7 +13,7 @@ import {
 
 import { FiPhoneCall, FiMail, FiMapPin } from "react-icons/fi";
 
-export default function Foooter() {
+export default function Footer() {
   return (
     <>
       <footer className="">
@@ -93,42 +93,42 @@ export default function Foooter() {
 
                 {/* Social */}
                 <div className="flex items-center gap-3 mt-6">
-                  <Link
+                  <a
                     href="https://www.facebook.com/profile.php?id=61579937264212"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white text-[#3b5998] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaFacebookF />
-                  </Link>
+                  </a>
 
-                  <Link
+                  <a
                     href="#"
                     className="w-10 h-10 rounded-full bg-white text-[#1da1f2] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaTwitter />
-                  </Link>
+                  </a>
 
-                  <Link
+                  <a
                     href="#"
                     className="w-10 h-10 rounded-full bg-white text-[#25d366] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaWhatsapp />
-                  </Link>
+                  </a>
 
-                  <Link
+                  <a
                     href="#"
                     className="w-10 h-10 rounded-full bg-white text-[#e1306c] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaInstagram />
-                  </Link>
+                  </a>
 
-                  <Link
+                  <a
                     href="#"
                     className="w-10 h-10 rounded-full bg-white text-[#0077b5] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaLinkedinIn />
-                  </Link>
+                  </a>
                 </div>
               </div>
 
