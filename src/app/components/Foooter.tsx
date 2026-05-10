@@ -94,7 +94,9 @@ export default function Foooter() {
                 {/* Social */}
                 <div className="flex items-center gap-3 mt-6">
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61579937264212"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white text-[#3b5998] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaFacebookF />
