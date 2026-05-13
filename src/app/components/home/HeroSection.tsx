@@ -8,27 +8,32 @@ import Button from "@/app/utils/Button";
 
 const slides = [
   {
-    title: "Scalable and Secured Platform for Retail & Wholesale SMS Business",
-    desc: "An all-in-one A2P, P2P, and P2A platform with multi-protocol and SIGTRAN support, enabling faster delivery and higher success rates. Manage SMS and WhatsApp campaigns together with rich messaging and detailed tracking from one unified system.",
-    img: "/hero1.webp",
+    title:
+      "Custom AI Chatbot & Virtual Assistant for Smart Customer Engagement",
+    alt: "Chatbot",
+    desc: "Deliver instant, human-like customer support with our AI-powered custom chatbot solution. From website live chat to WhatsApp, Facebook, and mobile apps, automate conversations, answer queries 24/7, generate leads, and improve customer satisfaction with intelligent multilingual communication.",
+    img: "/home/chatbot.jpeg",
     button: "Get a Free Demo",
     LernMore: "Learn More",
   },
   {
-    title: "Next-Gen Outsourcing Solutions",
-    desc: " We deliver reliable, enterprise-grade solutions that you can count on. Our dedicated teams seamlessly integrate with your workflows, combining deep expertise, agile delivery, and best-in-class practices to accelerate projects, reduce costs, and drive measurable business outcomes.",
-    img: "/hero2.webp",
+    title: "Advanced Big Data Analytics & Business Intelligence Solutions",
+    alt: "Big Data",
+    desc: " Turn massive volumes of structured and unstructured data into actionable business insights with our AI-powered big data analytics platform. Monitor real-time performance, predict trends, optimize operations, and make data-driven decisions using intelligent dashboards, machine learning, and cloud-scale processing.",
+    img: "/home/BigData.jpeg",
     LearnMore: "Learn More",
   },
   {
-    title: "Self-Serving Platform for Wholesale Telecom Businesses",
-    desc: "An award-winning unified platform for international voice, SMS, and DID buy/sell. Streamline your wholesale operations with automated business processes, advanced analytics, and collaboration tools.",
-    img: "/hero3.webp",
+    title: "Custom ERP & Cybersecurity Solutions for Modern Enterprises",
+    alt: "Custom ERP",
+    desc: "Streamline business operations and protect critical digital assets with our custom ERP and cybersecurity solutions. From finance, HR, inventory, and workflow automation to advanced threat detection, data protection, and secure cloud infrastructure, we deliver scalable software tailored to your business needs.",
+    img: "/home/CustomERP.jpeg",
     button: "Get a Free Demo",
     LearnMore: "Learn More",
   },
   {
     title: "AI-Enhanced Voice, Video & Messaging Apps",
+    alt: "",
     h3: "Customized IP Calling & Messaging Solution for <br> Communication Service Providers",
     desc: "Launch your market-ready IP communication App — join the next generation of global connectivity seamlessly integrate voice, video, and messaging into your applications and websites with ease. Powered by advanced AI voice suppression and engineered for optimal performance — even in low-bandwidth environments",
     img: "/hero4.webp",
@@ -36,6 +41,7 @@ const slides = [
   },
   {
     title: "AI-Powered Cloud PABX & Contact Center for Growing Enterprises",
+    alt: "",
     desc: "We bring AI-powered voice bot & chatbot, advanced call routing, and multichannel communication into one enterprise-ready platform, helping large teams handle high call volumes with speed, accuracy, and consistency.",
     img: "/cloud.webp",
     LearnMore: "Learn More",
@@ -117,9 +123,9 @@ export default function HeroSection() {
             <div className="w-full flex justify-center md:justify-end max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px]">
               <Image
                 src={slides[index].img}
-                alt="hero"
-                width={750}
-                height={750}
+                alt={slides[index].alt}
+                width={800}
+                height={800}
                 className="w-full h-auto object-contain"
                 sizes="(max-width: 768px) 100vw, 500px"
                 priority
