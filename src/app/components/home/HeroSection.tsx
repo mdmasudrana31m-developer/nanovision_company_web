@@ -120,7 +120,7 @@ export default function HeroSection() {
             </div>
 
             {/* 🔹 Right Image */}
-            <div className="w-full flex justify-center md:justify-end max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px]">
+            <div className="w-full flex justify-center md:justify-end max-w-[330px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[550px]">
               <Image
                 src={slides[index].img}
                 alt={slides[index].alt}
