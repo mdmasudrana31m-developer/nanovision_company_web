@@ -32,18 +32,18 @@ const slides = [
     LearnMore: "Learn More",
   },
   {
-    title: "AI-Enhanced Voice, Video & Messaging Apps",
-    alt: "",
-    h3: "Customized IP Calling & Messaging Solution for <br> Communication Service Providers",
-    desc: "Launch your market-ready IP communication App — join the next generation of global connectivity seamlessly integrate voice, video, and messaging into your applications and websites with ease. Powered by advanced AI voice suppression and engineered for optimal performance — even in low-bandwidth environments",
-    img: "/hero4.webp",
+    title:
+      "Bulk SMS & Omnichannel Messaging Platform for Business Communication",
+    alt: "Bulk SMS",
+    desc: "Reach thousands of customers instantly with our high-performance bulk SMS and omnichannel messaging platform. Send promotional campaigns, OTP verification, transactional alerts, and marketing messages with real-time delivery tracking, API integration, advanced analytics, and secure enterprise-grade infrastructure.",
+    img: "/home/sms.png",
     button: "Get a Free Demo",
   },
   {
-    title: "AI-Powered Cloud PABX & Contact Center for Growing Enterprises",
-    alt: "",
-    desc: "We bring AI-powered voice bot & chatbot, advanced call routing, and multichannel communication into one enterprise-ready platform, helping large teams handle high call volumes with speed, accuracy, and consistency.",
-    img: "/cloud.webp",
+    title: "Secure Cloud Infrastructure & Managed Cloud Services",
+    alt: "Cloud Infrastructure",
+    desc: "Accelerate digital transformation with our scalable cloud infrastructure and managed cloud services. Deploy applications faster, improve system reliability, ensure data security, and optimize performance with high-availability cloud hosting, virtualization, backup solutions, and enterprise-grade monitoring.",
+    img: "/home/cloud-service.png",
     LearnMore: "Learn More",
   },
 ];
@@ -89,13 +89,6 @@ export default function HeroSection() {
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">
                 {slides[index].title}
               </h1>
-
-              {slides[index].h3 && (
-                <h4
-                  className="text-lg sm:text-xl md:text-2xl font-semibold mb-4"
-                  dangerouslySetInnerHTML={{ __html: slides[index].h3 }}
-                />
-              )}
 
               <p className="text-gray-600 mb-8 md:mb-12 text-sm sm:text-base">
                 {slides[index].desc}
