@@ -12,7 +12,7 @@ const slides = [
       "Custom AI Chatbot & Virtual Assistant for Smart Customer Engagement",
     alt: "Chatbot",
     desc: "Deliver instant, human-like customer support with our AI-powered custom chatbot solution. From website live chat to WhatsApp, Facebook, and mobile apps, automate conversations, answer queries 24/7, generate leads, and improve customer satisfaction with intelligent multilingual communication.",
-    img: "/home/chatbot.jpeg",
+    img: "/home/chatbot.png",
     button: "Get a Free Demo",
     LernMore: "Learn More",
   },

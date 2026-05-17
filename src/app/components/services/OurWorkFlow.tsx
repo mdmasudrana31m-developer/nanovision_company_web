@@ -57,7 +57,7 @@ export default function OurWorkFlow() {
                 <div className=" top-10px border-b-2 border-gray-500 border-dashed"/>
               </div>
               <Image
-                src="/arrow1.svg"
+                src="/service-img/arrow1.svg"
                 alt="Arrow"
                 width={20}
                 height={20}
@@ -80,7 +80,7 @@ export default function OurWorkFlow() {
                 <p className="">2. UX/UI Design</p>
               </div>
               <Image
-                src="/arrow2.svg"
+                src="/service-img/arrow2.svg"
                 alt="Arrow"
                 width={20}
                 height={20}
@@ -103,7 +103,7 @@ export default function OurWorkFlow() {
                 <hr />
               </div>
               <Image
-                src="/arrow3.svg"
+                src="/service-img/arrow3.svg"
                 alt="Arrow"
                 width={20}
                 height={20}
@@ -125,7 +125,7 @@ export default function OurWorkFlow() {
                 <p className="">4. QA & Deployment</p>
               </div>
               <Image
-                src="/arrow5.svg"
+                src="/service-img/arrow5.svg"
                 alt="Arrow"
                 width={20}
                 height={20}

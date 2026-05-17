@@ -76,7 +76,7 @@ export default function Footer() {
             >
               {/* Logo & About */}
               <div>
-                <div className="bg-white inline-block rounded-lg p-2 mb-6">
+                <div className=" inline-block rounded-lg p-2 mb-6">
                   <Image
                     src="/logo.png"
                     alt="Logo"

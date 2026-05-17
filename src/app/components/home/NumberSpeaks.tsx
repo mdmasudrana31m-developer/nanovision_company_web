@@ -54,7 +54,7 @@ export default function NumberSpeaks() {
         text-[#0072BA]
         "
           >
-            50+ Countries
+            27+ Countries
           </h3>
 
           <p className="text-[#0072BA] text-sm sm:text-base mt-3">

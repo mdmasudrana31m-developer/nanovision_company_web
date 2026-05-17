@@ -25,7 +25,7 @@ export default function HeroSection() {
       {!videoLoaded && (
         <div className="absolute inset-0 z-0">
           <Image
-            src="/poster.webp"
+            src="/service-img/poster.webp"
             alt="Background"
             fill
             priority
@@ -49,7 +49,7 @@ export default function HeroSection() {
           ${videoLoaded ? "opacity-100" : "opacity-0"}
         `}
       >
-        <source src="/services_video.mp4" type="video/mp4" />
+        <source src="/service-img/services_video.mp4" type="video/mp4" />
       </video>
 
       {/* 🔹 Overlay */}
@@ -76,7 +76,7 @@ export default function HeroSection() {
           <div className="bg-white/10 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl text-white hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <Image
-                src="/Layer_1.svg"
+                src="/service-img/svg-icon/Layer_1.svg"
                 alt="Innovation"
                 width={30}
                 height={30}
@@ -95,7 +95,7 @@ export default function HeroSection() {
           <div className="bg-white/10 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl text-white hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <Image
-                src="/Layer_2.svg"
+                src="/service-img/svg-icon/Layer_2.svg"
                 alt="Precision"
                 width={30}
                 height={30}
@@ -114,7 +114,7 @@ export default function HeroSection() {
           <div className="bg-white/10 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl text-white hover:bg-white/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-3">
               <Image
-                src="/Layer_3.svg"
+                src="/service-img/svg-icon/Layer_3.svg"
                 alt="Execution"
                 width={30}
                 height={30}

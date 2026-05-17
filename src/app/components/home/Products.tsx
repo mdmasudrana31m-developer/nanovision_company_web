@@ -8,23 +8,23 @@ import Button from "@/app/utils/Button";
 const products = [
   {
     icon: TbMessages,
-    title: "SMS Platform",
-    desc: "All-in-one solution designed for wholesale and retail SMS trading, large-scale campaigns, and reselling",
+    title: "Bulk SMS & WhatsApp Platform",
+    desc: "A powerful communication platform for sending promotional, transactional, and OTP messages through SMS and WhatsApp with real-time delivery reports, API integration, and campaign management tools.",
   },
   {
     icon: RiGlobalFill,
-    title: "Virtual Roaming Solution",
-    desc: "App-based virtual roaming enables subscribers borderless communication without bilateral agreements",
+    title: "Cloud PABX & IP Telephony System",
+    desc: "Advanced cloud-based calling solution with IVR, call recording, extension management, and virtual numbers to help businesses manage customer communication efficiently from anywhere.",
   },
   {
     icon: GiServerRack,
-    title: "Class 5 Softswitch",
-    desc: "Versatile Softswitch platform offering retail, wholesale, and hybrid IP solutions with integrated billing",
+    title: "ERP & Distribution Management Software",
+    desc: "Complete business automation solution for inventory, sales, dealer management, delivery tracking, accounting, and order processing designed for wholesale and distribution companies.",
   },
   {
     icon: IoLayers, // 🔹 optional: 4th ta lucide thaklo
-    title: "Self-Serving Wholesale Platform",
-    desc: "Unified platform for Voice, SMS, and DID services, enabling global telecom businesses",
+    title: "VPS & Cloud Hosting Platform",
+    desc: "Secure and scalable VPS hosting infrastructure with high uptime, SSD storage, dedicated resources, and flexible monthly plans for hosting websites, applications, and enterprise systems.",
   },
 ];
 
