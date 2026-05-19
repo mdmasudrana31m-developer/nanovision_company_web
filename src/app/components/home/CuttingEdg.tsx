@@ -4,23 +4,23 @@ import Image from "next/image";
 
 const data = [
   {
-    title: "AI",
-    desc: "Advanced AI-powered solutions including automation, intelligent chatbots, predictive analytics, and more with scalability and high performance.",
+    title: "Artificial Intelligence",
+    desc: "Advanced AI-powered solutions with automation, intelligent chatbots, predictive analytics, and more. Scalable, high-performance, and built for the future.",
     img: "/home/cutting-img/Ai1.png",
   },
   {
     title: "SMS & SaaS Services",
-    desc: "Customized and white-label SMS and SaaS solutions designed for service providers, enterprises, and resellers. Deliver secure, scalable, and high-performance communication services with dedicated 24/7 technical support and flexible deployment options.",
+    desc: "Custom white-label SMS and SaaS platforms for service providers, enterprises, and resellers. Secure, scalable, and supported 24/7 with flexible deployment options.",
     img: "/home/cutting-img/services.svg",
   },
   {
     title: "ENTERPRISES",
-    desc: "Secured communication for enterprises and large-scale businesses worldwide",
+    desc: "Secure and reliable communication solutions designed for large enterprises and global businesses.",
     img: "/home/cutting-img/enterprise.svg",
   },
   {
     title: "VPS Server Platform",
-    desc: "Reliable and high-performance VPS server hosting solutions designed for businesses, developers, and enterprise applications. Enjoy scalable cloud infrastructure, secure networking, dedicated resources, and 24/7 uptime monitoring with flexible monthly payment options for maximum convenience and cost efficiency.",
+    desc: "High-performance VPS hosting with scalable cloud infrastructure, dedicated resources, secure networking, and 24/7 monitoring. Flexible monthly plans for maximum convenience.",
     img: "/home/cutting-img/hosted.svg",
   },
 ];
