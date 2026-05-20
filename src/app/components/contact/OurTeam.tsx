@@ -39,9 +39,7 @@ export default function OurTeam() {
         </h2>
 
         <p className="text-gray-600 text-sm md:text-base leading-[1.8]">
-          REVE Systems has a team of expert sales professionals based across
-          Europe, Africa, Middle East, North America, South America and the Asia
-          Pacific regions.
+          Our company is driven by a team of experienced key professionals who lead different areas including management, technology, sales, customer support, and business operations. Their expertise, leadership, and commitment help us deliver innovative solutions and maintain high standards of service for our clients worldwide.
         </p>
       </div>
 
