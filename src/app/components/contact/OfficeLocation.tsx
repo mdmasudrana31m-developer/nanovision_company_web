@@ -4,6 +4,7 @@ import Button from "@/app/utils/Button";
 import { MapPin, Phone, Building2 } from "lucide-react";
 import Link from "next/link";
 import { useCallback } from "react";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function OfficeLocation() {
   const handleScrollToBusiness = useCallback(() => {
@@ -53,8 +54,8 @@ export default function OfficeLocation() {
               <div>
                 <p className="font-medium text-gray-800">Address</p>
                 <p className="text-gray-600 text-sm">
-                  REVE Centre, Plot-94, Purbachal Express Highway, Dumni,
-                  Khilkhet, Dhaka 1229, Bangladesh
+                  337/1,Khondokar Azim Uddin Road West Side Of Goalkhali
+                  Busstand,Khalishpur, Khulna.
                 </p>
               </div>
             </div>
@@ -64,25 +65,40 @@ export default function OfficeLocation() {
             <div className="flex gap-3">
               <Phone className="text-gray-500 mt-1" size={20} />
               <div>
-                <p className="font-medium text-gray-800">Sales</p>
-                <p className="text-gray-600 text-sm">+880 1811-412834</p>
+                <Link href="tel:+8801811412834" target="_blank">
+                  <p className="font-medium text-gray-800">Contact</p>
+                  <Link
+                    href={`https://wa.me/+8801778807497`}
+                    target="_blank"
+                    className="
+                  flex
+                  justify-center
+                  items-center
+                  gap-1
+                  flex-wrap
+                  text-green-600 
+                "
+                  >
+                    <p className="break-all">+8801778807497</p>
+                  </Link>
+                </Link>
               </div>
             </div>
 
             {/* Office */}
-            <div className="flex gap-3">
+            {/* <div className="flex gap-3">
               <Building2 className="text-gray-500 mt-1" size={20} />
               <div>
                 <p className="font-medium text-gray-800">Office</p>
                 <p className="text-gray-600 text-sm">+880 09606738300</p>
               </div>
-            </div>
+            </div> */}
 
             <hr className="border-t-2 border-gray-300 " />
 
             {/* Map */}
             <Link
-              href="https://www.google.com/maps/place/Boikali+Bazar/@22.8418467,89.5335217,17z/data=!3m1!4b1!4m6!3m5!1s0x39ff9a90e51fdad5:0xd3b1f4bdfcee5740!8m2!3d22.8418418!4d89.5383926!16s%2Fg%2F1whdgrz5?authuser=1&entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+              href="https://maps.app.goo.gl/3pKV9hy4Ca4coWW5A"
               target="blank"
               className="flex items-center gap-2 text-blue-600 text-sm hover:underline"
             >

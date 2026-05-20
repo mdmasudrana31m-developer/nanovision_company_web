@@ -7,23 +7,23 @@ import { BsWhatsapp } from "react-icons/bs";
 const team = [
   {
     region: "Khulna, Bangladesh",
-    name: "Saiful Islam",
+    name: "Md Saiful Islam",
     post: "Chairman of Nanovision",
-    img: "/hero1.webp",
-    phone: "+44 7956170990",
-    BsWhatsapp: "+44 7956170990",
-    email: "quazi.limon@revesoft.com",
+    img: "/saiful.jpeg",
+    phone: " +8801778807497",
+    BsWhatsapp: " +8801778807497",
+    email: " chairman@nanovisionltd.com",
     lang: "English, Bangla",
     color: "bg-blue-400",
   },
   {
     region: "Khulna, Bangladesh",
-    name: "Salman Rahman",
-    post: "Executive Director - Nanovision",
-    img: "/hero1.webp",
-    phone: "+91 9891863927",
-    BsWhatsapp: "+91 9891863927",
-    email: "siddharth@revesoft.com",
+    name: "Sheik Salman Sami",
+    post: "Managing Director of Nanovision",
+    img: "/salman.png",
+    phone: " +8801845314732",
+    BsWhatsapp: " +8801845314732",
+    email: " managingdirector@nanovisionltd.com",
     lang: "English, Bangla",
     color: "bg-gray-500",
   },
@@ -35,7 +35,7 @@ export default function OurTeam() {
       {/* HEADER */}
       <div className="max-w-3xl mx-auto text-center mb-14 px-4">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-          Our Sales Team
+          Key Persons of Nanovision
         </h2>
 
         <p className="text-gray-600 text-sm md:text-base leading-[1.8]">
@@ -83,13 +83,12 @@ export default function OurTeam() {
             {/* CONTENT */}
             <div className="p-5 sm:p-6 text-center">
               {/* IMAGE */}
-              <div className="w-24 h-24 sm:w-25 sm:h-25 mx-auto mb-4 relative">
+              <div className="w-24 h-24 sm:w-[120px] sm:h-[120px] mx-auto mb-4 relative">
                 <Image
                   src={item.img}
                   alt={item.name}
                   fill
-                  className="rounded-full object-cover"
-                  priority
+                  className="rounded-full object-fill"
                 />
               </div>
 
@@ -114,14 +113,15 @@ export default function OurTeam() {
                   <Link
                     href={`https://wa.me/${item.BsWhatsapp}`}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="
-                  flex
-                  justify-center
-                  items-center
-                  gap-1
-                  flex-wrap
-                  text-green-600
-                "
+          flex
+          justify-center
+          items-center
+          gap-1
+          flex-wrap
+          text-green-600
+        "
                   >
                     <BsWhatsapp size={19} />
                     <span className="break-all">{item.BsWhatsapp}</span>
