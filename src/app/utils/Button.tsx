@@ -1,10 +1,15 @@
+import type { ReactNode } from "react";
+
 export default function Button({
   buttonText,
-  onClick,Plus
+  onClick,
+  Plus,
+  type = "button",
 }: {
-  buttonText: string;
+  buttonText: ReactNode;
   onClick?: () => void;
-  Plus?: React.ReactNode;
+  Plus?: ReactNode;
+  type?: "button" | "submit" | "reset";
 }) {
   return (
     <>
@@ -31,6 +36,7 @@ export default function Button({
             `}</style>
       <div className="button-bg rounded-xl p-1 hover:scale-105 transition duration-300 active:scale-100 ">
         <button
+          type={type}
           className="cursor-pointer w-full flex justify-center items-center gap-2 text-sm py-2.5 text-white rounded-xl font-medium bg-gray-800"
           onClick={onClick}
         >

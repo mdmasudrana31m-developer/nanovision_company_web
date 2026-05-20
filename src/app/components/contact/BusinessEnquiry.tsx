@@ -3,10 +3,11 @@
 import Button from "@/app/utils/Button";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { ImSpinner } from "react-icons/im";
 
 export default function BusinessEnquiry() {
   const form = useRef<HTMLFormElement | null>(null);
-  const [status, setStatus] = useState<string | null>(null); // null, 'success', or 'error'
+  const [status, setStatus] = useState<"success" | "error" | null>(null); // null, 'success', or 'error'
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,40 +44,6 @@ export default function BusinessEnquiry() {
       );
   };
 
-  // Status message component
-  const StatusMessage = () => {
-    if (!status) return null;
-
-    const config = {
-      success: {
-        icon: "✓",
-        message: "Message sent successfully!",
-        bgColor: "bg-green-100",
-        textColor: "text-green-800",
-        borderColor: "border-green-300",
-      },
-      error: {
-        icon: "✕",
-        message: "Failed to send message. Please try again.",
-        bgColor: "bg-red-100",
-        textColor: "text-red-800",
-        borderColor: "border-red-300",
-      },
-    };
-
-    const { icon, message, bgColor, textColor, borderColor } = config[status];
-
-    return (
-      <div
-      
-        className={`p-4 mb-6 rounded-lg border ${bgColor} ${textColor} ${borderColor} flex items-center`}
-      >
-        <span className="text-xl mr-3 font-bold">{icon}</span>
-        <span>{message}</span>
-      </div>
-    );
-  };
-
   return (
     <section
       className="min-h-screen  flex items-center justify-center px-4 py-16 
@@ -96,7 +63,37 @@ export default function BusinessEnquiry() {
         {/* Form Box */}
         <div className="bg-white rounded-xl p-6 md:p-8 text-gray-700 shadow-xl">
           <form ref={form} onSubmit={sendEmail} className="space-y-4 text-left">
-            <StatusMessage/>
+            {status
+              ? (() => {
+                  const config = {
+                    success: {
+                      icon: "✓",
+                      message: "Message sent successfully!",
+                      bgColor: "bg-green-100",
+                      textColor: "text-green-800",
+                      borderColor: "border-green-300",
+                    },
+                    error: {
+                      icon: "✕",
+                      message: "Failed to send message. Please try again.",
+                      bgColor: "bg-red-100",
+                      textColor: "text-red-800",
+                      borderColor: "border-red-300",
+                    },
+                  };
+
+                  const { icon, message, bgColor, textColor, borderColor } =
+                    config[status];
+                  return (
+                    <div
+                      className={`p-4 mb-6 rounded-lg border ${bgColor} ${textColor} ${borderColor} flex items-center`}
+                    >
+                      <span className="text-xl mr-3 font-bold">{icon}</span>
+                      <span>{message}</span>
+                    </div>
+                  );
+                })()
+              : null}
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -154,6 +151,7 @@ export default function BusinessEnquiry() {
                 <input
                   name="whatsapp"
                   type="text"
+                  required
                   placeholder="Enter your WhatsApp number"
                   className="w-full border rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -209,16 +207,13 @@ export default function BusinessEnquiry() {
               <span className="text-xs text-gray-500">reCAPTCHA</span>
             </div>
 
-            {/* Button */}
-            {/* <button
-              type="submit"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md font-medium transition"
-            >
-              Submit
-            </button> */}
+         
 
             <Button
-              buttonText={isSubmitting ? "Sending..." : "Submit"}
+              type="button"
+              buttonText={
+                isSubmitting ? <ImSpinner className="animate-spin" /> : "Submit"
+              }
               onClick={() => form.current?.requestSubmit()}
             />
           </form>
