@@ -65,12 +65,11 @@ export default function OfficeLocation() {
             <div className="flex gap-3">
               <Phone className="text-gray-500 mt-1" size={20} />
               <div>
-                <Link href="tel:+8801811412834" target="_blank">
-                  <p className="font-medium text-gray-800">Contact</p>
-                  <Link
-                    href={`https://wa.me/+8801778807497`}
-                    target="_blank"
-                    className="
+                <p className="font-medium text-gray-800">Contact</p>
+                <a
+                  href={`https://wa.me/+8801778807497`}
+                  target="_blank"
+                  className="
                   flex
                   justify-center
                   items-center
@@ -78,10 +77,9 @@ export default function OfficeLocation() {
                   flex-wrap
                   text-green-600 
                 "
-                  >
-                    <p className="break-all">+8801778807497</p>
-                  </Link>
-                </Link>
+                >
+                  <p className="break-all">+8801778807497</p>
+                </a>
               </div>
             </div>
 

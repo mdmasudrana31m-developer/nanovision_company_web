@@ -235,7 +235,8 @@ export default function Footer() {
                     <FiMapPin className="mt-1 text-[22px]" />
 
                     <p>
-                      128, Boikali, Jessore Roard Khulna
+                      337/1,Khondokar Azim Uddin Road West Side Of Goalkhali
+                      Busstand,Khalishpur, Khulna,
                       <br />
                       Bangladesh
                     </p>
