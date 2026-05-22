@@ -54,7 +54,7 @@ export default function OurWorkFlow() {
             >
               <div className="circle">
                 <p className="">1. Discovery</p>
-                <div className=" top-10px border-b-2 border-gray-500 border-dashed"/>
+                <div className=" top-10px border-b-2 border-gray-500 border-dashed" />
               </div>
               <Image
                 src="/service-img/arrow1.svg"
@@ -65,9 +65,8 @@ export default function OurWorkFlow() {
               />
               <div className="m_image_animate_box_one_text one ">
                 <p className="paragraph ">
-                  We begin with an intensive discovery phase - conducting
-                  workshops, competitor analysis & technical feasibility
-                  studies.
+                  Understanding your needs through research, analysis, and
+                  strategic planning.
                 </p>
               </div>
             </div>
@@ -88,8 +87,8 @@ export default function OurWorkFlow() {
               />
               <div className="m_image_animate_box_two_text">
                 <p className="paragraph ">
-                  From wireframes to polished UI, we design user journeys that
-                  balance business logic with aesthetics.
+                  Designing intuitive and engaging user experiences with modern,
+                  user-focused interfaces.
                 </p>
               </div>
             </div>
@@ -111,8 +110,8 @@ export default function OurWorkFlow() {
               />
               <div className="m_image_animate_box_three_text">
                 <p className="paragraph">
-                  Our development team builds functional, scalable, and
-                  efficient code that brings designs to life.
+                  Building scalable, efficient, and high-performance solutions
+                  with clean code.
                 </p>
               </div>
             </div>
@@ -133,8 +132,8 @@ export default function OurWorkFlow() {
               />
               <div className="m_image_animate_box_four_text">
                 <p className="paragraph">
-                  We rigorously test and deploy your solution ensuring quality
-                  and reliability for your users.
+                  Ensuring quality and reliability through testing and seamless
+                  deployment.
                 </p>
               </div>
             </div>

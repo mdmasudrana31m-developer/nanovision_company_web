@@ -228,7 +228,7 @@ export default function Footer() {
                   <div className="flex items-start gap-4">
                     <FiMail className="mt-1 text-[22px]" />
 
-                    <p>nano@vision.com</p>
+                    <p>info@nanovisionltd.com</p>
                   </div>
 
                   <div className="flex items-start gap-4">

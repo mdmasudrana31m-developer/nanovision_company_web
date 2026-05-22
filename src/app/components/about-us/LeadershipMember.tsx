@@ -6,7 +6,17 @@ import { useEffect, useState } from "react";
 import Button from "@/app/utils/Button";
 
 export default function LeadershipMember() {
+  type Leader = {
+    name: string;
+    role: string;
+    img: string;
+    detailsTitle: string;
+    detailsText: string;
+    detailsImg: string;
+  };
+
   const [open, setOpen] = useState(false);
+  const [selectedLeader, setSelectedLeader] = useState<Leader | null>(null);
 
   // ESC close
   useEffect(() => {
@@ -21,28 +31,66 @@ export default function LeadershipMember() {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
+  // 🔥 ALL DATA
   const leaders = [
     {
       name: "Monnujan Nargis",
       role: "Director - REVE Group",
       img: "/about-us/image.png",
+
+      detailsTitle: "Monnujan Nargis",
+
+      detailsText:
+        "Monnujan Nargis is one of the key leaders of REVE Group. She has played an important role in business development, management, and organizational growth. With strong leadership and strategic planning, she contributes to expanding the company’s global operations and long-term success.",
+
+      detailsImg: "/about-us/image.png",
     },
+
     {
       name: "Momi Monjili",
       role: "Chief Technical Strategy Officer (CTSO)",
       img: "/about-us/image.png",
+
+      detailsTitle: "Momi Monjili",
+
+      detailsText:
+        "Momi Monjili leads the technology strategy and innovation initiatives of the company. She focuses on advanced software architecture, product scalability, and modern technology solutions to ensure business growth and digital transformation.",
+
+      detailsImg: "/about-us/image.png",
     },
+
     {
       name: "Ajmat Iqbal",
       role: "Director - REVE Group",
       img: "/about-us/image.png",
+
+      detailsTitle: "Ajmat Iqbal",
+
+      detailsText:
+        "Ajmat Iqbal is responsible for strategic business operations and leadership management within REVE Group. His expertise in operations and corporate strategy helps the company maintain sustainable growth in international markets.",
+
+      detailsImg: "/about-us/image.png",
     },
+
     {
       name: "Mir Monsoor Hossain",
       role: "Chief Commercial Officer (CCO) & Head of Growth",
       img: "/about-us/image.png",
+
+      detailsTitle: "Mir Monsoor Hossain",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/image.png",
     },
   ];
+
+  // 🔥 OPEN MODAL
+  const handleOpen = (leader: Leader) => {
+    setSelectedLeader(leader);
+    setOpen(true);
+  };
 
   return (
     <>
@@ -60,13 +108,13 @@ export default function LeadershipMember() {
                 {/* IMAGE */}
                 <div
                   className="
-                relative
-                overflow-hidden
-                rounded-[22px]
-                sm:rounded-[26px]
-                bg-white
-                aspect-[4/4.6]
-                "
+                    relative
+                    overflow-hidden
+                    rounded-[22px]
+                    sm:rounded-[26px]
+                    bg-white
+                    aspect-[4/4.6]
+                  "
                 >
                   <Image
                     src={item.img}
@@ -90,11 +138,11 @@ export default function LeadershipMember() {
                   <div className="max-w-30 mt-8 sm:mt-10">
                     <Button
                       buttonText="See More"
-                      onClick={() => setOpen(true)}
+                      onClick={() => handleOpen(item)}
                       Plus={
                         <Plus
                           size={18}
-                          className="text-white bg-gray-600  rounded-full"
+                          className="text-white bg-gray-600 rounded-full"
                         />
                       }
                     />
@@ -107,7 +155,7 @@ export default function LeadershipMember() {
       </section>
 
       {/* MODAL */}
-      {open && (
+      {open && selectedLeader && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm overflow-y-auto">
           {/* CENTER */}
           <div className="min-h-full flex items-center justify-center p-3 sm:p-2 md:p-2">
@@ -116,40 +164,31 @@ export default function LeadershipMember() {
               {/* CLOSE BUTTON */}
               <button
                 onClick={() => setOpen(false)}
-                className="absolute top-2.5 right-2.5 lg:right-3 lg:top-3 sm:top-1 sm:right-1 z-30 w-7 h-7 lg:w-10 lg:h-10 rounded-full bg-black flex items-center justify-center hover:scale-110 transition"
+                className="absolute top-2.5 right-2.5 lg:right-3 lg:top-3 sm:top-1 sm:right-1 z-30 w-5 h-5 cursor-pointer lg:w-7 lg:h-7 rounded-full bg-black flex items-center justify-center  transition"
               >
-                <X className="text-white" size={18} />
+                <X className="text-white" size={15} />
               </button>
 
               {/* CONTENT */}
-              <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_.9fr] gap-8 lg:gap-6 items-center p-5 sm:px-4 md:px-5 lg:px-6">
+              <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_.9fr] gap-8 lg:gap-6 justify-center p-5 sm:px-4 md:px-5 lg:px-6">
                 {/* LEFT CONTENT */}
-                <div className="order-2 lg:order-1  p-4 sm:p-6 rounded-xl">
-                  <h2 className="text-[36px] sm:text-[48px] md:text-[58px] lg:text-[64px] leading-[1.05] font-semibold mb-6 sm:mb-8">
-                    M Rezaul Hassan
+                <div className="order-2 lg:order-1  rounded-xl">
+                  <h2 className="text-[18px] sm:text-[18px] md:text-[20px]  lg:text-[30px] leading-[1.05] font-semibold ">
+                    {selectedLeader.detailsTitle}
                   </h2>
+                  <p>{selectedLeader.role}</p>
 
-                  <div className="text-[15px] sm:text-[17px] md:text-[16px] leading-[1.9]">
-                    <p>
-                      M Rezaul Hassan is the founding Group CEO of REVE Systems,
-                      which he established in 2003 after holding CXO roles in
-                      several leading IT and Internet service providers. Under
-                      his visionary leadership and with a dedicated team, REVE
-                      Group has grown into a major global solution provider in
-                      the IP and telecommunication sector, serving customers in
-                      over 80 countries. Mr. Hassan holds an engineering degree
-                      and an MBA from the prestigious Institute of Business
-                      Administration (IBA), University of Dhaka.
-                    </p>
+                  <div className="text-[15px] mt-10 sm:text-[17px] md:text-[16px] leading-[1.9]">
+                    <p>{selectedLeader.detailsText}</p>
                   </div>
                 </div>
 
                 {/* RIGHT IMAGE */}
-                <div className="order-1 lg:order-2 flex justify-center lg:justify-start  p-4 rounded-xl">
-                  <div className="relative w-full max-w-[400px] h-[400px] overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-[32px]">
+                <div className="order-1 lg:order-2 flex justify-center lg:justify-start p-4 rounded-xl">
+                  <div className="relative w-full max-w-100 h-100 overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-4xl">
                     <Image
-                      src="/about-us/founder.png"
-                      alt="Founder"
+                      src={selectedLeader.detailsImg}
+                      alt={selectedLeader.detailsTitle}
                       fill
                       className="object-cover"
                     />

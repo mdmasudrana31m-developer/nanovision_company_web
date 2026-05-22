@@ -1,8 +1,47 @@
 "use client";
-
+import emailjs from "@emailjs/browser";
 import Button from "@/app/utils/Button";
+import { useRef, useState } from "react";
+import { ImSpinner } from "react-icons/im";
 
 export default function WorkDiscus() {
+  const form = useRef<HTMLFormElement | null>(null);
+  const [status, setStatus] = useState<"success" | "error" | null>(null); // null, 'success', or 'error'
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus(null);
+
+    if (!form.current) {
+      setStatus("error");
+      setIsSubmitting(false);
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_gyxumyw",
+        "template_ff8pzeg",
+
+        // Public Key
+        form.current,
+        "w5Fi2DsIzIzz3056P",
+      )
+      .then(
+        () => {
+          setStatus("success");
+          setIsSubmitting(false);
+          form.current?.reset();
+        },
+        (error) => {
+          setStatus("error");
+          setIsSubmitting(false);
+          console.error("Email send failed:", error);
+        },
+      );
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16">
       {/* Background */}
@@ -25,15 +64,13 @@ export default function WorkDiscus() {
             mb-6
           "
           >
-            We Fix, <br />
-            Transform, <br />
-            and Skyrocket <br />
-            Your Software
+            Build, Transform & Grow Your Business with Us
           </h1>
 
           <p className="text-gray-300 max-w-md mx-auto md:mx-0 text-sm sm:text-base">
-            Require further assistance? Fill in the form to have our experts
-            reach out to you or write to us on our dedicated email ID
+            Turn your ideas into powerful digital solutions with our expert
+            team. We deliver innovative, scalable, and high-performance software
+            tailored to your business needs.
           </p>
         </div>
 
@@ -52,42 +89,82 @@ export default function WorkDiscus() {
         "
         >
           <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3">
-            Let’s Discuss Your Project!
+            Let&apos;s Discuss Your Project!
           </h2>
 
           <p className="text-xs sm:text-sm text-gray-300 mb-6">
-            Share the details of your project- like scope or business
-            challenges.
+            Need assistance? Fill out the form and our experts will get in
+            touch, or reach out through our dedicated email for personalized
+            support.
           </p>
 
-          <form className="space-y-4">
+          <form className="space-y-4" ref={form} onSubmit={sendEmail}>
+            {status
+              ? (() => {
+                  const config = {
+                    success: {
+                      icon: "✓",
+                      message: "Message sent successfully!",
+                      bgColor: "bg-green-100",
+                      textColor: "text-green-800",
+                      borderColor: "border-green-300",
+                    },
+                    error: {
+                      icon: "✕",
+                      message: "Failed to send message. Please try again.",
+                      bgColor: "bg-red-100",
+                      textColor: "text-red-800",
+                      borderColor: "border-red-300",
+                    },
+                  };
+
+                  const { icon, message, bgColor, textColor, borderColor } =
+                    config[status];
+                  return (
+                    <div
+                      className={`p-4 mb-6 rounded-lg border ${bgColor} ${textColor} ${borderColor} flex items-center`}
+                    >
+                      <span className="text-xl mr-3 font-bold">{icon}</span>
+                      <span>{message}</span>
+                    </div>
+                  );
+                })()
+              : null}
             {/* Name */}
             <input
+              name="user_name"
               type="text"
               placeholder="Enter full name"
+              required
               className="w-full bg-transparent border border-white/30 rounded-lg px-4 py-3 text-sm outline-none focus:border-blue-400"
             />
 
             {/* Phone */}
             <div className="flex border border-white/30 rounded-lg overflow-hidden">
               <input
+                name="phone"
                 type="text"
                 placeholder="Phone Number"
+                required
                 className="w-full bg-transparent px-4 py-3 text-sm outline-none"
               />
             </div>
 
             {/* Email */}
             <input
+              name="email"
               type="email"
               placeholder="Enter email address"
+              required
               className="w-full bg-transparent border border-white/30 rounded-lg px-4 py-3 text-sm outline-none focus:border-blue-400"
             />
 
             {/* Message */}
             <textarea
+              name="message"
               rows={4}
               placeholder="Message"
+              required
               className="w-full bg-transparent border border-white/30 rounded-lg px-4 py-3 text-sm outline-none focus:border-blue-400 resize-none"
             ></textarea>
 
@@ -103,14 +180,13 @@ export default function WorkDiscus() {
             </div>
 
             {/* Button */}
-            {/* <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-600 transition px-8 py-3 rounded-lg text-white text-sm sm:text-base"
-            >
-              Submit
-            </button> */}
 
-            <Button buttonText="Submit" />
+            <Button
+              type="submit"
+              buttonText={
+                isSubmitting ? <ImSpinner className="animate-spin" /> : "Submit"
+              }
+            />
           </form>
         </div>
       </div>

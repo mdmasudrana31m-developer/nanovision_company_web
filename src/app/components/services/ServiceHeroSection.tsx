@@ -86,8 +86,8 @@ export default function HeroSection() {
             </div>
 
             <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-              Building future-ready solutions with AI, cloud-native design, and
-              scalable architectures that keep you ahead of the curve.
+              Building AI-powered, scalable, and future-ready solutions for
+              smarter business growth.
             </p>
           </div>
 
@@ -105,8 +105,8 @@ export default function HeroSection() {
             </div>
 
             <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-              Delivering clean code, robust frameworks, and rigorous quality
-              assurance for reliable and high-performing software.
+              Delivering reliable, high-performance solutions with clean code
+              and quality-driven development.
             </p>
           </div>
 
@@ -124,8 +124,8 @@ export default function HeroSection() {
             </div>
 
             <p className="text-sm md:text-base text-gray-200 leading-relaxed">
-              Adapting quickly with iterative development, flexible models, and
-              seamless integration to accelerate time-to-market.
+              Accelerating delivery through agile development and seamless
+              execution.
             </p>
           </div>
         </div>

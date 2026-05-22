@@ -30,22 +30,12 @@ export default function TrustedWorld() {
 
             <div className="space-y-8 text-[#4b5563] text-[16px] md:text-[17px] leading-[1.9]">
               <p>
-                REVE Systems is headquartered in Singapore, with major Research
-                & Development (R&D) centers strategically located in Bangladesh
-                and India. Our full-stack communication solutions, coupled with
-                a diversified technical and business team and decades of
-                experience, empower enterprises, carriers, and telecom operators
-                to address critical infrastructure challenges and maximize
-                revenue streams.
+                Over time, we have built a strong reputation for delivering high-quality solutions that clients can depend on. Our work is trusted by businesses across different industries and regions because we prioritize consistency, transparency, and performance.
               </p>
 
               <p>
-                With a customer base spanning over 80 countries, REVE Systems
-                has become the trusted partner of leading carriers and telecom
-                operators worldwide. Our esteemed clients include Airtel, bKash,
-                IDT, STC, Telecom Oman, 21st Century Ltd, and Babylon Mobile,
-                reflecting our commitment to delivering innovative and reliable
-                solutions on a global scale.
+                We believe trust is earned through results. That’s why we focus on delivering secure, stable, and scalable systems that perform reliably under real-world conditions. Our global mindset allows us to support clients from different markets while maintaining the same level of quality and commitment everywhere.
+
               </p>
             </div>
           </div>
