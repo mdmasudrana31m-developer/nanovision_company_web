@@ -222,7 +222,7 @@ export default function Footer() {
                   <div className="flex items-start gap-4">
                     <FiPhoneCall className="mt-1 text-[22px]" />
 
-                    <p>Call Us - +8801976350591</p>
+                    <p>Call Us : {"  "} +8801778807497</p>
                   </div>
 
                   <div className="flex items-start gap-4">
@@ -265,9 +265,9 @@ export default function Footer() {
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 text-center">
-                  <Link href="#">Privacy Policy</Link>
+                  <Link href="/privacy-policy">Privacy Policy</Link>
                   <span>|</span>
-                  <Link href="#">Cookie Policy</Link>
+                  <Link href="/cookie-policy">Cookie Policy</Link>
                 </div>
               </div>
             </div>

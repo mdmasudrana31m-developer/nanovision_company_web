@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 
@@ -54,10 +54,7 @@ export default function Navbar() {
 
           scale: scrolled && isLargeDesktop ? 0.96 : 1,
 
-          marginTop:
-            scrolled && isLargeDesktop
-              ? "10px"
-              : "0px",
+          marginTop: scrolled && isLargeDesktop ? "10px" : "0px",
 
           borderRadius: scrolled && isLargeDesktop ? "18px" : "0px",
 
@@ -98,7 +95,16 @@ export default function Navbar() {
             <li className="relative group">
               {/* MENU BUTTON */}
               <span className="flex items-center gap-1 cursor-pointer py-2 text-[20px]">
-                Products <IoIosArrowDown />
+                Products
+                <IoIosArrowDown
+                  size={18}
+                  className="
+        transition-transform
+        duration-300
+        ease-in-out
+        group-hover:-rotate-180
+      "
+                />
               </span>
 
               {/* DROPDOWN */}
@@ -132,14 +138,25 @@ export default function Navbar() {
 
             {/* Services */}
             <li>
-              <Link href="/services" className="text-[20px]">Services</Link>
+              <Link href="/services" className="text-[20px]">
+                Services
+              </Link>
             </li>
 
             {/* Company */}
             <li className="relative group">
               {/* MENU BUTTON */}
               <span className="flex items-center gap-1 cursor-pointer py-2 text-[20px]">
-                Company <IoIosArrowDown />
+                Company{" "}
+                <IoIosArrowDown
+                  size={18}
+                  className="
+        transition-transform
+        duration-300
+        ease-in-out
+        group-hover:-rotate-180
+      "
+                />
               </span>
 
               {/* DROPDOWN */}
@@ -173,12 +190,16 @@ export default function Navbar() {
 
             {/* Blog */}
             <li>
-              <Link href="#"  className="text-[20px]">Blog</Link>
+              <Link href="#" className="text-[20px]">
+                Blog
+              </Link>
             </li>
 
             {/* Contact */}
             <li>
-              <Link href="/contact"  className="text-[20px]">Contact</Link>
+              <Link href="/contact" className="text-[20px]">
+                Contact
+              </Link>
             </li>
           </ul>
 

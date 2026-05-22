@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function OurWork() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -56,11 +57,48 @@ export default function OurWork() {
     return () => clearInterval(interval);
   }, [isMobile, isPaused]);
 
-  const data = Array(20).fill({
-    title: "AI SaaS Platform",
-    desc: "Modern AI based automation system",
-    img: "/ourworkimg/marcent-billing.webp",
-  });
+  const data = [
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+
+    {
+      title: "AI SaaS Platform",
+      desc: "Modern AI based automation system",
+      img: "/ourworkimg/marcent-billing.webp",
+    },
+  ];
 
   return (
     <section className="py-20 bg-gray-100">
@@ -100,7 +138,7 @@ export default function OurWork() {
         justify-center
       "
         >
-          ←
+          <IoIosArrowBack />
         </button>
 
         <button
@@ -123,7 +161,7 @@ export default function OurWork() {
         justify-center
       "
         >
-          →
+          <IoIosArrowForward />
         </button>
 
         {/* Cards */}
@@ -181,10 +219,11 @@ export default function OurWork() {
           shadow
           w-10
           h-10
+          flex justify-center items-center
           rounded-full
         "
           >
-            ←
+            <IoIosArrowBack />
           </button>
 
           <button
@@ -193,11 +232,12 @@ export default function OurWork() {
           bg-white
           shadow
           w-10
-          h-10
+          h-10           flex justify-center items-center
+
           rounded-full
         "
           >
-            →
+            <IoIosArrowForward />
           </button>
         </div>
       </div>
