@@ -10,7 +10,6 @@ export default function LeadershipMember() {
     name: string;
     role: string;
     img: string;
-    detailsTitle: string;
     detailsText: string;
     detailsImg: string;
   };
@@ -34,55 +33,141 @@ export default function LeadershipMember() {
   // 🔥 ALL DATA
   const leaders = [
     {
-      name: "Monnujan Nargis",
-      role: "Director - REVE Group",
-      img: "/about-us/image.png",
+      name: "Md Saiful Islam",
+      role: "AI Engineer (Chairman of Nanovision)",
+      img: "/about-us/team-members/ai engineer.jpeg",
 
-      detailsTitle: "Monnujan Nargis",
+      alt: "ai engineer",
 
       detailsText:
         "Monnujan Nargis is one of the key leaders of REVE Group. She has played an important role in business development, management, and organizational growth. With strong leadership and strategic planning, she contributes to expanding the company’s global operations and long-term success.",
 
-      detailsImg: "/about-us/image.png",
+      detailsImg: "/about-us/team-members/ai engineer.jpeg",
     },
 
     {
-      name: "Momi Monjili",
-      role: "Chief Technical Strategy Officer (CTSO)",
-      img: "/about-us/image.png",
+      name: "Sheik Salman Sami",
+      role: "Data Analysis (MD of Nanovision)",
+      img: "/about-us/team-members/Data analysis.jpeg",
 
-      detailsTitle: "Momi Monjili",
+      alt: "Data analysis",
 
       detailsText:
         "Momi Monjili leads the technology strategy and innovation initiatives of the company. She focuses on advanced software architecture, product scalability, and modern technology solutions to ensure business growth and digital transformation.",
 
-      detailsImg: "/about-us/image.png",
+      detailsImg: "/about-us/team-members/Data analysis.jpeg",
     },
 
     {
       name: "Ajmat Iqbal",
-      role: "Director - REVE Group",
-      img: "/about-us/image.png",
+      role: "Data Engineer",
+      img: "/about-us/team-members/data engineer.jpeg",
 
-      detailsTitle: "Ajmat Iqbal",
+      alt: "data engineer",
 
       detailsText:
         "Ajmat Iqbal is responsible for strategic business operations and leadership management within REVE Group. His expertise in operations and corporate strategy helps the company maintain sustainable growth in international markets.",
 
-      detailsImg: "/about-us/image.png",
+      detailsImg: "/about-us/team-members/data engineer.jpeg",
     },
 
     {
       name: "Mir Monsoor Hossain",
-      role: "Chief Commercial Officer (CCO) & Head of Growth",
-      img: "/about-us/image.png",
+      role: "Next js Developer",
+      img: "/about-us/team-members/next js developer.jpg",
 
-      detailsTitle: "Mir Monsoor Hossain",
+      alt: "next js developer",
 
       detailsText:
         "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
 
-      detailsImg: "/about-us/image.png",
+      detailsImg: "/about-us/team-members/next js developer.jpg",
+    },
+
+    {
+      name: "Mir Monsoor Hossain",
+      role: "React Developer",
+      img: "/about-us/team-members/react developer.jpg",
+
+      alt: "react developer",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/react developer.jpg",
+    },
+
+    {
+      name: "Md Masud Rana",
+      role: "MERN Full Stack Developer",
+      img: "/about-us/team-members/react developer.jpeg",
+
+      alt: "react developer",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/react developer.jpeg",
+    },
+    {
+      name: "Md Showon Sheikh",
+      role: "Senior Backend Developer",
+      img: "/about-us/team-members/suner backend develper.jpeg",
+
+      alt: "senior backend develper",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/suner backend develper.jpeg",
+    },
+    {
+      name: "Saad",
+      role: "Junior Backend Developer",
+      img: "/about-us/team-members/junior backend developer.jpeg",
+
+      alt: "junior backend developer",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/junior backend developer.jpeg",
+    },
+    {
+      name: "Muhammad Amir Fahad",
+      role: "UI_UX Designer",
+      img: "/about-us/team-members/UI_UX designer.jpeg",
+
+      alt: "UI_UX designer",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/UI_UX designer.jpeg",
+    },
+    {
+      name: "Saifullah",
+      role: "Cyber Security Expert",
+      img: "/about-us/team-members/cybersecurity expert.jpeg",
+
+      alt: "cybersecurity expert",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/cybersecurity expert.jpeg",
+    },
+    {
+      name: "Mir Monsoor Hossain",
+      role: "Marketing Officer",
+      img: "/about-us/team-members/marketing officer.jpeg",
+
+      alt: "marketing officer",
+
+      detailsText:
+        "Mir Monsoor Hossain oversees commercial operations and business growth strategies. He works closely with global partners and clients to expand market reach and strengthen the company’s commercial success.",
+
+      detailsImg: "/about-us/team-members/marketing officer.jpeg",
     },
   ];
 
@@ -95,14 +180,14 @@ export default function LeadershipMember() {
   return (
     <>
       <section className="py-16 sm:py-20 bg-[#f5f5f7]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* HEADING */}
           <h2 className="text-[34px] sm:text-[46px] md:text-[58px] leading-none font-semibold text-[#111827] mb-10 sm:mb-14">
             Leadership Team
           </h2>
 
           {/* GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-14">
             {leaders.map((item, index) => (
               <div key={index}>
                 {/* IMAGE */}
@@ -174,7 +259,7 @@ export default function LeadershipMember() {
                 {/* LEFT CONTENT */}
                 <div className="order-2 lg:order-1  rounded-xl">
                   <h2 className="text-[18px] sm:text-[18px] md:text-[20px]  lg:text-[30px] leading-[1.05] font-semibold ">
-                    {selectedLeader.detailsTitle}
+                    {selectedLeader.name}
                   </h2>
                   <p>{selectedLeader.role}</p>
 
@@ -188,7 +273,7 @@ export default function LeadershipMember() {
                   <div className="relative w-full max-w-100 h-100 overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-4xl">
                     <Image
                       src={selectedLeader.detailsImg}
-                      alt={selectedLeader.detailsTitle}
+                      alt={selectedLeader.img}
                       fill
                       className="object-cover"
                     />
