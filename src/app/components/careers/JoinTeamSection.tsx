@@ -22,9 +22,7 @@ export default function JoinTeamSection() {
             text-[#111827]
             "
           >
-            Contribute to the future of mobile
-            <br className="hidden md:block" />
-            VoIP & IP Communication
+            Empowering Businesses with Innovative Solutions
           </h2>
 
           <p
@@ -39,9 +37,10 @@ export default function JoinTeamSection() {
             mx-auto
             "
           >
-            At REVE Systems you will have the freedom to explore across the
-            globe through experience different cultures while dedicatedly
-            working together as a team towards a common vision and goals
+            We empower businesses with innovative technology solutions that
+            drive growth, improve efficiency, and transform ideas into impactful
+            digital experiences through web, mobile, AI, and software
+            development expertise.
           </p>
 
           {/* BUTTON */}

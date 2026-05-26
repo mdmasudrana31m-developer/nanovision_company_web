@@ -35,13 +35,11 @@ export default function OurCulture() {
               text-[#4B5563]
               "
             >
-              At REVE Systems, we ensure the freedom for people to deliver their
-              best output and maintain the responsibility to achieve excellence.
-              We admire people who speak their minds and listen more while
-              making a real effort to understand views that differ from their
-              own. People here are friendly and helpful beyond expectation.
-              Everyone shares a common goal to make the best products and
-              services for the customers.
+              At Nano Vision LTD, our culture is built on innovation, teamwork,
+              and continuous growth. We foster a collaborative environment where
+              creativity is encouraged, ideas are valued, and every team member
+              is empowered to deliver impactful technology solutions with
+              integrity, excellence, and a customer-focused mindset.
             </p>
           </div>
 
@@ -69,7 +67,7 @@ export default function OurCulture() {
     "
             >
               <Image
-                src="/team-img/Frame.png"
+                src="/team-img/Frame1.png"
                 alt="Culture"
                 fill
                 priority

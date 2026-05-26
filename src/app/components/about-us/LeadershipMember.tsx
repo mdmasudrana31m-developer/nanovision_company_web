@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Plus, X } from "lucide-react";
+import { Eye,  X } from "lucide-react";
 import { useEffect, useState } from "react";
 import Button from "@/app/utils/Button";
 
@@ -34,7 +34,7 @@ export default function LeadershipMember() {
   const leaders = [
     {
       name: "Md Saiful Islam",
-      role: "AI Engineer (Chairman of Nanovision)",
+      role: "AI Engineer ",
       img: "/about-us/team-members/ai engineer.jpeg",
 
       alt: "ai engineer",
@@ -47,7 +47,7 @@ export default function LeadershipMember() {
 
     {
       name: "Sheik Salman Sami",
-      role: "Data Analysis (MD of Nanovision)",
+      role: "Data Analysis ",
       img: "/about-us/team-members/Data analysis.jpeg",
 
       alt: "Data analysis",
@@ -59,7 +59,7 @@ export default function LeadershipMember() {
     },
 
     {
-      name: "Ajmat Iqbal",
+      name: "Dip Adnan",
       role: "Data Engineer",
       img: "/about-us/team-members/data engineer.jpeg",
 
@@ -72,7 +72,7 @@ export default function LeadershipMember() {
     },
 
     {
-      name: "Mir Monsoor Hossain",
+      name: "Ehsanul H. Rizvy",
       role: "Next js Developer",
       img: "/about-us/team-members/next js developer.jpg",
 
@@ -85,7 +85,7 @@ export default function LeadershipMember() {
     },
 
     {
-      name: "Mir Monsoor Hossain",
+      name: "Tasnia Sharin",
       role: "React Developer",
       img: "/about-us/team-members/react developer.jpg",
 
@@ -110,7 +110,7 @@ export default function LeadershipMember() {
       detailsImg: "/about-us/team-members/react developer.jpeg",
     },
     {
-      name: "Md Showon Sheikh",
+      name: "Muhammad Shaon Sheikh ",
       role: "Senior Backend Developer",
       img: "/about-us/team-members/suner backend develper.jpeg",
 
@@ -122,7 +122,7 @@ export default function LeadershipMember() {
       detailsImg: "/about-us/team-members/suner backend develper.jpeg",
     },
     {
-      name: "Saad",
+      name: "Mushtaq Ahmad Saad (Saad)",
       role: "Junior Backend Developer",
       img: "/about-us/team-members/junior backend developer.jpeg",
 
@@ -146,7 +146,7 @@ export default function LeadershipMember() {
       detailsImg: "/about-us/team-members/UI_UX designer.jpeg",
     },
     {
-      name: "Saifullah",
+      name: "Walid Saifullah Sadi ",
       role: "Cyber Security Expert",
       img: "/about-us/team-members/cybersecurity expert.jpeg",
 
@@ -158,7 +158,7 @@ export default function LeadershipMember() {
       detailsImg: "/about-us/team-members/cybersecurity expert.jpeg",
     },
     {
-      name: "Mir Monsoor Hossain",
+      name: "Mithu",
       role: "Marketing Officer",
       img: "/about-us/team-members/marketing officer.jpeg",
 
@@ -225,7 +225,7 @@ export default function LeadershipMember() {
                       buttonText="See More"
                       onClick={() => handleOpen(item)}
                       Plus={
-                        <Plus
+                        <Eye
                           size={18}
                           className="text-white bg-gray-600 rounded-full"
                         />
