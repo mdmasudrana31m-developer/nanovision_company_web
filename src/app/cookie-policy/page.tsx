@@ -34,11 +34,12 @@ const CookiePolicy = () => {
               what information they gather, how we use it and why we sometimes
               need to store these cookies. We will also share how you can
               prevent these cookies from being stored, however this may
-              downgrade or break certain elements of the site&apos;s functionality.
+              downgrade or break certain elements of the site&apos;s
+              functionality.
             </p>
 
             <p className="text-base sm:text-lg leading-[1.9] mt-5">
-              For more general information on cookies see the: {" "}
+              For more general information on cookies see the:{" "}
               <a
                 href="https://en.wikipedia.org/wiki/HTTP_cookie"
                 target="_blank"
@@ -123,11 +124,7 @@ const CookiePolicy = () => {
 
             <p className="text-base sm:text-lg leading-[1.9] mt-5">
               For more information on Google Analytics cookies, see the{" "}
-              <a
-                href="/"
-                target="_blank"
-                className="text-blue-600 underline"
-              >
+              <a href="/" target="_blank" className="text-blue-600 underline">
                 official Google Analytics page
               </a>
               .
@@ -147,9 +144,10 @@ const CookiePolicy = () => {
 
             <p className="text-base sm:text-lg leading-[1.9]">
               Hopefully that has clarified things for you and as was previously
-              mentioned if there is something that you aren&apos;t sure whether you
-              need or not it&apos;s usually safer to leave cookies enabled in case it
-              does interact with one of the features you use on our site.
+              mentioned if there is something that you aren&apos;t sure whether
+              you need or not it&apos;s usually safer to leave cookies enabled
+              in case it does interact with one of the features you use on our
+              site.
             </p>
 
             <p className="text-base sm:text-lg leading-[1.9] mt-5">
@@ -163,7 +161,7 @@ const CookiePolicy = () => {
                 href="mailto:sparsh@revesoft.com"
                 className="text-blue-600 underline break-all"
               >
-                nano@vision.com
+                info@nanovisionltd.com
               </a>
             </p>
           </div>

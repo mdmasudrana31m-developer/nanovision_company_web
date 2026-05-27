@@ -1,10 +1,9 @@
 "use client";
 
 import Button from "@/app/utils/Button";
-import { MapPin, Phone, Building2 } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { useCallback } from "react";
-import { BsWhatsapp } from "react-icons/bs";
 
 export default function OfficeLocation() {
   const handleScrollToBusiness = useCallback(() => {
@@ -84,13 +83,7 @@ export default function OfficeLocation() {
             </div>
 
             {/* Office */}
-            {/* <div className="flex gap-3">
-              <Building2 className="text-gray-500 mt-1" size={20} />
-              <div>
-                <p className="font-medium text-gray-800">Office</p>
-                <p className="text-gray-600 text-sm">+880 09606738300</p>
-              </div>
-            </div> */}
+          
 
             <hr className="border-t-2 border-gray-300 " />
 

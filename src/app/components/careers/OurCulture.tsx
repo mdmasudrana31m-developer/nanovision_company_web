@@ -67,7 +67,7 @@ export default function OurCulture() {
     "
             >
               <Image
-                src="/team-img/Frame1.png"
+                src="/team-img/Fram.png"
                 alt="Culture"
                 fill
                 priority

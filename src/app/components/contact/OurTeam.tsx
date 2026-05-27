@@ -9,7 +9,7 @@ const team = [
     region: "Khulna, Bangladesh",
     name: "Md Saiful Islam",
     post: "Chairman of Nanovision",
-    img: "/saiful.jpeg",
+    img: "/saiful.png",
     phone: " +8801778807497",
     BsWhatsapp: " +8801778807497",
     email: " chairman@nanovisionltd.com",
@@ -20,7 +20,7 @@ const team = [
     region: "Khulna, Bangladesh",
     name: "Sheik Salman Sami",
     post: "Managing Director of Nanovision",
-    img: "/salman.png",
+    img: "/salman1.png",
     phone: " +8801845314732",
     BsWhatsapp: " +8801845314732",
     email: " managingdirector@nanovisionltd.com",
@@ -81,12 +81,12 @@ export default function OurTeam() {
             {/* CONTENT */}
             <div className="p-5 sm:p-6 text-center">
               {/* IMAGE */}
-              <div className="w-24 h-24 sm:w-[120px] sm:h-[120px] mx-auto mb-4 relative">
+              <div className="w-24 h-24 sm:w-[120px] sm:h-[120px] bg-gray-400 rounded-full mx-auto mb-4 relative">
                 <Image
                   src={item.img}
                   alt={item.name}
                   fill
-                  className="rounded-full object-fill"
+                  className="rounded-full object-cover"
                 />
               </div>
 

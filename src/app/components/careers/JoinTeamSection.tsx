@@ -2,9 +2,17 @@
 
 import Button from "@/app/utils/Button";
 import Image from "next/image";
-import Link from "next/link";
+import { useCallback } from "react";
 
 export default function JoinTeamSection() {
+  const handleScrollToBusiness = useCallback(() => {
+    const section = document.getElementById("business");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "business";
+    }
+  }, []);
   return (
     <section className="bg-[#f5f5f7] mt-16 py-16 sm:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,9 +56,10 @@ export default function JoinTeamSection() {
             className="mt-8 sm:mt-10     w-50
 "
           >
-            <Link href="#">
-              <Button buttonText="Join Our Team" />
-            </Link>
+            <Button
+              buttonText="Join Our Team"
+              onClick={handleScrollToBusiness}
+            />
           </div>
         </div>
 

@@ -1,10 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Button from "@/app/utils/Button";
 
 export default function HeroSection() {
+   const handleScrollToBusiness = useCallback(() => {
+      const section = document.getElementById("business");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.location.hash = "business";
+      }
+    }, []);
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -66,7 +74,8 @@ export default function HeroSection() {
         {/* 🔹 Button */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
           <div className="lg:mt-20 mt-0 md:w-60 w-50">
-            <Button buttonText="Contact Us" />
+            <Button buttonText="Contact Us" 
+            onClick={handleScrollToBusiness}/>
           </div>
         </div>
 

@@ -110,7 +110,9 @@ export default function Footer() {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://wa.me/+8801778807497"
+                     target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white text-[#25d366] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaWhatsapp />

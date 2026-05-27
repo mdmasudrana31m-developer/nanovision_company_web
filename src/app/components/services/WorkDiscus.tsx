@@ -43,7 +43,10 @@ export default function WorkDiscus() {
       );
   };
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16">
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden py-16"
+      id="business"
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-[url('/contactBg.webp')] bg-cover bg-center"></div>
 
