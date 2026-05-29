@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
 
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <div className="min-w-[180px] p-3 flex flex-col gap-3">
                   <div className="absolute left-0 top-4 bg-white shadow-lg rounded-md p-6 w-[500px]">
                     <div className="grid grid-cols-2 gap-4">
-                      <Link href="#">SMS Platform</Link>
+                      <Link href="/products/sms-platform">SMS Platform</Link>
 
                       <Link href="#">Live Chat</Link>
 
@@ -188,12 +188,7 @@ export default function Navbar() {
               </div>
             </li>
 
-            {/* Blog */}
-            <li>
-              <Link href="#" className="text-[20px]">
-                Blog
-              </Link>
-            </li>
+           
 
             {/* Contact */}
             <li>
