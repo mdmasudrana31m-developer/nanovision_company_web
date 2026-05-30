@@ -85,19 +85,24 @@ export default function TrafficBecomes() {
   ];
 
   const [activeTab, setActiveTab] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [autoPlay, setAutoPlay] = useState(true);
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // 🔥 AUTO CHANGE TAB
   useEffect(() => {
+    if (!autoPlay) return;
     const interval = setInterval(() => {
+      setDirection(1);
       setActiveTab((prev) => (prev + 1) % tabs.length);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [tabs.length]);
+  }, [autoPlay, tabs.length]);
 
   // 🔥 ACTIVE BUTTON AUTO SCROLL
+
   useEffect(() => {
     const container = scrollRef.current;
 
@@ -106,19 +111,35 @@ export default function TrafficBecomes() {
     const activeButton = container.children[activeTab] as HTMLElement;
 
     if (activeButton) {
-      activeButton.scrollIntoView({
+      container.scrollTo({
+        left:
+          activeButton.offsetLeft -
+          container.clientWidth / 2 +
+          activeButton.clientWidth / 2,
         behavior: "smooth",
-        inline: "center",
-        block: "nearest",
       });
     }
   }, [activeTab]);
 
+  useEffect(() => {
+    if (autoPlay) return;
+
+    const timer = setTimeout(() => {
+      setAutoPlay(true);
+    }, 15000);
+
+    return () => clearTimeout(timer);
+  }, [activeTab, autoPlay]);
+
   const nextSlide = () => {
+    setAutoPlay(false);
+    setDirection(1);
     setActiveTab((prev) => (prev + 1) % tabs.length);
   };
 
   const prevSlide = () => {
+    setAutoPlay(false);
+    setDirection(-1);
     setActiveTab((prev) => (prev - 1 + tabs.length) % tabs.length);
   };
 
@@ -174,7 +195,10 @@ export default function TrafficBecomes() {
           {tabs.map((tab, index) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(index)}
+              onClick={() => {
+                setAutoPlay(false);
+                setActiveTab(index);
+              }}
               className={`
                 flex
                 items-center
@@ -203,21 +227,74 @@ export default function TrafficBecomes() {
         </div>
 
         {/* IMAGE SECTION */}
-        <div className="relative overflow-hidden max-w-5xl   flex">
-          {/* LEFT ARROW */}
+        <div className="relative max-w-4xl mx-auto mt-10">
+          {/* LEFT ARROW DESKTOP */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center hover:scale-110 transition"
+            className="
+    hidden lg:flex
+    absolute
+    top-1/2
+    -translate-y-1/2
+    -left-[60px]
+    z-30
+    w-12
+    h-12
+    rounded-full
+    bg-gray-500
+    text-white
+    shadow-lg
+    items-center
+    justify-center
+    hover:scale-110
+    transition
+  "
           >
             <ChevronLeft size={24} />
           </button>
-          <div className=" aspect-[16/9] w-full   rounded-[22px] ">
+
+          {/* RIGHT ARROW DESKTOP */}
+          <button
+            onClick={nextSlide}
+            className="
+    hidden lg:flex
+    absolute
+    top-1/2
+    -translate-y-1/2
+    -right-[60px]
+    z-30
+    w-12
+    h-12
+    rounded-full
+    bg-gray-500
+    text-white
+    shadow-lg
+    items-center
+    justify-center
+    hover:scale-110
+    transition
+  "
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* IMAGE */}
+          <div className="relative w-full aspect-[16/9] overflow-hidden rounded-[22px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={tabs[activeTab].image}
-                initial={{ x: 300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -300, opacity: 0 }}
+                initial={{
+                  x: direction > 0 ? 300 : -300,
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                exit={{
+                  x: direction > 0 ? -300 : 300,
+                  opacity: 0,
+                }}
                 transition={{
                   duration: 0.5,
                   ease: "easeInOut",
@@ -234,13 +311,47 @@ export default function TrafficBecomes() {
               </motion.div>
             </AnimatePresence>
           </div>
-          {/* RIGHT ARROW */}
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 shadow-lg flex items-center justify-center hover:scale-110 transition"
-          >
-            <ChevronRight size={24} />
-          </button>
+
+          {/* MOBILE NAVIGATION */}
+          <div className="flex lg:hidden justify-center gap-4 mt-5">
+            <button
+              onClick={prevSlide}
+              className="
+      w-12
+      h-12
+      rounded-full
+      bg-gray-500
+      text-white
+      flex
+      items-center
+      justify-center
+      shadow-lg
+      hover:scale-110
+      transition
+    "
+            >
+              <ChevronLeft size={24} />
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="
+      w-12
+      h-12
+      rounded-full
+      bg-gray-500
+      text-white
+      flex
+      items-center
+      justify-center
+      shadow-lg
+      hover:scale-110
+      transition
+    "
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
         </div>
       </div>
     </section>
