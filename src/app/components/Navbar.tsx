@@ -123,7 +123,7 @@ export default function Navbar() {
                     <div className="grid grid-cols-2 gap-4">
                       <Link href="/products/sms-platform">SMS Platform</Link>
 
-                      <Link href="#">Live Chat</Link>
+                      <Link href="/products/live-chat">Live Chat</Link>
 
                       <Link href="#">
                         Mobile Session Border Controller (SBC)
@@ -187,8 +187,6 @@ export default function Navbar() {
                 </div>
               </div>
             </li>
-
-           
 
             {/* Contact */}
             <li>
