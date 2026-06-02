@@ -81,7 +81,7 @@ export default function BigDataExtraSections() {
             {vData.map((item, index) => (
               <div
                 key={index}
-                className="bg-white border rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition"
+                className="bg-white  rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition"
               >
                 <div className="flex justify-center mb-4">
                   <Image
@@ -112,7 +112,7 @@ export default function BigDataExtraSections() {
             {benefits.map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 p-5 border rounded-xl"
+                className="flex items-start gap-3 p-5 rounded-xl"
               >
                 <div className="w-3 h-3 rounded-full bg-blue-600 mt-2"></div>
 
@@ -165,7 +165,7 @@ export default function BigDataExtraSections() {
             {technologies.map((item, index) => (
               <div
                 key={index}
-                className="border rounded-2xl p-6 md:p-8 hover:shadow-md transition"
+                className=" rounded-2xl p-6 md:p-8 hover:shadow-md transition"
               >
                 <h3 className="text-xl font-semibold">{item.title}</h3>
 

@@ -6,10 +6,45 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+
+const products = [
+  {
+    title: "SMS Platform",
+    href: "/products/sms-platform",
+  },
+  {
+    title: "Live Chat",
+    href: "/products/live-chat",
+  },
+  {
+    title: "Big Data Analytics",
+    href: "/products/big-data",
+  },
+  {
+    title: "ERP System",
+    href: "/products/erp-system",
+  },
+];
+
+const Company = [
+  {
+    title: "About Us",
+    href: "/company/about-us",
+  },
+  {
+    title: "Careers",
+    href: "/company/careers",
+  },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const [productOpen, setProductOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
 
   // 👉 only 1024px+ screen এ animation হবে
   const [isLargeDesktop, setIsLargeDesktop] = useState(false);
@@ -119,15 +154,52 @@ export default function Navbar() {
                 "
               >
                 <div className="min-w-[180px] p-3 flex flex-col gap-3">
-                  <div className="absolute left-0 top-4 bg-white shadow-lg rounded-md p-6 w-[500px]">
+                  <div className="absolute left-0 top-4 bg-white shadow-xl rounded-xl p-6 w-[360px]">
                     <div className="grid grid-cols-2 gap-4">
-                      <Link href="/products/sms-platform">SMS Platform</Link>
+                      {products.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`
+    relative
+    inline-block
+    py-2
+    px-2
+    text-[16px]
+    font-medium
+    transition-colors
+    duration-300
 
-                      <Link href="/products/live-chat">Live Chat</Link>
+    ${
+      pathname === item.href
+        ? "text-[#5B6CF0]"
+        : "text-gray-700 hover:bg-gray-100 rounded"
+    }
+  `}
+                        >
+                          {item.title}
 
-                      <Link href="/products/big-data">Big Data Analytics</Link>
+                          <span
+                            className={`
+      absolute
+      left-0
+      bottom-0
+      h-[2px]
+      bg-[#5B6CF0]
+      transition-all
+      duration-300
 
-                      <Link href="#">ERP System</Link>
+      ${pathname === item.href ? "w-[80%]" : "w-0"}
+    `}
+                          />
+
+                          <style jsx>{`
+                            a:hover span {
+                              width: 100%;
+                            }
+                          `}</style>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -168,28 +240,63 @@ export default function Navbar() {
                   z-50
                 "
               >
-                <div className="bg-white shadow-xl rounded-xl min-w-[180px] p-3 flex flex-col gap-3">
-                  <Link
-                    href="/about-us"
-                    className="hover:text-blue-600 transition"
-                  >
-                    About Us
-                  </Link>
+                <div className="bg-white shadow-xl rounded-xl min-w-[150px] p-3 flex flex-col gap-3">
+                  <div className="absolute left-0 top-4 bg-white shadow-xl rounded-xl p-6 w-[150px]">
+                    <div className="grid grid-cols-1 gap-4">
+                      {Company.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className={`
+    relative
+    inline-block
+    py-2
+    px-2
+    text-[16px]
+    font-medium
+    transition-colors
+    duration-300
 
-                  <Link
-                    href="/careers"
-                    className="hover:text-blue-600 transition"
-                  >
-                    Careers
-                  </Link>
+    ${
+      pathname === item.href
+        ? "text-[#5B6CF0]"
+        : "text-gray-700 hover:bg-gray-100 rounded"
+    }
+  `}
+                        >
+                          {item.title}
+
+                          <span
+                            className={`
+      absolute
+      left-0
+      bottom-0
+      h-[2px]
+      bg-[#5B6CF0]
+      transition-all
+      duration-300
+
+      ${pathname === item.href ? "w-[80%]" : "w-0"}
+    `}
+                          />
+
+                          <style jsx>{`
+                            a:hover span {
+                              width: 100%;
+                            }
+                          `}</style>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
 
             {/* Contact */}
             <li>
-              <Link href="/contact" className="text-[20px]">
-                Contact
+              <Link href="/contact-us" className="text-[20px]">
+                Contact Us
               </Link>
             </li>
           </ul>
@@ -254,19 +361,101 @@ export default function Navbar() {
               {/* Menu Items */}
               <div
                 className="flex flex-col gap-4 text-gray-700"
-                onClick={() => setOpen(false)}
+                onClick={(e) => e.stopPropagation()}
               >
-                <Link href="/">Home</Link>
+                <Link href="/" onClick={() => setOpen(false)}>
+                  Home
+                </Link>
 
-                <Link href="#">Products</Link>
+                {/* PRODUCTS */}
+                <div>
+                  <button
+                    onClick={() => setProductOpen(!productOpen)}
+                    className="w-full flex items-center justify-between"
+                  >
+                    <span>Products</span>
 
-                <Link href="/services">Services</Link>
+                    <IoIosArrowDown
+                      className={`transition-transform duration-300 ${
+                        productOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-                <Link href="/careers">Careers</Link>
+                  {productOpen && (
+                    <div className="flex flex-col gap-3 mt-3 ml-4 text-sm text-gray-600">
+                      <Link
+                        href="/products/sms-platform"
+                        onClick={() => setOpen(false)}
+                      >
+                        SMS Platform
+                      </Link>
 
-                <Link href="/contact">Contact</Link>
+                      <Link
+                        href="/products/live-chat"
+                        onClick={() => setOpen(false)}
+                      >
+                        Live Chat
+                      </Link>
 
-                <Link href="/about-us">About Us</Link>
+                      <Link
+                        href="/products/big-data"
+                        onClick={() => setOpen(false)}
+                      >
+                        Big Data Analytics
+                      </Link>
+
+                      <Link
+                        href="/products/erp-system"
+                        onClick={() => setOpen(false)}
+                      >
+                        ERP System
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link href="services" onClick={() => setOpen(false)}>
+                  Services
+                </Link>
+
+                {/* COMPANY */}
+                <div>
+                  <button
+                    onClick={() => setCompanyOpen(!companyOpen)}
+                    className="w-full flex items-center justify-between"
+                  >
+                    <span>Company</span>
+
+                    <IoIosArrowDown
+                      className={`transition-transform duration-300 ${
+                        companyOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {companyOpen && (
+                    <div className="flex flex-col gap-3 mt-3 ml-4 text-sm text-gray-600">
+                      <Link
+                        href="/company/about-us"
+                        onClick={() => setOpen(false)}
+                      >
+                        About Us
+                      </Link>
+
+                      <Link
+                        href="/company/careers"
+                        onClick={() => setOpen(false)}
+                      >
+                        Careers
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link href="/contact" onClick={() => setOpen(false)}>
+                  Contact
+                </Link>
               </div>
             </motion.div>
           </>

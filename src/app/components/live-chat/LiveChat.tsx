@@ -46,7 +46,7 @@ const LiveChat = () => {
             max-w-3xl
           "
             >
-              (Sister Concern of REVE Systems)
+              (Sister Concern of NanoVision Systems)
             </h2>
 
             {/* DESCRIPTION */}
@@ -85,8 +85,8 @@ const LiveChat = () => {
           "
             >
               <Image
-                src="/sms-platform/sms-platform.webp"
-                alt="SMS Platform"
+                src="/sms-platform/live-chat/live-chat.webp"
+                alt="Live Chat"
                 fill
                 priority
                 className="object-contain"

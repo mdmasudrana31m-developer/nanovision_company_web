@@ -111,7 +111,7 @@ export default function Footer() {
 
                   <a
                     href="https://wa.me/+8801778807497"
-                     target="_blank"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white text-[#25d366] flex items-center justify-center hover:scale-110 transition"
                   >
@@ -150,7 +150,7 @@ export default function Footer() {
 
                   <li>
                     <Link
-                      href="/products"
+                      href="/products/sms-platform"
                       className="hover:text-yellow-300 transition"
                     >
                       ⦿ Products
@@ -168,7 +168,7 @@ export default function Footer() {
 
                   <li>
                     <Link
-                      href="/careers"
+                      href="/company/careers"
                       className="hover:text-yellow-300 transition"
                     >
                       ⦿ Careers
@@ -177,16 +177,16 @@ export default function Footer() {
 
                   <li>
                     <Link
-                      href="/contact"
+                      href="/contact-us"
                       className="hover:text-yellow-300 transition"
                     >
-                      ⦿ Contact
+                      ⦿ Contact Us
                     </Link>
                   </li>
 
                   <li>
                     <Link
-                      href="/about-us"
+                      href="/company/about-us"
                       className="hover:text-yellow-300 transition"
                     >
                       ⦿ About Us

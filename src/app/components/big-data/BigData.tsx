@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function BigData() {
   return (
-    <main className="bg-white text-[#111827]">
+    <main className="bg-white mt-15 text-[#111827]">
       {/* HERO */}
       <section className="bg-[#EEF3F8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
