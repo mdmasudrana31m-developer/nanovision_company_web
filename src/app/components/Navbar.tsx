@@ -125,11 +125,9 @@ export default function Navbar() {
 
                       <Link href="/products/live-chat">Live Chat</Link>
 
-                      <Link href="#">
-                        Mobile Session Border Controller (SBC)
-                      </Link>
+                      <Link href="/products/big-data">Big Data Analytics</Link>
 
-                      <Link href="#">WhatsApp Campaign</Link>
+                      <Link href="#">ERP System</Link>
                     </div>
                   </div>
                 </div>

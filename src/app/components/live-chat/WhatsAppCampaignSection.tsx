@@ -24,7 +24,7 @@ export default function WhatsAppCampaignSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* LEFT CONTENT */}
           <div>
-            <h2 className="text-[36px] md:text-[54px] font-bold text-[#111827]">
+            <h2 className="text-[26px] md:text-[44px] font-bold text-[#111827]">
               WhatsApp Campaign
             </h2>
 
@@ -71,7 +71,7 @@ export default function WhatsAppCampaignSection() {
 
         {/* WORKFLOW */}
         <div className="mt-24 lg:mt-32">
-          <h3 className="text-center text-[32px] md:text-[48px] font-bold text-[#111827] mb-14">
+          <h3 className="text-center text-[22px] md:text-[38px] font-bold text-[#111827] mb-14">
             Campaign Workflow
           </h3>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
