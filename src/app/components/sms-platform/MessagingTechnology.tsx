@@ -13,51 +13,39 @@ export default function MessagingTechnology() {
   const features = [
     {
       icon: <Network size={28} />,
-      title: "Multi-Protocol Support",
+      title: "Bulk SMS Campaigns",
       description:
-        "A complete and scalable solution to suit your requirements, capable of sending and receiving messages seamlessly from SMPP, HTTP, HTTPS, RESTful API, and SS7 (SIGTRAN M3UA, SCCP).",
+        "Send promotional and marketing messages to thousands of recipients within seconds with advanced scheduling and audience management.",
     },
     {
       icon: <Megaphone size={28} />,
-      title: "Effortless Campaign Management",
+      title: "OTP & Verification Services",
       description:
-        "Take full control and manage dynamic and generic SMS campaigns with an intuitive web-based interface that enables users to schedule campaigns, customize sender IDs, and manage everything effortlessly.",
+        "Deliver secure one-time passwords and verification codes instantly to support authentication, account security, and user onboarding.",
     },
     {
       icon: <Route size={28} />,
-      title: "Advanced Routing Capabilities",
+      title: "Transactional Messaging",
       description:
-        "The cloud-based geographically distributed architecture is capable of processing millions of messages per hour. Priority, LLR, and LCR-based route selection ensure reliable SMS delivery.",
+        "Automatically send order confirmations, payment notifications, appointment reminders, delivery updates, and service alerts.",
     },
     {
       icon: <Users size={28} />,
-      title: "Multi-Level Client Management",
+      title: "API Integration",
       description:
-        "Client and reseller management gets easier than ever with interactive dashboards, multi-tier reseller management, and client-specific reporting portals.",
+        "Easily integrate SMS functionality into websites, mobile applications, CRM systems, ERP platforms, and custom business software.",
     },
     {
       icon: <Package size={28} />,
-      title: "Bundle/Package Management",
+      title: "Real-Time Analytics",
       description:
-        "Activate, deactivate, or modify SMS bundles. Create specific SMS types, sender ID types, subscription fees, SMS quantity limits, and periods.",
+        "Monitor message delivery, campaign performance, response rates, and engagement metrics through a centralized dashboard.",
     },
     {
       icon: <FilePenLine size={28} />,
       title: "Content Whitelisting, Blocking & Modification",
       description:
         "Advanced filtering allows screening SMS text and sender IDs. The system can block URLs and prevent unauthorized links in SMS texts.",
-    },
-    {
-      icon: <Settings2 size={28} />,
-      title: "MNP Dipping & HLR Configuration",
-      description:
-        "Configure MNP and HLR lookup systems to improve routing efficiency and optimize message delivery accuracy.",
-    },
-    {
-      icon: <BadgeDollarSign size={28} />,
-      title: "Pricing & Rate Management",
-      description:
-        "Manage rates, pricing structures, billing rules, and revenue models through a centralized administration panel.",
     },
   ];
 

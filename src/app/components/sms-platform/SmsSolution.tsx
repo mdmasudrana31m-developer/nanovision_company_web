@@ -38,9 +38,7 @@ const SmsSolution = () => {
         lg:text-[54px]
       "
         >
-          Carrier-Grade SMS Solution for
-          <br />
-          Aggregators, MNOs & MVNOs
+          Powerful SMS Communication for Modern Businesses{" "}
         </h2>
 
         {/* DESCRIPTION */}
@@ -56,11 +54,11 @@ const SmsSolution = () => {
         md:text-[22px]
       "
         >
-          The high-performance REVE SMS Platform is a wholesale & retail
-          business messaging solution that supports A2P, P2A, and P2P SMS with
-          real-time billing system. Designed for large-scale operations, the
-          platform boasts powerful features and has become an ideal solution for
-          wholesale carriers, SMS aggregators, MNOs, and MVNOs worldwide
+          Reach customers instantly with Nano Vision LTD&apos;s reliable and
+          scalable SMS Platform. Whether you need promotional campaigns,
+          transactional notifications, OTP verification, or customer engagement
+          messaging, our platform ensures fast delivery, high availability, and
+          enterprise-grade security.
         </p>
       </div>
     </section>

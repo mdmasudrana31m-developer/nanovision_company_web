@@ -30,7 +30,7 @@ const SmsPlatform = () => {
             text-[#111827]
           "
             >
-              REVE SMS Platform
+              NanoVision SMS Platform
             </h1>
 
             {/* SUB TITLE */}
@@ -46,7 +46,7 @@ const SmsPlatform = () => {
             max-w-3xl
           "
             >
-              One-stop SMS Platform Supporting SS7/SIGTRAN, SMPP, and HTTP
+              Empower Your Business with Smart SMS Communication
             </h2>
 
             {/* DESCRIPTION */}
@@ -62,8 +62,8 @@ const SmsPlatform = () => {
             lg:mx-0
           "
             >
-              Your Complete Gateway Solution for SMS Hubbing, A2P SMS and
-              Campaign Management, Two-way Messaging
+              Reliable Bulk SMS, OTP Verification, Transactional Messaging, and
+              Enterprise Communication Solutions for Businesses of All Sizes.
             </p>
 
             {/* BUTTON */}

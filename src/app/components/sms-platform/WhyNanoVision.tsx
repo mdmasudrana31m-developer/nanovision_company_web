@@ -14,48 +14,43 @@ export default function WhyNanoVision() {
   const features = [
     {
       icon: <LayoutPanelLeft size={26} />,
-      title: "User-Friendly Interface",
-      desc: "Efficiently manage campaigns with an intuitive and easy-to-navigate platform.",
+      title: "High-speed message delivery",
+      desc: "Deliver SMS messages instantly through our optimized routing network, ensuring timely communication with your customers.",
     },
     {
       icon: <WalletCards size={26} />,
-      title: "Telco-Grade Solution",
-      desc: "Ideal for large-scale campaigns, offering high TPS with flexibility to scale capacity.",
+      title: "Enterprise-Grade Security",
+      desc: "Protect sensitive data with advanced security protocols, encrypted transmissions, and secure infrastructure.",
     },
     {
       icon: <Server size={26} />,
-      title: "Bare-Metal Server/Cloud",
-      desc: "On-premise dedicated servers or cloud deployment to suit operational needs.",
+      title: "Scalable Infrastructure",
+      desc: "Handle thousands to millions of messages effortlessly with a platform designed to grow alongside your business.",
     },
     {
       icon: <MoveUpRight size={26} />,
-      title: "Flexible & Scalable",
-      desc: "Supporting distributed architecture with 1+1 Hot Standby facility.",
+      title: "Developer-Friendly API",
+      desc: "Integrate SMS capabilities quickly and easily using our well-documented, flexible, and reliable API.",
     },
     {
       icon: <Crosshair size={26} />,
-      title: "Campaign Versatility",
-      desc: "Run powerful multi-channel campaigns with SMS and WhatsApp support.",
+      title: "Detailed Reporting & Analytics",
+      desc: "Track delivery status, campaign performance, and customer engagement through comprehensive reporting tools.",
     },
     {
       icon: <CreditCard size={26} />,
-      title: "Integrated Payment Flexibility",
-      desc: "Choose from multiple international payment gateways.",
+      title: "24/7 Technical Support",
+      desc: "Receive expert assistance anytime from our dedicated support team to ensure uninterrupted communication.",
     },
     {
       icon: <MapPinned size={26} />,
-      title: "Intelligent Routing & Delivery",
-      desc: "Leverage HLR Lookup and MNP Dipping to improve delivery accuracy.",
+      title: "Competitive pricing",
+      desc: "Benefit from cost-effective SMS solutions that maximize value without compromising quality or performance.",
     },
     {
       icon: <Headset size={26} />,
-      title: "24/7 Technical Support",
-      desc: "Dedicated support channels and prompt resolution of issues.",
-    },
-    {
-      icon: <BadgeCheck size={26} />,
-      title: "Licensed or Hosted Model",
-      desc: "Choose between licensed ownership or hosted service deployment.",
+      title: "Reliable Uptime & Performance",
+      desc: "Count on a robust and highly available platform that delivers consistent service and dependable message delivery.",
     },
   ];
 
@@ -100,7 +95,7 @@ export default function WhyNanoVision() {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[36px] md:text-[54px] font-semibold text-[#1d2433]">
-            Why NanoVision
+            Why Choose Nano Vision SMS Platform?{" "}
           </h2>
         </div>
 
