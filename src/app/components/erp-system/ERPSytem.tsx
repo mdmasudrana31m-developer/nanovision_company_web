@@ -9,37 +9,37 @@ import {
   Headset,
 } from "lucide-react";
 
-export default function WhyNanoVision() {
+export default function ERPSytem() {
   const features = [
     {
       icon: <LayoutPanelLeft size={26} />,
-      title: "High-speed message delivery",
-      desc: "Deliver SMS messages instantly through our optimized routing network, ensuring timely communication with your customers.",
+      title: "Financial Management",
+      desc: "Maintain complete control over your organization's financial operations with automated accounting and reporting.",
     },
     {
       icon: <WalletCards size={26} />,
-      title: "Enterprise-Grade Security",
-      desc: "Protect sensitive data with advanced security protocols, encrypted transmissions, and secure infrastructure.",
+      title: "Human Resource Management (HRM)",
+      desc: "Simplify workforce management, employee engagement, payroll processing, and attendance monitoring.",
     },
     {
       icon: <Server size={26} />,
-      title: "Scalable Infrastructure",
-      desc: "Handle thousands to millions of messages effortlessly with a platform designed to grow alongside your business.",
+      title: " Inventory & Warehouse Management",
+      desc: "Optimize stock control, reduce inventory costs, and improve supply chain efficiency.",
     },
     {
       icon: <MoveUpRight size={26} />,
-      title: "Developer-Friendly API",
-      desc: "Integrate SMS capabilities quickly and easily using our well-documented, flexible, and reliable API.",
+      title: " Customer Relationship Management (CRM)",
+      desc: "Strengthen customer relationships through better sales tracking, communication, and customer service.",
     },
     {
       icon: <Crosshair size={26} />,
-      title: "Detailed Reporting & Analytics",
-      desc: "Track delivery status, campaign performance, and customer engagement through comprehensive reporting tools.",
+      title: " Procurement Management",
+      desc: "Improve purchasing efficiency and gain greater visibility into supplier performance and procurement costs.",
     },
     {
       icon: <CreditCard size={26} />,
-      title: "24/7 Technical Support",
-      desc: "Receive expert assistance anytime from our dedicated support team to ensure uninterrupted communication.",
+      title: "Asset Management",
+      desc: "Track company assets, maintenance schedules, depreciation, and asset utilization throughout their lifecycle.",
     },
     {
       icon: <MapPinned size={26} />,
@@ -94,7 +94,7 @@ export default function WhyNanoVision() {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-[36px] md:text-[54px] font-semibold text-[#1d2433]">
-            Why Choose Nano Vision SMS Platform?{" "}
+            Core ERP Modules
           </h2>
         </div>
 

@@ -2,7 +2,7 @@ import Button from "@/app/utils/Button";
 import Image from "next/image";
 import React from "react";
 
-const LiveChat = () => {
+const ERPPlatform = () => {
   return (
     <section className="w-full bg-[#f3f4f8] py-14 sm:py-16 lg:py-24 overflow-hidden">
       <div className="max-w-7xl md:mt-14 lg:mt-0 mt-18 mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,15 +22,15 @@ const LiveChat = () => {
             <h1
               className="
             text-[40px]
-            sm:text-[32px]
-            md:text-[44px]
-            lg:text-[52px]
+            sm:text-[42px]
+            md:text-[54px]
+            lg:text-[62px]
             leading-[1]
             font-bold
             text-[#111827]
           "
             >
-              Real-Time Customer Support & Engagement{" "}
+              Smart ERP for Modern Businesses
             </h1>
 
             {/* DESCRIPTION */}
@@ -46,15 +46,15 @@ const LiveChat = () => {
             lg:mx-0
           "
             >
-              Connect with website visitors instantly through live chat,
-              AI-powered assistance, and omnichannel communication designed to
-              boost customer satisfaction and business growth.
+              Integrate finance, HR, inventory, sales, procurement, and
+              operations into one powerful platform that drives efficiency,
+              productivity, and business growth.
             </p>
 
             {/* BUTTON */}
             <div className="flex mt-8 flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start   ">
               <div className="min-w-50 ">
-                <Button buttonText="Start Free Trial" />
+                <Button buttonText="Get a Free Demo" />
               </div>
             </div>
           </div>
@@ -70,8 +70,8 @@ const LiveChat = () => {
           "
             >
               <Image
-                src="/sms-platform/live-chat/live-chat.webp"
-                alt="Live Chat"
+                src="/sms-platform/sms-platform.webp"
+                alt="SMS Platform"
                 fill
                 priority
                 className="object-contain"
@@ -84,4 +84,4 @@ const LiveChat = () => {
   );
 };
 
-export default LiveChat;
+export default ERPPlatform;

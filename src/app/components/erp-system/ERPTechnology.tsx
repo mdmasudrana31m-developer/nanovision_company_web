@@ -5,47 +5,69 @@ import {
   Users,
   Package,
   FilePenLine,
-  Settings2,
-  BadgeDollarSign,
 } from "lucide-react";
 
-export default function MessagingTechnology() {
+export default function ERPTechnology() {
   const features = [
     {
       icon: <Network size={28} />,
-      title: "Bulk SMS Campaigns",
+      title: "Finance & Accounting",
       description:
-        "Send promotional and marketing messages to thousands of recipients within seconds with advanced scheduling and audience management.",
+        "Manage budgeting, invoicing, accounts payable, accounts receivable, expenses, payroll, and financial reporting from a single platform.",
     },
     {
       icon: <Megaphone size={28} />,
-      title: "OTP & Verification Services",
+      title: "Inventory Management",
       description:
-        "Deliver secure one-time passwords and verification codes instantly to support authentication, account security, and user onboarding.",
+        "rack inventory levels, warehouse operations, stock movements, procurement, and product availability in real time.",
     },
     {
       icon: <Route size={28} />,
-      title: "Transactional Messaging",
+      title: "Human Resource Management",
       description:
-        "Automatically send order confirmations, payment notifications, appointment reminders, delivery updates, and service alerts.",
+        "Manage employee records, attendance, payroll, leave requests, performance evaluations, and workforce planning efficiently.",
     },
     {
       icon: <Users size={28} />,
-      title: "API Integration",
+      title: "Sales & Customer Management",
       description:
-        "Easily integrate SMS functionality into websites, mobile applications, CRM systems, ERP platforms, and custom business software.",
+        "Handle leads, quotations, customer records, sales orders, invoices, and customer interactions through an integrated CRM module.",
     },
     {
       icon: <Package size={28} />,
-      title: "Real-Time Analytics",
+      title: " Procurement & Vendor Management",
       description:
-        "Monitor message delivery, campaign performance, response rates, and engagement metrics through a centralized dashboard.",
+        "Streamline purchasing processes, supplier relationships, approvals, and procurement workflows while maintaining full visibility over spending.",
     },
     {
       icon: <FilePenLine size={28} />,
-      title: "Content Whitelisting, Blocking & Modification",
+      title: "Project Management",
       description:
-        "Advanced filtering allows screening SMS text and sender IDs. The system can block URLs and prevent unauthorized links in SMS texts.",
+        "Plan, execute, and monitor projects with task tracking, resource allocation, budgeting, and performance reporting.",
+    },
+    {
+      icon: <FilePenLine size={28} />,
+      title: "Business Intelligence & Reporting",
+      description:
+        "Access real-time dashboards, performance metrics, and detailed reports that support data-driven decision-making.",
+    },
+    {
+      icon: <FilePenLine size={28} />,
+      title: "Workflow Automation",
+      description:
+        "Automate repetitive business processes, approvals, notifications, and operational tasks to improve productivity and reduce manual work.",
+    },
+    {
+      icon: <FilePenLine size={28} />,
+      title: "Multi-Branch & Multi-Company Support",
+      description:
+        "Manage multiple offices, branches, subsidiaries, or business units through a centralized management system.",
+    },
+    {
+      icon: <FilePenLine size={28} />,
+      title: "Role-Based Access Control",
+      description:
+        "Protect sensitive business information through advanced security controls, user permissions, and audit trails.",
     },
   ];
 

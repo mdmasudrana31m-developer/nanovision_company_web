@@ -4,7 +4,7 @@ import React from "react";
 
 const SmsPlatform = () => {
   return (
-    <section className="w-full bg-[#f3f4f8] py-14 sm:py-16 lg:py-24 overflow-hidden">
+    <section className="w-full bg-[#f3f4f8] py-14 sm:py-16 lg:py-24 mt-12 overflow-hidden">
       <div className="max-w-7xl md:mt-14 lg:mt-0 mt-18 mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="
@@ -22,9 +22,9 @@ const SmsPlatform = () => {
             <h1
               className="
             text-[40px]
-            sm:text-[42px]
-            md:text-[54px]
-            lg:text-[62px]
+            sm:text-[32px]
+            md:text-[44px]
+            lg:text-[52px]
             leading-[1]
             font-bold
             text-[#111827]

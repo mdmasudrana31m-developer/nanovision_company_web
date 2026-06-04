@@ -49,78 +49,15 @@ export default function BigDataBottomSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 ">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* HOW BIG DATA WORKS */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#111827]">
-            How Big Data works
-          </h2>
-
-          <p className="mt-4 text-gray-600 leading-8">
-            Big Data refers to the analysis of large volumes of structured and
-            unstructured information to uncover insights, patterns, and trends.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-10 mt-12">
-            <div className="text-center">
-              <div className="relative w-20 h-20 mx-auto">
-                <Image
-                  src="/bigdata/icons/collect-data.png"
-                  alt=""
-                  fill
-                  className="object-contain"
-                />
-              </div>
-
-              <h3 className="font-semibold mt-4">Gather Big Data</h3>
-
-              <p className="text-gray-600 text-sm mt-2">
-                Collect data from multiple sources including applications,
-                sensors, websites and databases.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="relative w-20 h-20 mx-auto">
-                <Image
-                  src="/bigdata/icons/store-data.png"
-                  alt=""
-                  fill
-                  className="object-contain"
-                />
-              </div>
-
-              <h3 className="font-semibold mt-4">Store Big Data</h3>
-
-              <p className="text-gray-600 text-sm mt-2">
-                Store massive volumes of information using distributed storage
-                systems.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="relative w-20 h-20 mx-auto">
-                <Image
-                  src="/bigdata/icons/analyze-data.png"
-                  alt=""
-                  fill
-                  className="object-contain"
-                />
-              </div>
-
-              <h3 className="font-semibold mt-4">Analyze Big Data</h3>
-
-              <p className="text-gray-600 text-sm mt-2">
-                Extract valuable insights using analytics, AI, machine learning,
-                and visualization tools.
-              </p>
-            </div>
-          </div>
+          
         </div>
 
         {/* BIG DATA APPLICATIONS */}
-        <div className="mt-24">
+        <div className="">
           <h2 className="text-3xl md:text-4xl font-bold text-[#111827]">
             Big Data applications
           </h2>

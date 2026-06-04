@@ -3,30 +3,58 @@ import { MessageSquareText, Bot, RefreshCcw, Users } from "lucide-react";
 export default function CustomerEngagement() {
   const features = [
     {
-      title: "Zero Coding",
+      title: " Real-Time Website Chat",
       description:
-        "No coding is required. Engage your website visitors seamlessly using our zero-coding platform.",
+        "Provide instant support and answer customer inquiries directly from your website through a fast and user-friendly chat interface.",
       icon: MessageSquareText,
       color: "bg-blue-500",
     },
     {
-      title: "Live Chat + Bots",
+      title: "AI-Powered Chat Assistant",
       description:
-        "Combine the power of live chat and bots to offer the best customer experience. Let bots handle FAQs while support agents manage complex queries.",
+        "Automate common questions, qualify leads, and provide 24/7 customer assistance with intelligent chatbot integration.",
       icon: Bot,
       color: "bg-purple-500",
     },
     {
-      title: "Automate Support",
+      title: "Visitor Monitoring",
       description:
-        "Automate customer support 24/7 with chatbots, reducing the workload on live agents.",
+        "Track website visitors in real-time, understand customer behavior, and proactively engage high-value prospects.",
       icon: RefreshCcw,
       color: "bg-red-400",
     },
     {
-      title: "Qualify Leads",
+      title: "Omnichannel Communication",
       description:
-        "Automatically convert website visitors into qualified leads and transfer them to your sales team.",
+        "Manage conversations from website chat, social media, messaging apps, and customer support channels through a single dashboard.",
+      icon: Users,
+      color: "bg-yellow-600",
+    },
+    {
+      title: "Team Collaboration",
+      description:
+        "Assign chats to departments, transfer conversations between agents, and ensure every customer receives the right support.",
+      icon: Users,
+      color: "bg-yellow-600",
+    },
+    {
+      title: "Customizable Chat Widget",
+      description:
+        "Match your chat interface with your brand identity using custom colors, logos, greetings, and design settings.",
+      icon: Users,
+      color: "bg-yellow-600",
+    },
+    {
+      title: "Analytics & Reporting",
+      description:
+        "Measure response times, customer satisfaction, agent performance, and conversion rates through detailed reports and dashboards.",
+      icon: Users,
+      color: "bg-yellow-600",
+    },
+    {
+      title: "Mobile Accessibility",
+      description:
+        "Stay connected with customers from anywhere using mobile-friendly agent applications and notifications.",
       icon: Users,
       color: "bg-yellow-600",
     },
@@ -38,27 +66,28 @@ export default function CustomerEngagement() {
         {/* Top Heading */}
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-[26px] sm:text-[35px] md:text-[45px] font-bold text-black leading-tight">
-            All-in-One Customer Engagement Tool
+            Connect with Customers Instantly{" "}
           </h2>
 
           <p className="mt-5 text-[14px] md:text-[18px] text-[#4B5563] leading-relaxed">
-            Engage your customers with digital customer engagement tools to
-            provide a better contextual and conversational support in real time
+            Deliver exceptional customer experiences with Nano Vision LTD&apos;s
+            Live Chat Platform. Engage website visitors in real-time, provide
+            instant support, generate qualified leads, and convert more
+            prospects into customers through seamless online communication.
           </p>
         </div>
 
         {/* Content */}
         <div className="mt-16">
           <h3 className="text-[42px] md:text-[64px] font-bold text-black">
-            Chatbot
+            Real-Time Customer Engagement{" "}
           </h3>
 
           <p className="mt-5 text-[18px] md:text-[20px] text-[#4B5563] leading-[1.9] max-w-6xl">
-            The advanced AI-powered chatbot resolves 75% of customer queries and
-            increases sales conversions. Leveraging machine learning to deliver
-            exceptional service, REVE Chatbot reduces customer service costs by
-            up to 30% and effectively resolves 90% of healthcare and banking
-            queries.
+            Today&apos;s customers expect immediate responses. Our Live Chat
+            solution enables businesses to communicate with visitors the moment
+            they need assistance, improving satisfaction, increasing
+            conversions, and building stronger customer relationships.
           </p>
         </div>
 
