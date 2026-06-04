@@ -265,6 +265,13 @@ export default function Footer() {
                   © Copyright {new Date().getFullYear()} Nonovision All right
                   reserved.
                 </p>
+                <Link
+                  href="https://masudranabdd.vercel.app"
+                  target="_blank"
+                  className="text-[10px] text-blue-200"
+                >
+                  Created by MasudRana
+                </Link>
 
                 <div className="flex flex-wrap justify-center gap-4 text-center">
                   <Link href="/privacy-policy">Privacy Policy</Link>
