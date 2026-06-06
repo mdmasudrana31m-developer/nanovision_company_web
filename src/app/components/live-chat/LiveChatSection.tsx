@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { MousePointerClick, Video, Bot, Workflow } from "lucide-react";
-import Button from "@/app/utils/Button";
 
 export default function LiveChatSection() {
   const features = [
@@ -82,9 +81,9 @@ export default function LiveChatSection() {
         </div>
 
         {/* BUTTON */}
-        <div className="w-[200px] mt-8">
+        {/* <div className="w-[200px] mt-8">
           <Button buttonText="Get a Free Demo" />
-        </div>
+        </div> */}
 
         {/* Bottom Section */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mt-20">

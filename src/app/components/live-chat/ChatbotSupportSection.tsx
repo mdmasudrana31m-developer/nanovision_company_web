@@ -1,4 +1,3 @@
-import Button from "@/app/utils/Button";
 import Image from "next/image";
 
 export default function ChatbotSupportSection() {
@@ -27,9 +26,9 @@ export default function ChatbotSupportSection() {
             </h4>
 
             {/* BUTTON */}
-            <div className="w-[200px] mt-6">
+            {/* <div className="w-[200px] mt-6">
               <Button buttonText="Get a Free Demo" />
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT IMAGE */}

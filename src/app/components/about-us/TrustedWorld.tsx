@@ -12,7 +12,7 @@ export default function TrustedWorld() {
           <div className="w-full">
             <div className="relative overflow-hidden rounded-[30px] shadow-lg">
               <Image
-                src="/about-us/world.png"
+                src="/about-us/trusted-worldwide.jpeg"
                 alt="Trusted Worldwide"
                 width={700}
                 height={500}

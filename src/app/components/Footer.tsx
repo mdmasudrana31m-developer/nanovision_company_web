@@ -78,7 +78,7 @@ export default function Footer() {
               <div>
                 <div className=" inline-block rounded-lg p-2 mb-6">
                   <Image
-                    src="/logo.png"
+                    src="/footer-logo1.png"
                     alt="Logo"
                     width={240}
                     height={70}
@@ -119,14 +119,18 @@ export default function Footer() {
                   </a>
 
                   <a
-                    href="#"
+                       href="https://www.instagram.com/nanovisionltd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white text-[#e1306c] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaInstagram />
                   </a>
 
                   <a
-                    href="#"
+                      href="https://www.linkedin.com/company/108462454/admin/dashboard/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white text-[#0077b5] flex items-center justify-center hover:scale-110 transition"
                   >
                     <FaLinkedinIn />
@@ -268,9 +272,9 @@ export default function Footer() {
                 <Link
                   href="https://masudranabdd.vercel.app"
                   target="_blank"
-                  className="text-[10px] text-blue-200"
+                  className="text-[11px] text-blue-200"
                 >
-                  Created by MasudRana
+                  Created by Masud~Rana
                 </Link>
 
                 <div className="flex flex-wrap justify-center gap-4 text-center">

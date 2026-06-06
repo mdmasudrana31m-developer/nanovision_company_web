@@ -10,8 +10,8 @@ export default function WhatWeDo() {
           {/* GRID */}
           <div className="grid grid-cols-1  lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* LEFT CONTENT */}
-            <div>
-              <div className="space-y-8 text-[#4b5563] text-[16px] md:text-[17px] leading-[1.8]">
+            <div >
+              <div className="space-y-4 text-[#4b5563] text-[16px] md:text-[17px] leading-[1.8]">
                 <h2 className="text-[42px] sm:text-[56px] md:text-[68px] leading-none font-semibold text-[#111827] ">
                   What We Do
                 </h2>
@@ -41,10 +41,10 @@ export default function WhatWeDo() {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="w-full">
+            <div className="w-full lg:mt-12 mt-0">
               <div className="relative overflow-hidden rounded-[28px] shadow-lg">
                 <Image
-                  src="/about-us/office-buiding.webp"
+                  src="/about-us/what-we-do.jpeg"
                   alt="Office Building"
                   width={700}
                   height={800}

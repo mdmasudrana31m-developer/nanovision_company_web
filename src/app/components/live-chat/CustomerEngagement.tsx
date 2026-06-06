@@ -1,4 +1,8 @@
 import { MessageSquareText, Bot, RefreshCcw, Users } from "lucide-react";
+import { BsChatText } from "react-icons/bs";
+import { CiMobile3 } from "react-icons/ci";
+import { FcCollaboration } from "react-icons/fc";
+import { IoMdAnalytics } from "react-icons/io";
 
 export default function CustomerEngagement() {
   const features = [
@@ -14,49 +18,49 @@ export default function CustomerEngagement() {
       description:
         "Automate common questions, qualify leads, and provide 24/7 customer assistance with intelligent chatbot integration.",
       icon: Bot,
-      color: "bg-purple-500",
+      color: "bg-blue-500",
     },
     {
       title: "Visitor Monitoring",
       description:
         "Track website visitors in real-time, understand customer behavior, and proactively engage high-value prospects.",
       icon: RefreshCcw,
-      color: "bg-red-400",
+      color: "bg-blue-500",
     },
     {
       title: "Omnichannel Communication",
       description:
         "Manage conversations from website chat, social media, messaging apps, and customer support channels through a single dashboard.",
       icon: Users,
-      color: "bg-yellow-600",
+      color: "bg-blue-500",
     },
     {
       title: "Team Collaboration",
       description:
         "Assign chats to departments, transfer conversations between agents, and ensure every customer receives the right support.",
-      icon: Users,
-      color: "bg-yellow-600",
+      icon: FcCollaboration,
+      color: "bg-blue-500",
     },
     {
       title: "Customizable Chat Widget",
       description:
         "Match your chat interface with your brand identity using custom colors, logos, greetings, and design settings.",
-      icon: Users,
-      color: "bg-yellow-600",
+      icon: BsChatText,
+      color: "bg-blue-500",
     },
     {
       title: "Analytics & Reporting",
       description:
         "Measure response times, customer satisfaction, agent performance, and conversion rates through detailed reports and dashboards.",
-      icon: Users,
-      color: "bg-yellow-600",
+      icon: IoMdAnalytics,
+      color: "bg-blue-500",
     },
     {
       title: "Mobile Accessibility",
       description:
         "Stay connected with customers from anywhere using mobile-friendly agent applications and notifications.",
-      icon: Users,
-      color: "bg-yellow-600",
+      icon: CiMobile3,
+      color: "bg-blue-500",
     },
   ];
 

@@ -8,11 +8,14 @@ import {
   MapPinned,
   Headset,
 } from "lucide-react";
+import { GrDocumentPerformance } from "react-icons/gr";
+import { MdPriceChange } from "react-icons/md";
+import { TfiMoney } from "react-icons/tfi";
 
 export default function ERPSytem() {
   const features = [
     {
-      icon: <LayoutPanelLeft size={26} />,
+      icon: <TfiMoney size={26} />,
       title: "Financial Management",
       desc: "Maintain complete control over your organization's financial operations with automated accounting and reporting.",
     },
@@ -42,12 +45,12 @@ export default function ERPSytem() {
       desc: "Track company assets, maintenance schedules, depreciation, and asset utilization throughout their lifecycle.",
     },
     {
-      icon: <MapPinned size={26} />,
+      icon: <MdPriceChange size={26} />,
       title: "Competitive pricing",
       desc: "Benefit from cost-effective SMS solutions that maximize value without compromising quality or performance.",
     },
     {
-      icon: <Headset size={26} />,
+      icon: <GrDocumentPerformance size={26} />,
       title: "Reliable Uptime & Performance",
       desc: "Count on a robust and highly available platform that delivers consistent service and dependable message delivery.",
     },

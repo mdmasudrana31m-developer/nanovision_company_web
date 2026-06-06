@@ -1,4 +1,3 @@
-import Button from "@/app/utils/Button";
 import Image from "next/image";
 import React from "react";
 
@@ -52,11 +51,11 @@ const LiveChat = () => {
             </p>
 
             {/* BUTTON */}
-            <div className="flex mt-8 flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start   ">
+            {/* <div className="flex mt-8 flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start   ">
               <div className="min-w-50 ">
                 <Button buttonText="Start Free Trial" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT IMAGE */}

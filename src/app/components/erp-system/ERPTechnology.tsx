@@ -1,34 +1,36 @@
 import {
-  Network,
-  Megaphone,
-  Route,
-  Users,
   Package,
-  FilePenLine,
 } from "lucide-react";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { FaBusinessTime } from "react-icons/fa";
+import { GoWorkflow } from "react-icons/go";
+import { GrMultiple } from "react-icons/gr";
+import { MdInventory2, MdOutlineAccountBalanceWallet, MdOutlineMan2 } from "react-icons/md";
+import { RiCustomerService2Line } from "react-icons/ri";
+import { TbLockAccessOff } from "react-icons/tb";
 
 export default function ERPTechnology() {
   const features = [
     {
-      icon: <Network size={28} />,
+      icon: <MdOutlineAccountBalanceWallet size={28} />,
       title: "Finance & Accounting",
       description:
         "Manage budgeting, invoicing, accounts payable, accounts receivable, expenses, payroll, and financial reporting from a single platform.",
     },
     {
-      icon: <Megaphone size={28} />,
+      icon: <MdInventory2 size={28} />,
       title: "Inventory Management",
       description:
         "rack inventory levels, warehouse operations, stock movements, procurement, and product availability in real time.",
     },
     {
-      icon: <Route size={28} />,
+      icon: <MdOutlineMan2 size={28} />,
       title: "Human Resource Management",
       description:
         "Manage employee records, attendance, payroll, leave requests, performance evaluations, and workforce planning efficiently.",
     },
     {
-      icon: <Users size={28} />,
+      icon: <RiCustomerService2Line size={28} />,
       title: "Sales & Customer Management",
       description:
         "Handle leads, quotations, customer records, sales orders, invoices, and customer interactions through an integrated CRM module.",
@@ -40,31 +42,31 @@ export default function ERPTechnology() {
         "Streamline purchasing processes, supplier relationships, approvals, and procurement workflows while maintaining full visibility over spending.",
     },
     {
-      icon: <FilePenLine size={28} />,
+      icon: <AiOutlineFundProjectionScreen size={28} />,
       title: "Project Management",
       description:
         "Plan, execute, and monitor projects with task tracking, resource allocation, budgeting, and performance reporting.",
     },
     {
-      icon: <FilePenLine size={28} />,
+      icon: <FaBusinessTime size={28} />,
       title: "Business Intelligence & Reporting",
       description:
         "Access real-time dashboards, performance metrics, and detailed reports that support data-driven decision-making.",
     },
     {
-      icon: <FilePenLine size={28} />,
+      icon: <GoWorkflow size={28} />,
       title: "Workflow Automation",
       description:
         "Automate repetitive business processes, approvals, notifications, and operational tasks to improve productivity and reduce manual work.",
     },
     {
-      icon: <FilePenLine size={28} />,
+      icon: <GrMultiple size={28} />,
       title: "Multi-Branch & Multi-Company Support",
       description:
         "Manage multiple offices, branches, subsidiaries, or business units through a centralized management system.",
     },
     {
-      icon: <FilePenLine size={28} />,
+      icon: <TbLockAccessOff size={28} />,
       title: "Role-Based Access Control",
       description:
         "Protect sensitive business information through advanced security controls, user permissions, and audit trails.",

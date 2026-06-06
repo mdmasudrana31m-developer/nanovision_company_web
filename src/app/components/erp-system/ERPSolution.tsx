@@ -38,7 +38,7 @@ const ERPSolution = () => {
         lg:text-[54px]
       "
         >
-          Smart ERP for Modern Businesses{" "}
+          Transform the Way You Manage Your Business
         </h2>
 
         {/* DESCRIPTION */}
@@ -54,9 +54,17 @@ const ERPSolution = () => {
         md:text-[22px]
       "
         >
-          Integrate finance, HR, inventory, sales, procurement, and operations
-          into one powerful platform that drives efficiency, productivity, and
-          business growth.
+          Managing multiple departments with disconnected systems can create
+          inefficiencies, data inconsistencies, and operational challenges. Nano
+          Vision LTD&apos;s ERP System provides a centralized platform that
+          connects every aspect of your organization, enabling seamless
+          collaboration, process automation, and real-time visibility across
+          your business.
+          <br />
+          <br />
+          Whether you&apos;re a growing company or a large enterprise, our ERP
+          solution helps streamline operations, reduce costs, improve
+          decision-making, and accelerate digital transformation.
         </p>
       </div>
     </section>

@@ -40,7 +40,7 @@ export default function Connectivity() {
           <div className="w-full">
             <div className="relative overflow-hidden rounded-[28px] shadow-lg">
               <Image
-                src="/about-us/network.png"
+                src="/about-us/Avision.jpeg"
                 alt="Office Building"
                 width={700}
                 height={700}

@@ -52,9 +52,7 @@ export default function BigDataBottomSection() {
     <section className="py-10 ">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* HOW BIG DATA WORKS */}
-        <div>
-          
-        </div>
+        <div></div>
 
         {/* BIG DATA APPLICATIONS */}
         <div className="">
@@ -137,10 +135,6 @@ export default function BigDataBottomSection() {
               Manage enterprise data throughout your digital transformation
               journey.
             </p>
-
-            <button className="mt-4 text-[#4F46E5] font-medium">
-              Learn more →
-            </button>
           </div>
 
           <div className="group">
@@ -160,10 +154,6 @@ export default function BigDataBottomSection() {
             <p className="mt-3 text-gray-600">
               Stay up-to-date with thought leadership and innovation trends.
             </p>
-
-            <button className="mt-4 text-[#4F46E5] font-medium">
-              Learn more →
-            </button>
           </div>
         </div>
       </div>

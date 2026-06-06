@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import Button from "@/app/utils/Button";
 
 export default function WhatsAppCampaignSection() {
   const features = [
@@ -51,9 +50,9 @@ export default function WhatsAppCampaignSection() {
             </div>
 
             {/* BUTTON */}
-            <div className="w-[200px] mt-8">
+            {/* <div className="w-[200px] mt-8">
               <Button buttonText="Get a Free Demo" />
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT IMAGE */}

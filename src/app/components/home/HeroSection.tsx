@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Link from "next/dist/client/link";
-import Button from "@/app/utils/Button";
 
 const slides = [
   {
@@ -95,7 +93,7 @@ export default function HeroSection() {
               </p>
 
               {/* 🔹 Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start  md:ml-4 ">
+              {/* <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start  md:ml-4 ">
                 {slides[index].button && (
                   <div className="min-w-50 ">
                     <Link href="/demo" className="bg-amber-600">
@@ -109,7 +107,7 @@ export default function HeroSection() {
                     {slides[index].LearnMore}
                   </button>
                 )}
-              </div>
+              </div> */}
             </div>
 
             {/* 🔹 Right Image */}

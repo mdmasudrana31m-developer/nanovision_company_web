@@ -17,38 +17,38 @@ const bigDataTypes = [
   },
 
   {
-    icon: "⚙️",
+    icon: "🤖",
     title: "AI & Machine Learning",
     description:
       "Discover hidden patterns, predict outcomes, automate insights, and accelerate innovation using advanced analytics and AI technologies.",
   },
 
   {
-    icon: "⚙️",
+    icon: "📈",
     title: "Real-Time Analytics",
     description:
       "Monitor business performance, customer behavior, and operational metrics through real-time data processing and reporting.",
   },
   {
-    icon: "⚙️",
+    icon: "📉",
     title: "Advanced Analytics",
     description:
       "Leverage statistical modeling, predictive analytics, and business intelligence tools to transform raw data into actionable insights.",
   },
   {
-    icon: "⚙️",
+    icon: "💾",
     title: "Enterprise Data Management",
     description:
       "Store and manage structured, semi-structured, and unstructured data securely using scalable cloud-ready infrastructure.",
   },
   {
-    icon: "⚙️",
+    icon: "📊",
     title: "Interactive Dashboards",
     description:
       "Visualize KPIs, performance metrics, and business trends through customizable dashboards and reporting tools.",
   },
   {
-    icon: "⚙️",
+    icon: "🔒",
     title: "Secure & Scalable Architecture",
     description:
       "Built for growing organizations with enterprise-grade security, governance, and high-performance processing capabilities.",
@@ -71,20 +71,6 @@ export default function BigData() {
               insights, predictive intelligence, and smarter business decisions.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* BIG DATA DEFINITION */}
-      <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold mb-8">
-            Harness the Power of Big Data{" "}
-          </h2>
-
-          <p className="text-gray-700 leading-8">
-            Collect, analyze, and transform massive data into real-time
-            insights, predictive intelligence, and smarter business decisions.
-          </p>
         </div>
       </section>
 
@@ -185,7 +171,7 @@ export default function BigData() {
           </div>
 
           {/* CONTENT */}
-          <div>
+          <div className="lg:mt-16 mt-8">
             <p className="text-gray-700">
               Big Data is generated from numerous sources including social media
               platforms, IoT devices, business applications, sensors, websites,

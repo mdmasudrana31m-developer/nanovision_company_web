@@ -1,7 +1,6 @@
 "use client";
 
 import Button from "@/app/utils/Button";
-import Image from "next/image";
 import { useCallback } from "react";
 
 export default function JoinTeamSection() {
@@ -64,7 +63,7 @@ export default function JoinTeamSection() {
         </div>
 
         {/* IMAGE */}
-        <div className="mt-14 sm:mt-16 lg:mt-20">
+        {/* <div className="mt-14 sm:mt-16 lg:mt-20">
           <div
             className="
             relative
@@ -94,7 +93,7 @@ export default function JoinTeamSection() {
               priority
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

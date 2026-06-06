@@ -1,4 +1,3 @@
-import Button from "@/app/utils/Button";
 import Image from "next/image";
 import React from "react";
 
@@ -52,29 +51,29 @@ const ERPPlatform = () => {
             </p>
 
             {/* BUTTON */}
-            <div className="flex mt-8 flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start   ">
+            {/* <div className="flex mt-8 flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start   ">
               <div className="min-w-50 ">
                 <Button buttonText="Get a Free Demo" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center ">
             <div
               className="
             relative
             w-full
             max-w-[650px]
-            aspect-[1.2/1]
+            aspect-[1.2/1] 
           "
             >
               <Image
-                src="/sms-platform/sms-platform.webp"
+                src="/sms-platform/traffic-img/ERP-system.webp"
                 alt="SMS Platform"
                 fill
                 priority
-                className="object-contain"
+                className="object-contain "
               />
             </div>
           </div>

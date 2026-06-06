@@ -1,23 +1,23 @@
 import {
-  LayoutPanelLeft,
-  WalletCards,
   Server,
   MoveUpRight,
-  Crosshair,
-  CreditCard,
-  MapPinned,
-  Headset,
+  MessageSquareShare,
+  ShieldCogCorner,
+  ChartNoAxesCombined,
 } from "lucide-react";
+import { FcOnlineSupport } from "react-icons/fc";
+import { GrDocumentPerformance } from "react-icons/gr";
+import { MdPriceChange } from "react-icons/md";
 
 export default function WhyNanoVision() {
   const features = [
     {
-      icon: <LayoutPanelLeft size={26} />,
+      icon: <MessageSquareShare size={26} />,
       title: "High-speed message delivery",
       desc: "Deliver SMS messages instantly through our optimized routing network, ensuring timely communication with your customers.",
     },
     {
-      icon: <WalletCards size={26} />,
+      icon: <ShieldCogCorner size={26} />,
       title: "Enterprise-Grade Security",
       desc: "Protect sensitive data with advanced security protocols, encrypted transmissions, and secure infrastructure.",
     },
@@ -32,22 +32,22 @@ export default function WhyNanoVision() {
       desc: "Integrate SMS capabilities quickly and easily using our well-documented, flexible, and reliable API.",
     },
     {
-      icon: <Crosshair size={26} />,
+      icon: <ChartNoAxesCombined size={26} />,
       title: "Detailed Reporting & Analytics",
       desc: "Track delivery status, campaign performance, and customer engagement through comprehensive reporting tools.",
     },
     {
-      icon: <CreditCard size={26} />,
+      icon: <FcOnlineSupport size={26} />,
       title: "24/7 Technical Support",
       desc: "Receive expert assistance anytime from our dedicated support team to ensure uninterrupted communication.",
     },
     {
-      icon: <MapPinned size={26} />,
+      icon: <MdPriceChange size={26} />,
       title: "Competitive pricing",
       desc: "Benefit from cost-effective SMS solutions that maximize value without compromising quality or performance.",
     },
     {
-      icon: <Headset size={26} />,
+      icon: <GrDocumentPerformance size={26} />,
       title: "Reliable Uptime & Performance",
       desc: "Count on a robust and highly available platform that delivers consistent service and dependable message delivery.",
     },

@@ -1,18 +1,16 @@
 import {
-  Network,
   Megaphone,
   Route,
-  Users,
   Package,
   FilePenLine,
-  Settings2,
-  BadgeDollarSign,
+  Unplug,
+  MessageSquareShare,
 } from "lucide-react";
 
 export default function MessagingTechnology() {
   const features = [
     {
-      icon: <Network size={28} />,
+      icon: <MessageSquareShare size={28} />,
       title: "Bulk SMS Campaigns",
       description:
         "Send promotional and marketing messages to thousands of recipients within seconds with advanced scheduling and audience management.",
@@ -30,7 +28,7 @@ export default function MessagingTechnology() {
         "Automatically send order confirmations, payment notifications, appointment reminders, delivery updates, and service alerts.",
     },
     {
-      icon: <Users size={28} />,
+      icon: <Unplug size={28} />,
       title: "API Integration",
       description:
         "Easily integrate SMS functionality into websites, mobile applications, CRM systems, ERP platforms, and custom business software.",
