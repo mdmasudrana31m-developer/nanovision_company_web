@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Nanovision LTD",
+  description:
+    "Nanovision's privacy policy describes what personal information we collect, how we use it, and how we keep it secure.",
+  openGraph: { images: ["/og-image.jpg"] },
+};
 
 const PrivacyPolicy = () => {
   return (

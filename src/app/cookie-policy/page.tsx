@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | Nanovision LTD",
+  description:
+    "Read Nanovision's cookie policy: how we use cookies, third-party analytics, and how to manage your preferences.",
+  openGraph: { images: ["/og-image.jpg"] },
+};
 
 const CookiePolicy = () => {
   return (
