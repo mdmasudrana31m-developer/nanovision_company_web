@@ -12,13 +12,6 @@ export default function OurWork() {
 
   const data = [
     {
-      title: "School Management System",
-      desc: "Modern AI based automation system",
-      img: "/service-img/our-products/Uttar-High-school.jpeg",
-      url: "https://upumlsschool.com",
-    },
-
-    {
       title: "Auto Care Management System",
       desc: "A complete solution for car and bike service centers to manage vehicle washing, maintenance services, customer bookings, billing, and performance reports with ease.",
       img: "/service-img/our-products/Auto-Mobile.png",
