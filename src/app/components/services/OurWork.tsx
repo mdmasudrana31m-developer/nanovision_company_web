@@ -1,29 +1,98 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function OurWork() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
 
-  // 📱 screen detect
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const data = [
+    {
+      title: "School Management System",
+      desc: "Modern AI based automation system",
+      img: "/service-img/our-products/Uttar-High-school.jpeg",
+      url: "https://upumlsschool.com",
+    },
+
+    {
+      title: "Auto Care Management System",
+      desc: "A complete solution for car and bike service centers to manage vehicle washing, maintenance services, customer bookings, billing, and performance reports with ease.",
+      img: "/service-img/our-products/Auto-Mobile.png",
+    },
+
+    {
+      title: "ConstructPro",
+      desc: "Construction Firm Management System is a comprehensive ERP solution designed to streamline construction business operations. Manage finances, workforce, inventory, clients, suppliers, partners, and projects from a single platform, ensuring greater efficiency, transparency, and control across your organization.",
+      img: "/service-img/our-products/constraction.png",
+    },
+
+    {
+      title: "Hostel Management System",
+      desc: "A Hostel Management System is a digital platform designed to streamline accommodation operations by automating room allocation, guest or resident check-ins, billing, and daily utilities tracking. It replaces manual paperwork with an integrated dashboard, enabling administrators to efficiently manage student or guest records, maintenance requests, and dining schedules from a centralized hub.",
+      img: "/service-img/our-products/hostel-management.png",
+    },
+
+    {
+      title: "MediSchedule Pro",
+      desc: "A modern medical appointment management system that simplifies booking, scheduling, patient tracking, and healthcare administration through a secure and user-friendly platform.",
+      img: "/service-img/our-products/MediSchedule.png",
+    },
+
+    {
+      title: "NextGen School Management System",
+      desc: "A modern School Management System that digitizes and automates school operations, including student records, attendance tracking, examination management, fee collection, and reporting. The platform helps educational institutions enhance efficiency, accuracy, and collaboration.",
+      img: "/service-img/our-products/Uttar-High-school.jpeg",
+    },
+  ];
+
+  const handleScrollToBusiness = useCallback(() => {
+    const section = document.getElementById("business");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.hash = "business";
+    }
+  }, []);
+
+  const updateScrollButtons = () => {
+    if (!scrollRef.current) return;
+
+    const container = scrollRef.current;
+
+    setCanScrollLeft(container.scrollLeft > 0);
+
+    setCanScrollRight(
+      container.scrollLeft < container.scrollWidth - container.clientWidth - 5,
+    );
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+    updateScrollButtons();
+
+    const container = scrollRef.current;
+
+    if (!container) return;
+
+    container.addEventListener("scroll", updateScrollButtons);
+
+    window.addEventListener("resize", updateScrollButtons);
+
+    return () => {
+      container.removeEventListener("scroll", updateScrollButtons);
+      window.removeEventListener("resize", updateScrollButtons);
     };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const scroll = (dir: "left" | "right") => {
     if (!scrollRef.current) return;
 
     const container = scrollRef.current;
-    const card = container.children[0] as HTMLElement | undefined;
+    const card = container.children[0] as HTMLElement;
+
     if (!card) return;
 
     const style = window.getComputedStyle(container);
@@ -36,69 +105,7 @@ export default function OurWork() {
       left: dir === "left" ? -cardWidth * moveCount : cardWidth * moveCount,
       behavior: "smooth",
     });
-
-    // 🔥 pause auto scroll
-    setIsPaused(true);
-
-    // 🔥 resume after 4 sec
-    setTimeout(() => {
-      setIsPaused(false);
-    }, 4000);
   };
-
-  // 🔥 AUTO SCROLL
-  useEffect(() => {
-    if (isMobile || isPaused) return;
-
-    const interval = setInterval(() => {
-      scroll("right");
-    }, 2500);
-
-    return () => clearInterval(interval);
-  }, [isMobile, isPaused]);
-
-  const data = [
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-
-    {
-      title: "AI SaaS Platform",
-      desc: "Modern AI based automation system",
-      img: "/ourworkimg/marcent-billing.webp",
-    },
-  ];
 
   return (
     <section className="py-20 bg-gray-100">
@@ -117,49 +124,54 @@ export default function OurWork() {
 
       {/* Slider */}
       <div className="relative max-w-[1300px] mx-auto px-4 md:px-14 xl:px-4">
-        {/* Desktop arrows */}
+        {/* Desktop Left Arrow */}
         <button
           onClick={() => scroll("left")}
+          disabled={!canScrollLeft}
           className="
-        hidden
-        md:flex
-        absolute
-        left-2
-        xl:left-[-50px]
-        top-1/2
-        -translate-y-1/2
-        z-10
-        bg-white
-        shadow
-        w-10
-        h-10
-        rounded-full
-        items-center
-        justify-center
-      "
+            hidden md:flex
+            absolute
+            left-2
+            xl:left-[-50px]
+            top-1/2
+            -translate-y-1/2
+            z-10
+            bg-white
+            shadow
+            w-10
+            h-10
+            rounded-full
+            items-center
+            justify-center
+            disabled:opacity-40
+            disabled:cursor-not-allowed
+          "
         >
           <IoIosArrowBack />
         </button>
 
+        {/* Desktop Right Arrow */}
         <button
           onClick={() => scroll("right")}
+          disabled={!canScrollRight}
           className="
-        hidden
-        md:flex
-        absolute
-        right-2
-        xl:right-[-50px]
-        top-1/2
-        -translate-y-1/2
-        z-10
-        bg-white
-        shadow
-        w-10
-        h-10
-        rounded-full
-        items-center
-        justify-center
-      "
+            hidden md:flex
+            absolute
+            right-2
+            xl:right-[-50px]
+            top-1/2
+            -translate-y-1/2
+            z-10
+            bg-white
+            shadow
+            w-10
+            h-10
+            rounded-full
+            items-center
+            justify-center
+            disabled:opacity-40
+            disabled:cursor-not-allowed
+          "
         >
           <IoIosArrowForward />
         </button>
@@ -168,32 +180,36 @@ export default function OurWork() {
         <div
           ref={scrollRef}
           className="
-        flex
-        gap-8
-        overflow-x-auto
-        scroll-smooth
-        no-scrollbar
-      "
+            flex
+            gap-8
+            overflow-x-auto
+            scroll-smooth
+            no-scrollbar
+          "
         >
           {data.map((item, i) => (
             <div
               key={i}
               className="
-            min-w-full
-            sm:min-w-[90%]
-            md:min-w-[calc((100%-64px)/3)]
-            bg-white
-            rounded-2xl
-            overflow-hidden
-            shadow-md
-            transition-transform
-            duration-300
-            hover:scale-[1.02]
-          "
+                min-w-full
+                sm:min-w-[90%]
+                md:min-w-[calc((100%-64px)/3)]
+                bg-white
+                rounded-2xl
+                overflow-hidden
+                shadow-md
+                transition-transform
+                duration-300
+              "
             >
               {/* Image */}
               <div className="relative h-[200px]">
-                <Image src={item.img} alt="" fill className="object-cover" />
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Content */}
@@ -202,40 +218,53 @@ export default function OurWork() {
 
                 <p className="text-gray-600 text-sm mb-4">{item.desc}</p>
 
-                <button className="text-blue-600 text-sm hover:underline">
-                  Learn More
+                <button
+                  className="text-blue-600 text-sm cursor-pointer"
+                  onClick={handleScrollToBusiness}
+                >
+                  Contact for project details
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Mobile arrows */}
+        {/* Mobile Arrows */}
         <div className="flex justify-center gap-6 mt-6 md:hidden">
           <button
             onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
             className="
-          bg-white
-          shadow
-          w-10
-          h-10
-          flex justify-center items-center
-          rounded-full
-        "
+              bg-white
+              shadow
+              w-10
+              h-10
+              rounded-full
+              flex
+              justify-center
+              items-center
+              disabled:opacity-40
+              disabled:cursor-not-allowed
+            "
           >
             <IoIosArrowBack />
           </button>
 
           <button
             onClick={() => scroll("right")}
+            disabled={!canScrollRight}
             className="
-          bg-white
-          shadow
-          w-10
-          h-10           flex justify-center items-center
-
-          rounded-full
-        "
+              bg-white
+              shadow
+              w-10
+              h-10
+              rounded-full
+              flex
+              justify-center
+              items-center
+              disabled:opacity-40
+              disabled:cursor-not-allowed
+            "
           >
             <IoIosArrowForward />
           </button>

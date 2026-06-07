@@ -1,48 +1,9 @@
 "use client";
 
 import Button from "@/app/utils/Button";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { ImSpinner } from "react-icons/im";
 
 export default function DropYourResume() {
-  const form = useRef<HTMLFormElement | null>(null);
-  const [status, setStatus] = useState<"success" | "error" | null>(null); // null, 'success', or 'error'
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setStatus(null);
-
-    if (!form.current) {
-      setStatus("error");
-      setIsSubmitting(false);
-      return;
-    }
-
-    emailjs
-      .sendForm(
-        "service_irr8i7t",
-        "template_dy4xt5u",
-
-        // Public Key
-        form.current,
-        "TiUssFr8-wWWLB81q",
-      )
-      .then(
-        () => {
-          setStatus("success");
-          setIsSubmitting(false);
-          form.current?.reset();
-        },
-        (error) => {
-          setStatus("error");
-          setIsSubmitting(false);
-          console.error("Email send failed:", error);
-        },
-      );
-  };
   return (
     <section
       className="
@@ -66,38 +27,7 @@ export default function DropYourResume() {
 
         {/* FORM BOX */}
         <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-2xl text-left">
-          <form className="space-y-2" ref={form} onSubmit={sendEmail}>
-            {status
-              ? (() => {
-                  const config = {
-                    success: {
-                      icon: "✓",
-                      message: "Message sent successfully!",
-                      bgColor: "bg-green-100",
-                      textColor: "text-green-800",
-                      borderColor: "border-green-300",
-                    },
-                    error: {
-                      icon: "✕",
-                      message: "Failed to send message. Please try again.",
-                      bgColor: "bg-red-100",
-                      textColor: "text-red-800",
-                      borderColor: "border-red-300",
-                    },
-                  };
-
-                  const { icon, message, bgColor, textColor, borderColor } =
-                    config[status];
-                  return (
-                    <div
-                      className={`p-4 mb-6 rounded-lg border ${bgColor} ${textColor} ${borderColor} flex items-center`}
-                    >
-                      <span className="text-xl mr-3 font-bold">{icon}</span>
-                      <span>{message}</span>
-                    </div>
-                  );
-                })()
-              : null}
+          <form className="space-y-2">
             {/* ROW 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
@@ -319,12 +249,7 @@ export default function DropYourResume() {
 
             {/* BUTTON */}
 
-            <Button
-              type="submit"
-              buttonText={
-                isSubmitting ? <ImSpinner className="animate-spin" /> : "Submit"
-              }
-            />
+            <Button buttonText="Submit" />
           </form>
         </div>
       </div>

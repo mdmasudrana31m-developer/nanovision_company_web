@@ -23,12 +23,12 @@ export default function BusinessEnquiry() {
 
     emailjs
       .sendForm(
-        "service_gyxumyw",
-        "template_8ym4azz",
+        "service_cas09ir",
+        "template_n4qy1v8",
 
         // Public Key
         form.current,
-        "w5Fi2DsIzIzz3056P",
+        "cRq5KSNFcXBBt3R39",
       )
       .then(
         () => {
@@ -206,8 +206,6 @@ export default function BusinessEnquiry() {
               </div>
               <span className="text-xs text-gray-500">reCAPTCHA</span>
             </div>
-
-         
 
             <Button
               type="button"

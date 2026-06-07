@@ -1,11 +1,13 @@
-import {
-  Package,
-} from "lucide-react";
+import { Package } from "lucide-react";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FaBusinessTime } from "react-icons/fa";
 import { GoWorkflow } from "react-icons/go";
 import { GrMultiple } from "react-icons/gr";
-import { MdInventory2, MdOutlineAccountBalanceWallet, MdOutlineMan2 } from "react-icons/md";
+import {
+  MdInventory2,
+  MdOutlineAccountBalanceWallet,
+  MdOutlineMan2,
+} from "react-icons/md";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { TbLockAccessOff } from "react-icons/tb";
 
@@ -79,14 +81,15 @@ export default function ERPTechnology() {
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-semibold text-[#1d2433]">
-            A Complete SMS Platform Powered by Advanced Messaging Technology
+            A Complete ERP Platform for Modern Business Management{" "}
           </h2>
 
           <p className="mt-6 text-gray-500 text-md sm:text-lg leading-relaxed">
-            Empower your business communication with Nano Vision SMS Platform.
-            Send promotional, transactional, OTP, and service messages through a
-            secure, high-performance infrastructure designed for speed,
-            reliability, and scalability.
+            Streamline and automate your business operations with Nano Vision
+            ERP System. Manage finance, human resources, inventory, procurement,
+            sales, customer relationships, and reporting through a centralized,
+            secure, and scalable platform designed to improve efficiency,
+            visibility, and decision-making across your organization.
           </p>
         </div>
 

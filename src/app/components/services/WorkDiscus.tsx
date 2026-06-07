@@ -22,12 +22,12 @@ export default function WorkDiscus() {
 
     emailjs
       .sendForm(
-        "service_gyxumyw",
-        "template_ff8pzeg",
+        "service_cas09ir",
+        "template_w2eiy9v",
 
         // Public Key
         form.current,
-        "iJUCkdjd_GStijMeS",
+        "cRq5KSNFcXBBt3R39",
       )
       .then(
         () => {
