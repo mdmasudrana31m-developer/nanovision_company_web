@@ -20,7 +20,7 @@ export default function OfficeLocation() {
       {/* Heading */}
       <div className="max-w-3xl mx-auto text-center mb-12 px-4">
         <h2 className="text-3xl md:text-4xl font-semibold mb-4">Our Office</h2>
-        <p className="text-gray-600 text-sm md:text-base">
+        <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
           We operate from key locations across the world. Here is our Bangladesh
           office.
         </p>

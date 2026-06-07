@@ -52,11 +52,11 @@ export default function MessagingTechnology() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-semibold text-[#1d2433]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#1d2433]">
             A Complete SMS Platform Powered by Advanced Messaging Technology
           </h2>
 
-          <p className="mt-6 text-gray-500 text-sm md:text-base leading-relaxed">
+          <p className="mt-6 text-gray-500 text-md sm:text-lg leading-relaxed">
             Empower your business communication with Nano Vision SMS Platform.
             Send promotional, transactional, OTP, and service messages through a
             secure, high-performance infrastructure designed for speed,
@@ -100,7 +100,7 @@ export default function MessagingTechnology() {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 leading-7 text-[15px]">
+              <p className="text-gray-500 text-md sm:text-lg leading-relaxed">
                 {item.description}
               </p>
             </div>

@@ -38,7 +38,7 @@ export default function LiveChatSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-5xl">
-          <h2 className="text-[42px] md:text-[64px] font-bold leading-none text-[#111827]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-none text-[#111827]">
             Live Chat
           </h2>
 

@@ -13,7 +13,7 @@ export default function Connectivity() {
             <h2 className="text-[42px] sm:text-[56px] md:text-[55px] leading-none font-semibold text-[#111827] mb-8">
               A Vision to Redefine Connectivity
             </h2>
-            <div className="space-y-8 text-[#4b5563] text-[16px] md:text-[17px] leading-[1.8]">
+            <div className="space-y-2 text-[#4b5563] text-[16px] md:text-[17px] leading-[1.8]">
               <p>
                 Our vision is to redefine how people, systems, and businesses
                 connect in the digital era. We aim to build intelligent and

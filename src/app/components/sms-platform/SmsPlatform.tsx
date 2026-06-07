@@ -20,10 +20,7 @@ const SmsPlatform = () => {
             {/* TITLE */}
             <h1
               className="
-            text-[40px]
-            sm:text-[32px]
-            md:text-[44px]
-            lg:text-[52px]
+            text-2xl sm:text-3xl md:text-5xl 
             leading-[1]
             font-bold
             text-[#111827]

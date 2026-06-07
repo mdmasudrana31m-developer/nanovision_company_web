@@ -61,7 +61,7 @@ export default function CuttingEdg() {
             </h3>
 
             {/* Description */}
-            <p className="text-gray-500 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-500 text-md sm:text-lg leading-relaxed">
               {item.desc}
             </p>
           </div>

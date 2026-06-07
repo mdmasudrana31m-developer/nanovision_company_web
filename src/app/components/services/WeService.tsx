@@ -38,11 +38,11 @@ export default function WeService() {
       
       {/* 🔹 Heading */}
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">
           Services We Offer
         </h2>
 
-        <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+        <p className="text-gray-300 text-md sm:text-lg leading-relaxed">
           Every idea starts as a spark. We turn that spark into powerful software,
           addictive mobile apps, and flawless products. Our developers build the
           backbone of your digital journey, our mobile experts craft apps users

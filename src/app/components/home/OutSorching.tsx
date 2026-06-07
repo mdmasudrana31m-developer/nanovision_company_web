@@ -122,7 +122,7 @@ const Card: React.FC<{ item: CardItem }> = ({ item }) => {
         <Icon className="w-6 h-6 md:w-8 md:h-8 text-gray-500 group-hover:text-blue-600 transition" />
       </div>
 
-      <p className="text-neutral-700 text-sm md:text-base text-center">
+      <p className="text-neutral-700 text-md sm:text-lg leading-relaxed text-center">
         {item.text}
       </p>
     </div>

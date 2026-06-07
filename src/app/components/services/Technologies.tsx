@@ -67,7 +67,7 @@ export default function Technologies() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-3">
           Technologies We Use
         </h2>
-        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+        <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
           We combine proven frameworks with next-gen platforms to deliver
           solutions that are built to last and engineered for growth.
         </p>

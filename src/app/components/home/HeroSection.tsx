@@ -88,7 +88,7 @@ export default function HeroSection() {
                 {slides[index].title}
               </h1>
 
-              <p className="text-gray-600 mb-8 md:mb-12 text-sm sm:text-base">
+              <p className="text-gray-600 mb-8 md:mb-12 text-lg sm:text-xl leading-relaxed">
                 {slides[index].desc}
               </p>
 

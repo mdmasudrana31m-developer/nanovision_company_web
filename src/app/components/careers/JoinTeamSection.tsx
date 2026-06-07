@@ -19,14 +19,7 @@ export default function JoinTeamSection() {
         <div className="max-w-5xl mx-auto text-center flex flex-col justify-center items-center">
           <h2
             className="
-            text-[36px]
-            sm:text-[46px]
-            md:text-[55px]
-            lg:text-[60px]
-            leading-[1.08]
-            font-semibold
-            tracking-[-2px]
-            text-[#111827]
+           text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight
             "
           >
             Empowering Businesses with Innovative Solutions
@@ -35,10 +28,7 @@ export default function JoinTeamSection() {
           <p
             className="
             mt-6
-            text-[15px]
-            sm:text-[17px]
-            md:text-[18px]
-            leading-[1.8]
+          text-md sm:text-lg leading-relaxed
             text-[#4B5563]
             max-w-3xl
             mx-auto

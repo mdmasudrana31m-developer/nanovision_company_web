@@ -56,7 +56,7 @@ export default function BusinessEnquiry() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-2">
           Business Enquiry
         </h2>
-        <p className="text-sm text-gray-300 mb-8">
+        <p className="text-md sm:text-lg leading-relaxed text-gray-300 mb-8">
           To request a quote or a product enquiry, please fill in your details:
         </p>
 

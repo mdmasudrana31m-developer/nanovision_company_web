@@ -9,9 +9,7 @@ export default function TrafficBecomes() {
               text-[#111827]
               font-bold
               leading-tight
-              text-[34px]
-              sm:text-[46px]
-              md:text-[58px]
+            text-2xl sm:text-3xl md:text-5xl
             "
           >
             Transform Business Communication

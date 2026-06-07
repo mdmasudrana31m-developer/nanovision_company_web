@@ -28,7 +28,7 @@ export default function NumberSpeaks() {
             08+ Years
           </h3>
 
-          <p className="text-[#0072BA] text-sm sm:text-base mt-3">
+          <p className="text-[#0072BA] text-md sm:text-lg leading-relaxed mt-3">
             of Partnership with Telcos & Service Providers
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function NumberSpeaks() {
             27+ Countries
           </h3>
 
-          <p className="text-[#0072BA] text-sm sm:text-base mt-3">
+          <p className="text-[#0072BA] text-md sm:text-lg leading-relaxed mt-3">
             Worldwide Business Presence
           </p>
         </div>

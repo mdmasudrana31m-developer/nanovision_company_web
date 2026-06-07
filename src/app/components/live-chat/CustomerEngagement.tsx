@@ -69,7 +69,7 @@ export default function CustomerEngagement() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Heading */}
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-[26px] sm:text-[35px] md:text-[45px] font-bold text-black leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-black leading-tight">
             Connect with Customers Instantly{" "}
           </h2>
 
@@ -83,7 +83,7 @@ export default function CustomerEngagement() {
 
         {/* Content */}
         <div className="mt-16">
-          <h3 className="text-[42px] md:text-[64px] font-bold text-black">
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-black">
             Real-Time Customer Engagement{" "}
           </h3>
 

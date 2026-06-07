@@ -12,15 +12,7 @@ export default function OurCulture() {
           <div className="max-w-md lg:max-w-lg">
             <h2
               className="
-              text-[42px]
-              sm:text-[56px]
-              md:text-[64px]
-              lg:text-[72px]
-              leading-[1]
-              tracking-[-2px]
-              font-semibold
-              text-[#111827]
-              mb-8
+           text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight
               "
             >
               Our Culture

@@ -36,8 +36,8 @@ export default function OurWorkFlow() {
     <section id="workflow" className="text_anmation">
       <div className="max-w-7xl w-full mx-auto px-4 ">
         <div className="max-w-7xl w-full mx-auto mb-10 top-text">
-          <h2 className="text-center">Our Working Flow</h2>
-          <p className="text-center w-full max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 leading-tight">Our Working Flow</h2>
+          <p className="text-center w-full max-w-7xl mx-auto text-md sm:text-lg leading-relaxed">
             Great software doesn’t happen by chance —We start with ideation and
             planning, transform concepts into intuitive designs, engineer secure
             and scalable systems, put every feature through rigorous QA, and

@@ -41,12 +41,7 @@ const bigDataTypes = [
     description:
       "Store and manage structured, semi-structured, and unstructured data securely using scalable cloud-ready infrastructure.",
   },
-  {
-    icon: "📊",
-    title: "Interactive Dashboards",
-    description:
-      "Visualize KPIs, performance metrics, and business trends through customizable dashboards and reporting tools.",
-  },
+
   {
     icon: "🔒",
     title: "Secure & Scalable Architecture",
@@ -62,11 +57,11 @@ export default function BigData() {
       <section className="bg-[#EEF3F8]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold">
               Harness the Power of Big Data
             </h1>
 
-            <p className="mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
+            <p className="mt-5 text-gray-600 text-md sm:text-lg leading-relaxed">
               Collect, analyze, and transform massive data into real-time
               insights, predictive intelligence, and smarter business decisions.
             </p>
@@ -76,12 +71,12 @@ export default function BigData() {
 
       {/* IMPORTANCE */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold mb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">
             Turn Data Into Your Competitive Advantage{" "}
           </h2>
 
-          <p className="text-gray-700 leading-8">
+          <p className="text-gray-700 text-md sm:text-lg leading-relaxed">
             Organizations generate enormous amounts of data every day from
             websites, applications, customer interactions, business operations,
             and connected devices. Our Big Data Platform helps businesses
@@ -94,10 +89,12 @@ export default function BigData() {
 
       {/* EVOLUTION */}
       <section className="py-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold mb-8">Business Benefits</h2>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-8">
+            Business Benefits
+          </h2>
 
-          <p className="text-gray-700 leading-8">
+          <p className="text-gray-700 text-md sm:text-lg leading-relaxed">
             Our Big Data Platform empowers organizations to make faster
             decisions, improve operational efficiency, identify growth
             opportunities, optimize customer experiences, and gain a competitive
@@ -111,7 +108,7 @@ export default function BigData() {
             <div className="text-center">
               <h3 className="text-5xl font-bold text-purple-600">64.2</h3>
 
-              <p className="mt-4 text-gray-700">From Data to Innovation </p>
+              <p className="mt-4 text-gray-700 ">From Data to Innovation </p>
             </div>
 
             <div className="text-center">
@@ -131,7 +128,7 @@ export default function BigData() {
       {/* TYPES OF BIG DATA */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold text-center mb-14">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-14">
             Types of Big Data
           </h2>
 
@@ -145,7 +142,7 @@ export default function BigData() {
 
                 <h3 className="font-bold text-xl">{item.title}</h3>
 
-                <p className="mt-4 text-gray-600 leading-7">
+                <p className="mt-4 text-gray-600 text-md sm:text-lg leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -157,7 +154,9 @@ export default function BigData() {
       {/* SOURCES */}
       <section className="py-10 ">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl font-bold mb-14">Sources of Big Data</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-14">
+            Sources of Big Data
+          </h2>
 
           {/* IMAGE */}
           <div className="relative  max-w-4xl mx-auto w-full aspect-[3/1]">
@@ -172,7 +171,7 @@ export default function BigData() {
 
           {/* CONTENT */}
           <div className="lg:mt-16 mt-8">
-            <p className="text-gray-700">
+            <p className="text-gray-700  text-md sm:text-lg leading-relaxed">
               Big Data is generated from numerous sources including social media
               platforms, IoT devices, business applications, sensors, websites,
               financial transactions, mobile applications, customer
@@ -183,7 +182,7 @@ export default function BigData() {
               <div>
                 <h4 className="font-bold text-lg">Social Media</h4>
 
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
                   Facebook, X, Instagram, LinkedIn, YouTube and more.
                 </p>
               </div>
@@ -191,7 +190,7 @@ export default function BigData() {
               <div>
                 <h4 className="font-bold text-lg">IoT Devices</h4>
 
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
                   Sensors, smart devices, vehicles and connected equipment.
                 </p>
               </div>
@@ -199,7 +198,7 @@ export default function BigData() {
               <div>
                 <h4 className="font-bold text-lg">Business Systems</h4>
 
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
                   ERP, CRM, eCommerce platforms and enterprise software.
                 </p>
               </div>
@@ -207,7 +206,7 @@ export default function BigData() {
               <div>
                 <h4 className="font-bold text-lg">Machine Data</h4>
 
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-md sm:text-lg leading-relaxed  ">
                   Server logs, monitoring systems and automated processes.
                 </p>
               </div>

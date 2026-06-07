@@ -32,10 +32,7 @@ const SmsSolution = () => {
         text-[#111827]
         font-semibold
         leading-tight
-        text-[22px]
-        sm:text-[32px]
-        md:text-[46px]
-        lg:text-[54px]
+       text-2xl sm:text-3xl md:text-5xl
       "
         >
           Powerful SMS Communication for Modern Businesses{" "}

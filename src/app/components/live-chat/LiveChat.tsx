@@ -20,10 +20,7 @@ const LiveChat = () => {
             {/* TITLE */}
             <h1
               className="
-            text-[40px]
-            sm:text-[32px]
-            md:text-[44px]
-            lg:text-[52px]
+           text-2xl sm:text-3xl md:text-5xl 
             leading-[1]
             font-bold
             text-[#111827]
@@ -36,9 +33,7 @@ const LiveChat = () => {
             <p
               className="
             mt-6
-            text-[18px]
-            sm:text-[20px]
-            leading-[1.9]
+           text-md sm:text-lg leading-relaxed
             text-[#4b5563]
             max-w-2xl
             mx-auto

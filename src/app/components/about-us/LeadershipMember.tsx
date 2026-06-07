@@ -215,7 +215,7 @@ export default function LeadershipMember() {
                     {item.name}
                   </h3>
 
-                  <p className="text-[14px] text-[#4B5563] mt-2 leading-relaxed">
+                  <p className=" text-[#4B5563] mt-2 text-md sm:text-lg leading-relaxed">
                     {item.role}
                   </p>
 

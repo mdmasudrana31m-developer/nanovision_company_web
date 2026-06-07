@@ -38,7 +38,7 @@ export default function OurTeam() {
           Key Persons of Nanovision
         </h2>
 
-        <p className="text-gray-600 text-sm md:text-base leading-[1.8]">
+        <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
           Our company is driven by a team of experienced key professionals who lead different areas including management, technology, sales, customer support, and business operations. Their expertise, leadership, and commitment help us deliver innovative solutions and maintain high standards of service for our clients worldwide.
         </p>
       </div>

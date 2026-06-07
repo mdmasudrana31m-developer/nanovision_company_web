@@ -82,7 +82,7 @@ export default function ERPTechnology() {
             A Complete SMS Platform Powered by Advanced Messaging Technology
           </h2>
 
-          <p className="mt-6 text-gray-500 text-sm md:text-base leading-relaxed">
+          <p className="mt-6 text-gray-500 text-md sm:text-lg leading-relaxed">
             Empower your business communication with Nano Vision SMS Platform.
             Send promotional, transactional, OTP, and service messages through a
             secure, high-performance infrastructure designed for speed,
@@ -126,7 +126,7 @@ export default function ERPTechnology() {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-500 leading-7 text-[15px]">
+              <p className="text-gray-500 text-md sm:text-lg leading-relaxed">
                 {item.description}
               </p>
             </div>

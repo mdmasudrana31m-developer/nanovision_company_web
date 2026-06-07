@@ -108,7 +108,7 @@ export default function OurWork() {
           Our Latest Works
         </h2>
 
-        <p className="text-gray-600 text-sm md:text-base">
+        <p className="text-gray-600 text-md sm:text-lg leading-relaxed">
           Innovation in action. Every project you see represents a unique
           challenge we’ve solved and a powerful solution we’ve built to help a
           business thrive.

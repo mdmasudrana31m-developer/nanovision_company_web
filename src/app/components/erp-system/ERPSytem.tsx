@@ -111,8 +111,6 @@ export default function ERPSytem() {
                 backdrop-blur-sm
                 rounded-2xl
                 p-7
-                shadow-sm
-                hover:shadow-xl
                 transition-all
                 duration-300
               "
@@ -140,7 +138,7 @@ export default function ERPSytem() {
               </h3>
 
               {/* Description */}
-              <p className="text-[#4b5563] leading-7 text-[15px]">
+              <p className="text-[#4b5563] text-md sm:text-lg leading-relaxed">
                 {item.desc}
               </p>
             </div>

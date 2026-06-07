@@ -93,7 +93,7 @@ export default function WhyNanoVision() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-[36px] md:text-[54px] font-semibold text-[#1d2433]">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-[#1d2433]">
             Why Choose Nano Vision SMS Platform?{" "}
           </h2>
         </div>
@@ -137,7 +137,7 @@ export default function WhyNanoVision() {
               </h3>
 
               {/* Description */}
-              <p className="text-[#4b5563] leading-7 text-[15px]">
+              <p className="text-[#4b5563] text-md sm:text-lg leading-relaxed">
                 {item.desc}
               </p>
             </div>
