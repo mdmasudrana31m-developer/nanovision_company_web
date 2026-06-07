@@ -19,13 +19,13 @@ export default function OurWork() {
 
     {
       title: "ConstructPro",
-      desc: "Construction Firm Management System is a comprehensive ERP solution designed to streamline construction business operations. Manage finances, workforce, inventory, clients, suppliers, partners, and projects from a single platform, ensuring greater efficiency, transparency, and control across your organization.",
+      desc: "Construction Firm Management System is an all-in-one ERP platform that simplifies project, finance, workforce, inventory, and client management for efficient operations.",
       img: "/service-img/our-products/constraction.png",
     },
 
     {
       title: "Hostel Management System",
-      desc: "A Hostel Management System is a digital platform designed to streamline accommodation operations by automating room allocation, guest or resident check-ins, billing, and daily utilities tracking. It replaces manual paperwork with an integrated dashboard, enabling administrators to efficiently manage student or guest records, maintenance requests, and dining schedules from a centralized hub.",
+      desc: "Hostel Management System streamlines room allocation, resident records, billing, maintenance, and daily operations through a centralized, efficient, and easy-to-manage platform.",
       img: "/service-img/our-products/hostel-management.png",
     },
 
@@ -37,7 +37,7 @@ export default function OurWork() {
 
     {
       title: "NextGen School Management System",
-      desc: "A modern School Management System that digitizes and automates school operations, including student records, attendance tracking, examination management, fee collection, and reporting. The platform helps educational institutions enhance efficiency, accuracy, and collaboration.",
+      desc: "A modern School Management System automates student records, attendance, exams, fee collection, and reporting, improving efficiency, accuracy, and collaboration.",
       img: "/service-img/our-products/Uttar-High-school.jpeg",
     },
   ];
