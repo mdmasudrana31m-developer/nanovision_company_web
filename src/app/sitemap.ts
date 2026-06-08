@@ -3,31 +3,31 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/",
+      url: "https://nanovisionltd.com/",
       lastModified: new Date(),
     },
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/about-us",
+      url: "https://nanovisionltd.com/about-us",
       lastModified: new Date(),
     },
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/services",
+      url: "https://nanovisionltd.com/services",
       lastModified: new Date(),
     },
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/contact-us",
+      url: "https://nanovisionltd.com/contact-us",
       lastModified: new Date(),
     },
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/products/sms-platform",
+      url: "https://nanovisionltd.com/products/sms-platform",
       lastModified: new Date(),
     },
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/products/live-chat",
+      url: "https://nanovisionltd.com/products/live-chat",
       lastModified: new Date(),
     },
     {
-      url: "https://nanovision-company-web-poe5.vercel.app/products/big-data",
+      url: "https://nanovisionltd.com/products/big-data",
       lastModified: new Date(),
     },
   ];

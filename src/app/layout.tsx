@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nanovision-company-web-poe5.vercel.app"),
+  metadataBase: new URL("https://nanovisionltd.com"),
 
   title: {
     default: "Nanovision - Revolutionize Your Communication",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Nanovision",
-      url: "https://nanovision-company-web-poe5.vercel.app",
+      url: "https://nanovisionltd.com",
     },
   ],
 
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Nanovision",
-    url: "https://nanovision-company-web-poe5.vercel.app",
+    url: "https://nanovisionltd.com",
 
     title: "Nanovision - Revolutionize Your Communication",
 
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://nanovision-company-web-poe5.vercel.app",
+    canonical: "https://nanovisionltd.com",
   },
 };
 
@@ -96,9 +96,9 @@ export default function RootLayout({
 
     name: "Nanovision",
 
-    url: "https://nanovision-company-web-poe5.vercel.app",
+    url: "https://nanovisionltd.com",
 
-    logo: "https://nanovision-company-web-poe5.vercel.app/Avision.jpeg",
+    logo: "https://nanovisionltd.com/Avision.jpeg",
 
     description:
       "Nanovision provides enterprise communication solutions including SMS Platform, Live Chat, ERP Systems, Big Data Analytics, and custom software development.",

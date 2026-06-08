@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://nanovision-company-web-poe5.vercel.app/sitemap.xml",
+    sitemap: "https://nanovisionltd.com/sitemap.xml",
   };
 }
